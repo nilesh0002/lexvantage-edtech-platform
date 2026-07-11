@@ -16,7 +16,7 @@ export const facultyData: Educator[] = [
     role: "Founder & Lead Law Mentor",
     credentials: "BLS LL.B Candidate (D.Y. Patil College of Law) • Company Secretary (ICSI)",
     bio: "Detail-oriented professional with experience as a Legal Aid Officer at Belapur Court and content developer for InAmigos Foundation. Currently pursuing BLS LL.B to enhance legal knowledge through practical engagement, Shreya brings strong research, drafting, and compliance skills to guide aspirants into top law colleges.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=shreya",
+    avatar: "https://api.dicebear.com/7.x/lorelei/svg?seed=shreya",
     specialtyIcon: Scale,
   }
 ];

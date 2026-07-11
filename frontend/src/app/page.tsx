@@ -34,6 +34,19 @@ export default function Home() {
   const router = useRouter();
   const [activeMobileTab, setActiveMobileTab] = useState<"home" | "courses" | "prep" | "mentor">("home");
 
+  // Sync active mobile tab on refresh
+  useEffect(() => {
+    const savedTab = sessionStorage.getItem("jurispath_active_tab");
+    if (savedTab && ["home", "courses", "prep", "mentor"].includes(savedTab)) {
+      setActiveMobileTab(savedTab as any);
+    }
+  }, []);
+
+  const handleMobileTabChange = (tabId: "home" | "courses" | "prep" | "mentor") => {
+    setActiveMobileTab(tabId);
+    sessionStorage.setItem("jurispath_active_tab", tabId);
+  };
+
   // Sync auth state with localStorage if client side
   useEffect(() => {
     const savedUser = localStorage.getItem("jurispath_user");
@@ -192,7 +205,7 @@ export default function Home() {
           return (
             <button
               key={tab.id}
-              onClick={() => setActiveMobileTab(tab.id as any)}
+              onClick={() => handleMobileTabChange(tab.id as any)}
               className="flex flex-col items-center justify-center gap-1 cursor-pointer py-1 text-center"
             >
               <Icon className={`w-5 h-5 transition-colors ${isActive ? "text-brand-gold-500" : "text-slate-500"}`} />
