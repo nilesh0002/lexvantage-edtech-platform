@@ -151,3 +151,72 @@ body {
 .bg-gradient-radial {
   background: radial-gradient(circle at center, var(--tw-gradient-stops));
 }
+
+/* Light Mode Global Layout Overrides (when html does not have the .dark class) */
+html:not(.dark) {
+  /* Make global backgrounds pure white / light gray */
+  --background: #ffffff;
+  --foreground: #09090b;
+}
+
+html:not(.dark) .text-white {
+  color: #09090b !important;
+}
+
+html:not(.dark) .text-slate-100,
+html:not(.dark) .text-slate-150,
+html:not(.dark) .text-slate-200 {
+  color: #18181b !important;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #27272a !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #4b5563 !important;
+}
+
+html:not(.dark) .text-slate-450 {
+  color: #4b5563 !important;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #6b7280 !important;
+}
+
+/* Semi-transparent backgrounds dynamic shift */
+html:not(.dark) .bg-white\/5 {
+  background-color: rgba(9, 9, 11, 0.04) !important;
+}
+
+html:not(.dark) .bg-white\/10 {
+  background-color: rgba(9, 9, 11, 0.07) !important;
+}
+
+/* Semi-transparent borders dynamic shift */
+html:not(.dark) .border-white\/5,
+html:not(.dark) .border-white\/10,
+html:not(.dark) .border-white\/15,
+html:not(.dark) .border-white\/20 {
+  border-color: rgba(9, 9, 11, 0.08) !important;
+}
+
+/* Dividers dynamic shift */
+html:not(.dark) .divide-white\/5,
+html:not(.dark) .divide-white\/10 {
+  border-color: rgba(9, 9, 11, 0.08) !important;
+}
+
+/* Glassmorphism panel transformation */
+html:not(.dark) .glass-panel {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(9, 9, 11, 0.08) !important;
+  box-shadow: 0 4px 20px -2px rgba(9, 9, 11, 0.05) !important;
+}
+
+html:not(.dark) .glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(9, 9, 11, 0.12) !important;
+  box-shadow: 0 10px 30px -10px rgba(9, 9, 11, 0.1) !important;
+}
