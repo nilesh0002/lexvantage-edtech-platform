@@ -39,194 +39,70 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-brand-navy-950">
+    <section className="relative min-h-[75vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-brand-navy-950">
       {/* Grid Pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Text Left */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="lg:col-span-7 space-y-6 text-center lg:text-left"
-          >
-            {/* Pill Badge */}
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-navy-900 border border-white/5 text-brand-gold-500 text-xs font-bold uppercase tracking-wider">
-              <span>National Law University Preparation</span>
-            </motion.div>
-
-            {/* Main Headline */}
-            <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-white leading-[1.15]">
-              Your Gateway to <br />
-              <span className="text-brand-gold-500">
-                India's Top NLUs
-              </span>
-            </motion.h1>
-
-            {/* Tagline */}
-            <motion.p variants={itemVariants} className="text-slate-300 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-              Prepare for CLAT, AILET, & SLAT with structured pedagogy, dynamic mock simulations, and dedicated 1-on-1 mentorship from top NLU alumni.
-            </motion.p>
-
-            {/* Call to Actions */}
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <button
-                onClick={onStartFree}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-brand-navy-950 bg-brand-gold-500 hover:bg-brand-gold-450 transition-colors flex items-center justify-center gap-2 cursor-pointer"
-              >
-                Start Free Trial
-                <ChevronRight className="w-4 h-4" />
-              </button>
-
-              <button
-                onClick={() => {
-                  const target = document.getElementById("courses");
-                  if (target) target.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-white border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
-              >
-                Explore Courses
-              </button>
-            </motion.div>
-
-            {/* Startup Mission Focus Details */}
-            <motion.div variants={itemVariants} className="pt-8 border-t border-white/5 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4">
-              <div className="text-center lg:text-left">
-                <div className="text-white text-base font-bold flex items-center justify-center lg:justify-start gap-1.5">
-                  <Trophy className="w-4.5 h-4.5 text-brand-gold-500" />
-                  <span>Personalized Mentorship Focus</span>
-                </div>
-                <span className="text-xs text-slate-450 font-medium">Designed around small-batch individual growth rather than mass enrollment.</span>
-              </div>
-            </motion.div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-6 flex flex-col items-center justify-center"
+        >
+          {/* Pill Badge */}
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-navy-900 border border-white/5 text-brand-gold-500 text-xs font-bold uppercase tracking-wider">
+            <span>National Law University Preparation</span>
           </motion.div>
 
-          {/* Graphical Right Panel */}
-          <div className="lg:col-span-5 relative flex items-center justify-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.3 }}
-              className="w-full max-w-sm sm:max-w-md relative"
+          {/* Main Headline */}
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-white leading-[1.15] max-w-2xl">
+            Personalized CLAT & <br />
+            <span className="text-brand-gold-500">
+              Law Entrance Prep
+            </span>
+          </motion.h1>
+
+          {/* Tagline */}
+          <motion.p variants={itemVariants} className="text-slate-350 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
+            Direct, focused guidance and structured mocks from top law mentors. We keep our batches small to focus entirely on your individual success.
+          </motion.p>
+
+          {/* Call to Actions */}
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full sm:w-auto">
+            <button
+              onClick={onStartFree}
+              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-brand-navy-950 bg-brand-gold-500 hover:bg-brand-gold-450 transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
-              {/* Main Illustration container */}
-              <div className="relative rounded-2xl border border-white/10 bg-brand-navy-900 overflow-hidden shadow-2xl p-6">
-                {/* Simulated Portal Top */}
-                <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-4">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                  </div>
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-slate-500">Live Mock Portal</span>
-                </div>
+              Start Free Trial
+              <ChevronRight className="w-4 h-4" />
+            </button>
 
-                {/* Score Graphic Mock */}
-                <div className="space-y-4">
-                  <div className="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
-                    <div>
-                      <span className="text-slate-450 text-[10px] font-bold block uppercase tracking-wide">Diagnostic Evaluation</span>
-                      <span className="text-2xl font-bold text-white">CLAT 2026</span>
-                    </div>
-                    <div className="px-3 py-1.5 rounded-lg border border-brand-gold-500 text-[10px] font-bold text-brand-gold-500 bg-brand-gold-500/5">
-                      Interactive Portal
-                    </div>
-                  </div>
+            <button
+              onClick={() => {
+                const target = document.getElementById("courses");
+                if (target) target.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-white border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+            >
+              Explore Courses
+            </button>
+          </motion.div>
 
-                  {/* Multi-Section Progress Bars */}
-                  <div className="space-y-3 pt-2">
-                    <h4 className="text-xs font-semibold text-slate-350">CLAT Focus Breakdown</h4>
-                    {[
-                      { name: "Legal Reasoning", value: 92 },
-                      { name: "Logical Reasoning", value: 85 },
-                      { name: "Current Affairs & GK", value: 96 },
-                    ].map((sec) => (
-                      <div key={sec.name} className="space-y-1">
-                        <div className="flex justify-between text-[11px]">
-                          <span className="text-slate-400 font-medium">{sec.name}</span>
-                          <span className="text-white font-bold">{sec.value}%</span>
-                        </div>
-                        <div className="h-2 rounded-full bg-white/5 overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${sec.value}%` }}
-                            transition={{ duration: 1.5, delay: 0.8 }}
-                            className="h-full rounded-full bg-brand-gold-500"
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Static Mock Test Timer Pill */}
-                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-brand-navy-950 border border-white/5 mt-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                      <span className="text-xs font-medium text-slate-350">Active Test Simulation</span>
-                    </div>
-                    <span className="text-xs font-bold text-white font-mono">01:42:15</span>
-                  </div>
-                </div>
+          {/* Startup Focus Detail */}
+          <motion.div variants={itemVariants} className="pt-8 border-t border-white/5 w-full flex justify-center">
+            <div className="text-center">
+              <div className="text-white text-xs sm:text-sm font-semibold flex flex-wrap items-center justify-center gap-2 text-slate-350">
+                <Trophy className="w-4 h-4 text-brand-gold-500 inline-block mr-1" />
+                <span>Small Batch Focus</span>
+                <span className="text-slate-600">•</span>
+                <span>Personalized Mock Analysis</span>
+                <span className="text-slate-600">•</span>
+                <span>Dedicated 1-on-1 Mentorship</span>
               </div>
-
-              {/* Floating Cards */}
-              <motion.div
-                variants={badgeVariants}
-                animate="animate"
-                className="absolute -top-6 -right-6 p-3 rounded-xl border border-white/10 bg-brand-navy-900/90 shadow-xl flex items-center gap-2 backdrop-blur-md"
-              >
-                <div className="w-8 h-8 rounded-lg bg-brand-gold-500/10 flex items-center justify-center text-brand-gold-500 border border-brand-gold-500/20">
-                  <Trophy className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-slate-400 block font-semibold leading-none">NLSIU Bangalore</span>
-                  <span className="text-xs text-white font-bold">12 selections</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                variants={badgeVariants}
-                animate="animate"
-                className="absolute -bottom-6 -left-6 p-3 rounded-xl border border-white/10 bg-brand-navy-900/90 shadow-xl flex items-center gap-2 backdrop-blur-md"
-                style={{ animationDelay: "2s" }}
-              >
-                <div className="w-8 h-8 rounded-lg bg-brand-blue-500/10 flex items-center justify-center text-brand-blue-500 border border-brand-blue-500/20">
-                  <Scale className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-slate-400 block font-semibold leading-none">Legal Aptitude</span>
-                  <span className="text-xs text-white font-bold">Daily Quiz Live</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* NLU Trust Badge slider/grid */}
-        <div className="pt-20">
-          <p className="text-center text-slate-500 text-xs font-bold uppercase tracking-widest mb-6">
-            LexVantage Students are Top Rankers at Elite National Law Universities
-          </p>
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 items-center justify-center opacity-40 hover:opacity-60 transition-opacity duration-300">
-            {[
-              { name: "NLSIU Bangalore", label: "NLSIU" },
-              { name: "NALSAR Hyderabad", label: "NALSAR" },
-              { name: "WBNUJS Kolkata", label: "NUJS" },
-              { name: "NLU Jodhpur", label: "NLU Jodhpur" },
-              { name: "GNLU Gandhinagar", label: "GNLU" },
-              { name: "NLIU Bhopal", label: "NLIU" },
-            ].map((nlu) => (
-              <div key={nlu.name} className="flex justify-center text-center">
-                <span className="text-slate-300 font-serif font-extrabold text-sm sm:text-base tracking-widest border-b border-transparent hover:border-slate-500 transition-all cursor-default">
-                  {nlu.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
