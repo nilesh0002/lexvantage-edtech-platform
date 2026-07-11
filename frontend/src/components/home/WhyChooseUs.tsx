@@ -10,43 +10,43 @@ export default function WhyChooseUs() {
       icon: Bot,
       title: "AI-Powered Learning Analytics",
       description: "Our predictive engine calculates your NLU admissibility score and details concept-level strengths, identifying section-by-section bottlenecks.",
-      color: "text-brand-blue-500",
-      bg: "bg-brand-blue-500/5 border-brand-blue-500/10",
+      color: "text-brand-gold-500",
+      bg: "bg-white/5 border-white/10",
     },
     {
       icon: BookOpen,
       title: "Vantage Daily Bulletins",
       description: "Get daily current affairs breakdowns, static GK dossiers, and expert strategy walkthroughs tailored to the latest CLAT formats.",
-      color: "text-brand-purple-500",
-      bg: "bg-brand-purple-500/5 border-brand-purple-500/10",
+      color: "text-brand-gold-500",
+      bg: "bg-white/5 border-white/10",
     },
     {
       icon: Zap,
       title: "Elite Mock Simulations",
       description: "Access 120+ full-length mock tests modeled exactly on modern CLAT & AILET interfaces, with comprehensive analytics post-exam.",
       color: "text-brand-gold-500",
-      bg: "bg-brand-gold-500/5 border-brand-gold-500/10",
+      bg: "bg-white/5 border-white/10",
     },
     {
       icon: GraduationCap,
       title: "NLU Alumni Mentorship",
       description: "Get weekly 1-on-1 strategy sessions with mentors who have scored top-100 ranks and graduated from NLSIU, NALSAR, and NUJS.",
-      color: "text-brand-blue-500",
-      bg: "bg-brand-blue-500/5 border-brand-blue-500/10",
+      color: "text-brand-gold-500",
+      bg: "bg-white/5 border-white/10",
     },
     {
       icon: Users,
       title: "Ultra-Small Cohorts",
       description: "Strictly limited batch sizes of 40 students ensure personalized attention, individual feedback on essays, and interactive law discussion.",
-      color: "text-brand-purple-500",
-      bg: "bg-brand-purple-500/5 border-brand-purple-500/10",
+      color: "text-brand-gold-500",
+      bg: "bg-white/5 border-white/10",
     },
     {
       icon: Clock,
       title: "Instant Doubt Resolutions",
       description: "Submit doubts 24/7 inside the portal and get rich video or text explanations from senior faculty within 15 minutes.",
       color: "text-brand-gold-500",
-      bg: "bg-brand-gold-500/5 border-brand-gold-500/10",
+      bg: "bg-white/5 border-white/10",
     },
   ];
 
@@ -69,21 +69,18 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section className="py-24 bg-brand-navy-950 relative z-10">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
-
+    <section className="py-24 bg-brand-navy-955 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
+          <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
             Engineered for Success
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
             Why India's Top Law Aspirants Choose LexVantage
           </h2>
-          <p className="text-slate-400 text-base font-light">
+          <p className="text-slate-405 text-base font-light">
             We combine high-end technology with India's best law tutors to design a platform that goes far beyond standard lectures.
           </p>
         </div>
