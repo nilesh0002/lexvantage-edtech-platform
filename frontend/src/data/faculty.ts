@@ -1,4 +1,4 @@
-import { Scale, Landmark, BookOpen, GraduationCap } from "lucide-react";
+import { Scale } from "lucide-react";
 import React from "react";
 
 export interface Educator {
@@ -12,35 +12,11 @@ export interface Educator {
 
 export const facultyData: Educator[] = [
   {
-    name: "Adv. Vikramaditya Singh",
-    role: "Co-Founder & Head of Legal Aptitude",
-    credentials: "NLSIU Bangalore (B.A. LL.B.) • BCL, Oxford University",
-    bio: "Former Supreme Court litigator with 11+ years of CLAT coaching experience. Architect of the LexVantage legal analytical framework.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=vikram",
+    name: "Adv. Meera Sharma",
+    role: "Founder & Master Law Educator",
+    credentials: "NLSIU Bangalore (B.A. LL.B. Hons.) • BCL, Oxford University",
+    bio: "Former Supreme Court advocate with 12+ years of CLAT mentoring experience. Having cracked CLAT herself and mentored 1,500+ NLU qualifiers, she personally teaches and guides students across all core subjects—Legal Aptitude, Logical Reasoning, English, and Current Affairs.",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=meera",
     specialtyIcon: Scale,
-  },
-  {
-    name: "Prof. Meenakshi Iyer",
-    role: "Director of Logical Reasoning",
-    credentials: "PhD in Cognitive Logic, IIT Delhi • Former Prof. at Symbiosis",
-    bio: "Specializes in modern analytical reasoning formats. Decoded CLAT Logical patterns since the inception of the offline test.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=meenakshi",
-    specialtyIcon: Landmark,
-  },
-  {
-    name: "Devansh Kapoor",
-    role: "Lead English & Critical Logic",
-    credentials: "NUJS Kolkata (B.A. LL.B.) • Scored CLAT AIR 3 (2018)",
-    bio: "Focuses on comprehension efficiency and fast vocabulary hacks. Author of 'Critical Reasoning Secrets for Law Entrance'.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=devansh",
-    specialtyIcon: BookOpen,
-  },
-  {
-    name: "Priya Nair, IFS (Retd.)",
-    role: "Head of General Knowledge & Current Affairs",
-    credentials: "Former Indian Foreign Service Officer • Harvard Kennedy School MPA",
-    bio: "Ex-diplomat curating our high-yield GK bulletins. Focuses on connecting static constitutional history with dynamic news.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=priya",
-    specialtyIcon: GraduationCap,
-  },
+  }
 ];

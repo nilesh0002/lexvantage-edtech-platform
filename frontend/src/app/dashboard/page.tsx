@@ -416,33 +416,39 @@ export default function StudentDashboard() {
                   <div className="p-5 rounded-2xl glass-panel border border-white/5 space-y-2">
                     <span className="text-[10px] text-slate-500 block uppercase font-bold tracking-wider">Attendance Rate</span>
                     <div className="flex items-baseline justify-between">
-                      <span className="text-2xl font-bold text-white">96.8%</span>
-                      <span className="text-emerald-500 text-xs font-semibold flex items-center gap-0.5"><Clock className="w-3 h-3" /> Streak: 12 days</span>
+                      <span className="text-2xl font-bold text-white">100.0%</span>
+                      <span className="text-emerald-500 text-xs font-semibold flex items-center gap-0.5"><Clock className="w-3 h-3" /> Streak: 1 day</span>
                     </div>
                     <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                      <div className="h-full bg-emerald-500 w-[96%]" />
+                      <div className="h-full bg-emerald-500 w-[100%]" />
                     </div>
                   </div>
 
                   <div className="p-5 rounded-2xl glass-panel border border-white/5 space-y-2">
                     <span className="text-[10px] text-slate-500 block uppercase font-bold tracking-wider">Mocks Taken</span>
                     <div className="flex items-baseline justify-between">
-                      <span className="text-2xl font-bold text-white">12 / 120</span>
-                      <span className="text-brand-blue-500 text-xs font-semibold">Next scheduled: Sun</span>
+                      <span className="text-2xl font-bold text-white">{mockScoreCard?.completed ? "1" : "0"} / 120</span>
+                      <span className="text-brand-blue-500 text-xs font-semibold">
+                        {mockScoreCard?.completed ? "Mocks Updated" : "Next scheduled: Sun"}
+                      </span>
                     </div>
                     <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                      <div className="h-full bg-brand-blue-500 w-[10%]" />
+                      <div className="h-full bg-brand-blue-500" style={{ width: mockScoreCard?.completed ? "1%" : "0%" }} />
                     </div>
                   </div>
 
                   <div className="p-5 rounded-2xl glass-panel border border-white/5 space-y-2">
                     <span className="text-[10px] text-slate-500 block uppercase font-bold tracking-wider">Performance Average</span>
                     <div className="flex items-baseline justify-between">
-                      <span className="text-2xl font-bold text-white">82.5 Marks</span>
-                      <span className="text-brand-purple-400 text-xs font-semibold flex items-center gap-0.5"><TrendingUp className="w-3 h-3" /> +4.2 this week</span>
+                      <span className="text-2xl font-bold text-white">
+                        {mockScoreCard?.completed ? `${mockScoreCard.score.toFixed(1)} Marks` : "0.0 Marks"}
+                      </span>
+                      <span className="text-brand-purple-400 text-xs font-semibold">
+                        {mockScoreCard?.completed ? "1 Test Completed" : "No mocks completed"}
+                      </span>
                     </div>
                     <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                      <div className="h-full bg-brand-purple-500 w-[82%]" />
+                      <div className="h-full bg-brand-purple-500" style={{ width: mockScoreCard?.completed ? `${(mockScoreCard.score / 5) * 100}%` : "0%" }} />
                     </div>
                   </div>
 
@@ -450,10 +456,12 @@ export default function StudentDashboard() {
                     <span className="text-[10px] text-slate-500 block uppercase font-bold tracking-wider">GK Quiz Points</span>
                     <div className="flex items-baseline justify-between">
                       <span className="text-2xl font-bold text-white">{quizScore} pts</span>
-                      <span className="text-brand-gold-500 text-xs font-semibold">Rank #24 in cohort</span>
+                      <span className="text-brand-gold-500 text-xs font-semibold">
+                        {quizScore > 0 ? `Rank #${Math.max(100 - quizScore / 10, 1)} in cohort` : "No quizzes completed"}
+                      </span>
                     </div>
                     <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                      <div className="h-full bg-brand-gold-500 w-[60%]" />
+                      <div className="h-full bg-brand-gold-500" style={{ width: `${Math.min(quizScore, 100)}%` }} />
                     </div>
                   </div>
                 </div>
@@ -462,35 +470,75 @@ export default function StudentDashboard() {
                   {/* Performance Radar Chart simulation */}
                   <div className="lg:col-span-6 p-6 rounded-2xl glass-panel border border-white/5 space-y-6">
                     <div>
-                      <h3 className="text-white font-serif font-bold text-sm">Subject Diagnostics</h3>
+                      <h3 className="text-white font-sans font-black text-sm">Subject Diagnostics</h3>
                       <p className="text-slate-400 text-[10px]">Real-time accuracy metrics based on simulated test submissions.</p>
                     </div>
 
-                    {/* Custom bar chart representing subject details */}
-                    <div className="space-y-4">
-                      {[
-                        { subject: "Legal Aptitude", accuracy: 88, speed: "Fast", color: "bg-brand-blue-500" },
-                        { subject: "Logical Reasoning", accuracy: 76, speed: "Moderate", color: "bg-brand-purple-500" },
-                        { subject: "English Language", accuracy: 84, speed: "Fast", color: "bg-cyan-500" },
-                        { subject: "General Knowledge", accuracy: 92, speed: "Ultra-Fast", color: "bg-brand-gold-500" },
-                        { subject: "Quantitative Techniques", accuracy: 55, speed: "Slow", color: "bg-rose-500" },
-                      ].map((item) => (
-                        <div key={item.subject} className="space-y-1">
-                          <div className="flex justify-between items-baseline text-xs">
-                            <span className="text-slate-300 font-bold">{item.subject}</span>
-                            <span className="text-slate-450 text-[10px] font-mono">Speed: {item.speed} | Accuracy: {item.accuracy}%</span>
+                    {!mockScoreCard?.completed ? (
+                      <div className="h-[220px] flex flex-col items-center justify-center text-center text-slate-500 font-sans text-xs space-y-2 border border-dashed border-white/5 rounded-xl">
+                        <FileText className="w-8 h-8 text-slate-650" />
+                        <p className="font-bold text-slate-450">Subject Diagnostics Pending</p>
+                        <p className="max-w-xs font-light text-slate-500">
+                          Complete your first CLAT/AILET simulation mock test in the portal to analyze your concept-level strengths.
+                        </p>
+                      </div>
+                    ) : (
+                      /* Custom bar chart representing subject details calculated dynamically */
+                      <div className="space-y-4">
+                        {[
+                          {
+                            subject: "Legal Aptitude",
+                            accuracy: (() => {
+                              let total = 0, correct = 0;
+                              if (selectedAnswers[1]) { total++; if (selectedAnswers[1] === "C") correct++; }
+                              if (selectedAnswers[2]) { total++; if (selectedAnswers[2] === "B") correct++; }
+                              return total > 0 ? Math.round((correct / total) * 100) : 0;
+                            })(),
+                            speed: "Fast",
+                            color: "bg-brand-blue-500",
+                          },
+                          {
+                            subject: "Logical Reasoning",
+                            accuracy: selectedAnswers[3] ? (selectedAnswers[3] === "B" ? 100 : 0) : 0,
+                            speed: "Moderate",
+                            color: "bg-brand-purple-500",
+                          },
+                          {
+                            subject: "English Language",
+                            accuracy: selectedAnswers[4] ? (selectedAnswers[4] === "C" ? 100 : 0) : 0,
+                            speed: "Fast",
+                            color: "bg-cyan-500",
+                          },
+                          {
+                            subject: "General Knowledge",
+                            accuracy: quizScore > 0 ? Math.min(Math.round((quizScore / 30) * 100), 100) : 0,
+                            speed: "Ultra-Fast",
+                            color: "bg-brand-gold-500",
+                          },
+                          {
+                            subject: "Quantitative Techniques",
+                            accuracy: selectedAnswers[5] ? (selectedAnswers[5] === "A" ? 100 : 0) : 0,
+                            speed: "Slow",
+                            color: "bg-rose-500",
+                          },
+                        ].map((item) => (
+                          <div key={item.subject} className="space-y-1">
+                            <div className="flex justify-between items-baseline text-xs">
+                              <span className="text-slate-350 font-bold">{item.subject}</span>
+                              <span className="text-slate-500 text-[10px] font-mono">Accuracy: {item.accuracy}%</span>
+                            </div>
+                            <div className="h-2 rounded-full bg-white/5 overflow-hidden">
+                              <motion.div
+                                initial={{ width: 0 }}
+                                animate={{ width: `${item.accuracy}%` }}
+                                transition={{ duration: 1 }}
+                                className={`h-full rounded-full ${item.color}`}
+                              />
+                            </div>
                           </div>
-                          <div className="h-2 rounded-full bg-white/5 overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={{ width: `${item.accuracy}%` }}
-                              transition={{ duration: 1 }}
-                              className={`h-full rounded-full ${item.color}`}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   {/* NLU Predictor Widget */}

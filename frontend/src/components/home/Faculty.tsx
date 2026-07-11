@@ -26,40 +26,37 @@ export default function Faculty() {
 
   return (
     <section className="py-24 bg-brand-navy-950 relative z-10" id="faculty">
-      {/* Glow backgrounds */}
-      <div className="absolute left-1/4 top-1/4 w-[400px] h-[400px] bg-brand-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
-              Elite Mentors
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
+              Master Mentor
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
-              Learn From Law Experts & NLU Alumni
+            <h2 className="text-3xl sm:text-4xl font-sans font-black text-white tracking-tight">
+              Learn Directly From the Founder
             </h2>
-            <p className="text-slate-400 text-sm font-light leading-relaxed">
-              We do not hire generic tutors. Our faculty comprises Supreme Court advocates, former professors, and top-ranking NLU graduates.
+            <p className="text-slate-450 text-sm font-light leading-relaxed">
+              No generic tutors. Get direct, unmediated guidance from Adv. Meera Sharma, who personally teaches and anchors all core subject streams.
             </p>
           </div>
 
           <a
             href="#courses"
-            className="flex items-center gap-1.5 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold text-xs transition-all self-start md:self-auto"
+            className="flex items-center gap-1.5 px-5 py-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold text-xs transition-all self-start md:self-auto cursor-pointer"
           >
             Schedule Free Demo Class
             <ArrowUpRight className="w-4 h-4 text-brand-gold-500" />
           </a>
         </div>
 
-        {/* Faculty Grid */}
+        {/* Center-aligned single educator card */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+          className="max-w-3xl mx-auto"
         >
           {facultyData.map((member) => {
             const Icon = member.specialtyIcon;
@@ -67,41 +64,40 @@ export default function Faculty() {
               <motion.div
                 key={member.name}
                 variants={itemVariants}
-                className="group rounded-2xl glass-panel p-6 flex flex-col justify-between hover:border-white/15 transition-all duration-300"
+                className="group rounded-2xl bg-brand-navy-900 border border-white/5 p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-center hover:border-white/10 transition-all duration-300"
               >
-                <div className="space-y-4">
-                  {/* Avatar wrapper */}
-                  <div className="w-full aspect-square rounded-xl p-0.5 bg-gradient-to-tr from-white/5 to-white/15 overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-300">
-                    <div className="w-full h-full rounded-[10px] bg-brand-navy-900 overflow-hidden relative flex items-center justify-center">
-                      <img
-                        src={member.avatar}
-                        alt={member.name}
-                        className="w-4/5 h-4/5 object-contain"
-                      />
-                      {/* Overlay specialty badge */}
-                      <div className="absolute bottom-3 right-3 w-8 h-8 rounded-lg bg-brand-navy-950 border border-white/10 flex items-center justify-center shadow-lg">
-                        <Icon className="w-4 h-4 text-brand-gold-500" />
-                      </div>
+                {/* Avatar wrapper */}
+                <div className="w-44 h-44 rounded-xl p-0.5 bg-white/5 overflow-hidden shrink-0 relative">
+                  <div className="w-full h-full rounded-[10px] bg-brand-navy-950 overflow-hidden relative flex items-center justify-center">
+                    <img
+                      src={member.avatar}
+                      alt={member.name}
+                      className="w-4/5 h-4/5 object-contain"
+                    />
+                    {/* Overlay specialty badge */}
+                    <div className="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-brand-navy-950 border border-white/10 flex items-center justify-center shadow-lg">
+                      <Icon className="w-4 h-4 text-brand-gold-500" />
                     </div>
                   </div>
+                </div>
 
-                  {/* Info */}
-                  <div className="space-y-1">
-                    <h3 className="text-white font-extrabold text-base leading-tight group-hover:text-brand-blue-500 transition-colors">
+                {/* Info */}
+                <div className="space-y-4 flex-1">
+                  <div className="space-y-1 text-center md:text-left">
+                    <h3 className="text-white font-black text-xl leading-tight">
                       {member.name}
                     </h3>
                     <p className="text-brand-gold-500 text-xs font-bold font-mono">
                       {member.role}
                     </p>
-                    <p className="text-slate-400 text-[10px] font-medium leading-relaxed">
+                    <p className="text-slate-400 text-xs font-medium leading-relaxed">
                       {member.credentials}
                     </p>
                   </div>
+                  <p className="text-slate-300 text-sm font-light leading-relaxed border-t border-white/5 pt-4">
+                    {member.bio}
+                  </p>
                 </div>
-
-                <p className="text-slate-350 text-xs font-light leading-relaxed border-t border-white/5 pt-4 mt-4">
-                  {member.bio}
-                </p>
               </motion.div>
             );
           })}
