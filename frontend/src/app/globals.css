@@ -168,19 +168,23 @@ html:not(.dark) .text-slate-50,
 html:not(.dark) .text-slate-100,
 html:not(.dark) .text-slate-150,
 html:not(.dark) .text-slate-200,
-html:not(.dark) .text-slate-250 {
-  color: #0f172a !important;
+html:not(.dark) .text-slate-250,
+html:not(.dark) .text-slate-300,
+html:not(.dark) .text-slate-335 {
+  color: #09090b !important;
 }
 
-html:not(.dark) .text-slate-300,
 html:not(.dark) .text-slate-350,
+html:not(.dark) .text-slate-355,
 html:not(.dark) .text-slate-400,
 html:not(.dark) .text-slate-405 {
   color: #334155 !important;
 }
 
 html:not(.dark) .text-slate-450,
+html:not(.dark) .text-slate-455,
 html:not(.dark) .text-slate-500,
+html:not(.dark) .text-slate-555,
 html:not(.dark) .text-slate-550,
 html:not(.dark) .text-slate-600 {
   color: #64748b !important;
