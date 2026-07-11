@@ -99,7 +99,7 @@ export default function Footer() {
                 </div>
               </div>
               <span className="font-sans font-extrabold text-xl tracking-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Lex<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-500 to-brand-purple-500">Vantage</span>
+                Juris<span className="text-brand-gold-500">Path</span>
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -123,12 +123,10 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1 lg:col-span-2 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Target Programs</h4>
             <ul className="space-y-2.5 text-sm text-slate-400">
-              <li><Link href="/courses" className="hover:text-white transition-colors">CLAT (Class 12th)</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">AILET (NLU Delhi)</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">SLAT (Symbiosis)</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">MH CET Law</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">Droppers Cohort</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">Vantage Mock Series</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">CLAT & AILET Prep</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">SLAT & MH CET Law</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">5-Year LL.B Companion</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">JurisPath Mock Series</Link></li>
             </ul>
           </div>
 
@@ -137,11 +135,9 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Free Resources</h4>
             <ul className="space-y-2.5 text-sm text-slate-400">
               <li><Link href="/current-affairs" className="hover:text-white transition-colors">Daily Current Affairs</Link></li>
-              <li><Link href="/free-notes" className="hover:text-white transition-colors">Static GK E-books</Link></li>
+              <li><Link href="/free-notes" className="hover:text-white transition-colors">LL.B Semester Notes</Link></li>
               <li><Link href="/mock-tests" className="hover:text-white transition-colors">Free Mock Tests</Link></li>
               <li><Link href="/scholarships" className="hover:text-white transition-colors">Scholarship Test</Link></li>
-              <li><Link href="/blogs" className="hover:text-white transition-colors">Strategy Blogs</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">NLU Cutoff Guide</Link></li>
             </ul>
           </div>
 
