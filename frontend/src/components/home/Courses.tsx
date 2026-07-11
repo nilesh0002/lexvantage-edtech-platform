@@ -6,6 +6,12 @@ import { Search, Heart, Sparkles, Trophy, Calendar, CheckCircle2, ChevronRight, 
 import CheckoutModal from "../CheckoutModal";
 import { Course, coursesData } from "@/data/courses";
 
+interface CoursesProps {
+  wishlist: string[];
+  onToggleWishlist: (course: Course) => void;
+  onEnroll: (course: Course) => void;
+}
+
 export default function Courses({
   wishlist,
   onToggleWishlist,
