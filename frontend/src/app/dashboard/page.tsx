@@ -621,7 +621,7 @@ export default function StudentDashboard() {
 
                     <button
                       onClick={handlePredictNLU}
-                      className="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-xs transition-all shadow-md"
+                      className="min-h-[44px] w-full py-2.5 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs transition-all cursor-pointer"
                     >
                       Calculate NLU Probabilities
                     </button>

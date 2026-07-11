@@ -136,17 +136,14 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
               transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.3 }}
               className="w-full max-w-sm sm:max-w-md relative"
             >
-              {/* Decorative glows around the panel */}
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-brand-blue-500 via-brand-purple-600 to-brand-gold-500 opacity-20 blur-xl animate-pulse-slow" />
-
               {/* Main Illustration container */}
-              <div className="relative rounded-2xl border border-white/10 bg-brand-navy-900/60 backdrop-blur-md overflow-hidden shadow-2xl p-6 glow-blue">
+              <div className="relative rounded-2xl border border-white/10 bg-brand-navy-900 overflow-hidden shadow-2xl p-6">
                 {/* Simulated Portal Top */}
                 <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-4">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-rose-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
                   </div>
                   <span className="text-[10px] uppercase font-bold tracking-widest text-slate-500">Live Mock Portal</span>
                 </div>
@@ -156,20 +153,20 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
                   <div className="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                     <div>
                       <span className="text-slate-450 text-[10px] font-bold block uppercase tracking-wide">Overall Percentile</span>
-                      <span className="text-2xl font-bold font-serif text-white">99.86 %</span>
+                      <span className="text-2xl font-bold text-white">99.86 %</span>
                     </div>
-                    <div className="w-12 h-12 rounded-full border-2 border-brand-gold-500 flex items-center justify-center text-[10px] font-bold text-brand-gold-500 bg-brand-gold-500/5">
+                    <div className="w-12 h-12 rounded-full border border-brand-gold-500 flex items-center justify-center text-[10px] font-bold text-brand-gold-500 bg-brand-gold-500/5">
                       Rank 4
                     </div>
                   </div>
 
                   {/* Multi-Section Progress Bars */}
                   <div className="space-y-3 pt-2">
-                    <h4 className="text-xs font-semibold text-slate-300">CLAT Focus Breakdown</h4>
+                    <h4 className="text-xs font-semibold text-slate-350">CLAT Focus Breakdown</h4>
                     {[
-                      { name: "Legal Reasoning", value: 92, color: "from-brand-blue-500 to-cyan-500" },
-                      { name: "Logical Reasoning", value: 85, color: "from-brand-purple-500 to-pink-500" },
-                      { name: "Current Affairs & GK", value: 96, color: "from-brand-gold-500 to-amber-500" },
+                      { name: "Legal Reasoning", value: 92 },
+                      { name: "Logical Reasoning", value: 85 },
+                      { name: "Current Affairs & GK", value: 96 },
                     ].map((sec) => (
                       <div key={sec.name} className="space-y-1">
                         <div className="flex justify-between text-[11px]">
@@ -181,7 +178,7 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
                             initial={{ width: 0 }}
                             animate={{ width: `${sec.value}%` }}
                             transition={{ duration: 1.5, delay: 0.8 }}
-                            className={`h-full rounded-full bg-gradient-to-r ${sec.color}`}
+                            className="h-full rounded-full bg-brand-gold-500"
                           />
                         </div>
                       </div>
@@ -189,10 +186,10 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
                   </div>
 
                   {/* Static Mock Test Timer Pill */}
-                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-gradient-to-r from-brand-blue-950 to-brand-navy-950 border border-brand-blue-500/10 mt-4">
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-brand-navy-950 border border-white/5 mt-4">
                     <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-                      <span className="text-xs font-medium text-slate-300">Active Test Simulation</span>
+                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                      <span className="text-xs font-medium text-slate-350">Active Test Simulation</span>
                     </div>
                     <span className="text-xs font-bold text-white font-mono">01:42:15</span>
                   </div>

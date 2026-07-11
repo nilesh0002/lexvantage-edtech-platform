@@ -231,7 +231,16 @@ export default function Navbar({
             </div>
 
             {/* Mobile Actions & Hamburger */}
-            <div className="flex items-center gap-2 md:hidden">
+            <div className="flex items-center gap-1.5 md:hidden">
+              {/* Mobile Theme Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-xl text-slate-350 hover:text-white hover:bg-white/5 transition-colors border border-white/10"
+                title="Toggle Theme"
+              >
+                {theme === "dark" ? <Sun className="w-5 h-5 text-brand-gold-500" /> : <Moon className="w-5 h-5 text-brand-gold-500" />}
+              </button>
+
               <button
                 onClick={onOpenWishlist}
                 className="relative p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
@@ -270,7 +279,7 @@ export default function Navbar({
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-3.5 rounded-xl text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px]"
                 >
                   {link.name}
                 </Link>
@@ -286,7 +295,7 @@ export default function Navbar({
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+                      className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px]"
                     >
                       <Icon className="w-5 h-5 text-brand-blue-500" />
                       {item.name}
@@ -301,7 +310,7 @@ export default function Navbar({
                   <>
                     <Link
                       href="/dashboard"
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-base font-semibold bg-white/5 hover:bg-white/10 text-white transition-colors"
+                      className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-base font-bold bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-colors min-h-[48px]"
                     >
                       <LayoutDashboard className="w-5 h-5 text-brand-blue-500" />
                       Dashboard Portal
@@ -311,7 +320,7 @@ export default function Navbar({
                         onLogout();
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full py-3 rounded-xl text-base font-semibold text-rose-400 hover:bg-rose-500/5 transition-colors border border-rose-500/20"
+                      className="w-full py-3 rounded-lg text-base font-bold text-rose-450 hover:bg-rose-500/5 transition-colors border border-rose-500/10 min-h-[48px]"
                     >
                       Sign Out
                     </button>
@@ -323,7 +332,7 @@ export default function Navbar({
                         onOpenAuth("login");
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full py-3 rounded-xl text-base font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+                      className="w-full py-3 rounded-lg text-base font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px]"
                     >
                       Sign In
                     </button>
@@ -332,9 +341,8 @@ export default function Navbar({
                         onOpenAuth("signup");
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full py-3 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 text-center flex items-center justify-center gap-2"
+                      className="w-full min-h-[48px] py-3 rounded-lg text-base font-bold text-brand-navy-955 bg-brand-gold-500 hover:bg-brand-gold-600 text-center flex items-center justify-center gap-2 cursor-pointer"
                     >
-                      <Sparkles className="w-5 h-5 text-brand-gold-400" />
                       Start Free Trial
                     </button>
                   </>

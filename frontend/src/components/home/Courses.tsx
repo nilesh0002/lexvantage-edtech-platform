@@ -72,10 +72,10 @@ export default function Courses({
               <button
                 key={f.id}
                 onClick={() => setSelectedFilter(f.id)}
-                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                className={`min-h-[44px] px-4 py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
                   selectedFilter === f.id
-                    ? "bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 text-white shadow-md shadow-brand-blue-500/10"
-                    : "text-slate-400 hover:text-white hover:bg-white/5"
+                    ? "bg-brand-gold-500 text-brand-navy-950 border-brand-gold-500"
+                    : "text-slate-350 hover:text-white hover:bg-white/5 border-white/5"
                 }`}
               >
                 {f.label}
@@ -160,7 +160,7 @@ export default function Courses({
 
                     <button
                       onClick={() => setCheckoutCourse(course)}
-                      className="px-5 py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-semibold text-xs tracking-wide transition-all shadow-md shadow-brand-blue-600/10 flex items-center gap-1 group-hover:shadow-brand-blue-600/20"
+                      className="min-h-[48px] px-5 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wide transition-all flex items-center gap-1 cursor-pointer"
                     >
                       Enroll Now
                       <ChevronRight className="w-4 h-4" />
