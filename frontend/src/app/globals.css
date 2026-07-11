@@ -9,14 +9,14 @@
   --color-brand-navy-900: var(--bg-navy-900);
   --color-brand-navy-800: var(--bg-navy-800);
   --color-brand-navy-700: var(--bg-navy-700);
-  --color-brand-blue-600: #1a56db;
+  --color-brand-blue-600: #1e3a8a;
   --color-brand-blue-500: var(--primary-accent);
-  --color-brand-purple-600: #7c3aed;
-  --color-brand-purple-500: #a78bfa;
-  --color-brand-pink-500: #ec4899;
-  --color-brand-gold-500: #fbbf24;
+  --color-brand-purple-600: #14b8a6;
+  --color-brand-purple-500: #2dd4bf;
+  --color-brand-pink-500: #0d9488;
+  --color-brand-gold-500: #f59e0b;
   --color-brand-gold-600: #d97706;
-  --color-brand-gold-400: #fde047;
+  --color-brand-gold-400: #fcd34d;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -41,7 +41,7 @@
 
 :root {
   --background: #f8fafc;
-  --foreground: #0f172a;
+  --foreground: #1e3a8a;
   
   --bg-navy-955: #ffffff;
   --bg-navy-950: #f8fafc;
@@ -52,7 +52,7 @@
   --accent-gray: #64748b;
   --accent-gray-dark: #334155;
   --accent-gray-light: #cbd5e1;
-  --accent-white-black: #0f172a;
+  --accent-white-black: #1e3a8a;
   
   --primary-accent: #2563eb;
   --primary-accent-hover: #1d4ed8;
@@ -60,14 +60,14 @@
 }
 
 html.dark {
-  --background: #050814;
+  --background: #0f172a;
   --foreground: #f8fafc;
   
-  --bg-navy-955: #02040a;
-  --bg-navy-950: #050814;
-  --bg-navy-900: #0b1329;
-  --bg-navy-800: #111a36;
-  --bg-navy-700: #1c2a54;
+  --bg-navy-955: #0b0f19;
+  --bg-navy-950: #0f172a;
+  --bg-navy-900: #1e293b;
+  --bg-navy-800: #334155;
+  --bg-navy-700: #475569;
   
   --accent-gray: #475569;
   --accent-gray-dark: #1e293b;
@@ -90,12 +90,12 @@ html.dark {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-navy-700);
+  background: var(--accent-gray);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-gray);
+  background: var(--accent-gray-light);
 }
 
 body {
@@ -107,7 +107,7 @@ body {
 
 /* Glassmorphism utility classes */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(30, 41, 59, 0.45);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -118,7 +118,7 @@ body {
 }
 
 .glass-panel-hover:hover {
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(30, 41, 59, 0.65);
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
   transform: translateY(-2px);
@@ -130,7 +130,7 @@ body {
 }
 
 .glow-purple {
-  box-shadow: 0 0 40px -5px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 40px -5px rgba(20, 184, 166, 0.2);
 }
 
 .glow-gold {
@@ -138,7 +138,7 @@ body {
 }
 
 .text-gradient-purple-blue {
-  background: linear-gradient(135deg, #a78bfa 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #2dd4bf 0%, #2563eb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -157,11 +157,11 @@ body {
 html:not(.dark) {
   /* Make global backgrounds pure white / light gray */
   --background: #f8fafc;
-  --foreground: #0f172a;
+  --foreground: #1e3a8a;
 }
 
 html:not(.dark) .text-white {
-  color: #0f172a !important;
+  color: #1e3a8a !important;
 }
 
 html:not(.dark) .text-slate-100,
