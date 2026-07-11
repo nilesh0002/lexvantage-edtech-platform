@@ -12,11 +12,11 @@ export interface Educator {
 
 export const facultyData: Educator[] = [
   {
-    name: "Adv. Meera Sharma",
-    role: "Founder & Master Law Educator",
-    credentials: "NLSIU Bangalore (B.A. LL.B. Hons.) • BCL, Oxford University",
-    bio: "Former Supreme Court advocate with 12+ years of CLAT mentoring experience. Having cracked CLAT herself and mentored 1,500+ NLU qualifiers, she personally teaches and guides students across all core subjects—Legal Aptitude, Logical Reasoning, English, and Current Affairs.",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=meera",
+    name: "Shreya Nadar",
+    role: "Founder & Lead Law Mentor",
+    credentials: "BLS LL.B Candidate (D.Y. Patil College of Law) • Company Secretary (ICSI)",
+    bio: "Detail-oriented professional with experience as a Legal Aid Officer at Belapur Court and content developer for InAmigos Foundation. Currently pursuing BLS LL.B to enhance legal knowledge through practical engagement, Shreya brings strong research, drafting, and compliance skills to guide aspirants into top law colleges.",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=shreya",
     specialtyIcon: Scale,
   }
 ];
