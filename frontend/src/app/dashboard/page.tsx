@@ -778,7 +778,9 @@ export default function StudentDashboard() {
                         <span className="text-[10px] text-slate-500 block uppercase font-bold">Max Marks</span>
                         <span className="text-white font-bold text-sm">5.00</span>
                       </div>
-                                        <button
+                    </div>
+
+                    <button
                       onClick={handleStartTest}
                       className="min-h-[48px] px-8 py-3.5 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-955 font-bold text-sm tracking-wider transition-all cursor-pointer"
                     >
@@ -990,7 +992,7 @@ export default function StudentDashboard() {
                     <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/5">
                       <button
                         onClick={handleStartTest}
-                        className="w-full sm:w-1/2 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-slate-300 font-bold text-xs"
+                        className="min-h-[48px] w-full sm:w-1/2 py-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-slate-350 font-bold text-xs cursor-pointer"
                       >
                         Retake Test
                       </button>
@@ -1000,10 +1002,10 @@ export default function StudentDashboard() {
                           setTestResult(null);
                           setActiveTab("overview");
                         }}
-                        className="w-full sm:w-1/2 py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-xs transition-all flex items-center justify-center gap-1"
+                        className="min-h-[48px] w-full sm:w-1/2 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-955 font-bold text-xs transition-all flex items-center justify-center gap-1 cursor-pointer"
                       >
                         Unlock Scholar Certificate
-                        <Award className="w-4 h-4 text-brand-gold-500" />
+                        <Award className="w-4 h-4 text-brand-navy-955" />
                       </button>
                     </div>
                   </div>
@@ -1024,10 +1026,8 @@ export default function StudentDashboard() {
                 {/* Chat header */}
                 <div className="px-6 py-4 bg-brand-navy-950/80 border-b border-white/5 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-purple-600 to-brand-blue-500 p-0.5 flex items-center justify-center shadow-md">
-                      <div className="w-full h-full rounded-[10px] bg-brand-navy-950 flex items-center justify-center">
-                        <BrainCircuit className="w-4.5 h-4.5 text-brand-purple-500 animate-pulse" />
-                      </div>
+                    <div className="w-9 h-9 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center">
+                      <BrainCircuit className="w-4.5 h-4.5 text-brand-gold-500 animate-pulse" />
                     </div>
                     <div>
                       <h3 className="text-white font-serif font-bold text-sm leading-none">Vantage AI Law Tutor</h3>
@@ -1130,7 +1130,7 @@ export default function StudentDashboard() {
 
                     <button
                       onClick={handleStartQuiz}
-                      className="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-xs tracking-wider transition-all"
+                      className="min-h-[48px] px-6 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-955 font-bold text-xs tracking-wider transition-all cursor-pointer"
                     >
                       Enter Quiz Arena
                     </button>
@@ -1142,7 +1142,7 @@ export default function StudentDashboard() {
                     {/* Header */}
                     <div className="flex justify-between items-center border-b border-white/5 pb-4">
                       <div>
-                        <span className="text-[9px] uppercase font-bold text-brand-purple-400 font-mono">Arena Question {quizIndex + 1} of {quizQuestions.length}</span>
+                        <span className="text-[9px] uppercase font-bold text-brand-gold-500 font-mono">Arena Question {quizIndex + 1} of {quizQuestions.length}</span>
                         <h4 className="text-white font-bold text-xs mt-0.5">Rapid Challenge</h4>
                       </div>
 
@@ -1168,9 +1168,9 @@ export default function StudentDashboard() {
                           const isSelected = quizSelected === opt;
                           const isCorrect = opt === quizQuestions[quizIndex].ans;
                           
-                          let btnClass = "border-white/5 bg-white/5 text-slate-300 hover:bg-white/10";
+                          let btnClass = "border-white/5 bg-white/5 text-slate-350 hover:bg-white/10";
                           if (isSelected && !quizFeedback) {
-                            btnClass = "border-brand-blue-500 bg-brand-blue-500/10 text-white";
+                            btnClass = "border-brand-gold-500 bg-brand-gold-500/5 text-white font-bold";
                           } else if (quizFeedback) {
                             if (isCorrect) btnClass = "border-emerald-500/40 bg-emerald-500/10 text-emerald-400";
                             else if (isSelected) btnClass = "border-rose-500/40 bg-rose-500/10 text-rose-450";
@@ -1182,7 +1182,7 @@ export default function StudentDashboard() {
                               key={opt}
                               onClick={() => handleQuizOption(opt)}
                               disabled={quizFeedback !== null}
-                              className={`w-full text-left p-3.5 rounded-xl border text-xs font-medium transition-all ${btnClass}`}
+                              className={`w-full text-left p-3.5 rounded-lg border text-xs font-medium min-h-[48px] transition-all cursor-pointer ${btnClass}`}
                             >
                               {opt}
                             </button>
@@ -1250,14 +1250,14 @@ export default function StudentDashboard() {
                           max="100"
                           value={boardMarks}
                           onChange={(e) => setBoardMarks(parseInt(e.target.value))}
-                          className="w-full accent-brand-blue-500 bg-white/10 rounded-lg appearance-none h-1.5"
+                          className="w-full accent-white bg-white/10 rounded-lg appearance-none h-1.5"
                         />
                       </div>
 
                       {/* Mock Percentile Slider */}
                       <div className="space-y-2">
                         <div className="flex justify-between text-xs">
-                          <span className="text-slate-300 font-semibold">Mock Entrance Percentile</span>
+                          <span className="text-slate-350 font-semibold">Mock Entrance Percentile</span>
                           <span className="text-white font-bold">{targetPercentile}th Percentile</span>
                         </div>
                         <input
@@ -1266,14 +1266,14 @@ export default function StudentDashboard() {
                           max="100"
                           value={targetPercentile}
                           onChange={(e) => setTargetPercentile(parseInt(e.target.value))}
-                          className="w-full accent-brand-purple-500 bg-white/10 rounded-lg appearance-none h-1.5"
+                          className="w-full accent-white bg-white/10 rounded-lg appearance-none h-1.5"
                         />
                       </div>
                     </div>
 
                     <button
                       onClick={handleCalculateScholarship}
-                      className="w-full py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-xs transition-all shadow-md"
+                      className="min-h-[48px] w-full py-3 rounded-lg bg-white text-black font-bold text-xs tracking-wider transition-all cursor-pointer hover:bg-slate-200"
                     >
                       Compute Fee Waiver
                     </button>
@@ -1284,11 +1284,11 @@ export default function StudentDashboard() {
                     {scholarshipResult ? (
                       <div className="space-y-6">
                         <div className="text-center space-y-1.5">
-                          <Award className="w-10 h-10 text-brand-gold-500 mx-auto fill-brand-gold-500/5 animate-pulse" />
+                          <Award className="w-10 h-10 text-white mx-auto fill-white/10 animate-pulse" />
                           <h4 className="text-2xl font-serif font-extrabold text-white">
                             {scholarshipResult.waiver}% Scholarship
                           </h4>
-                          <span className="text-[10px] text-brand-gold-500 font-bold uppercase tracking-wider block">Awarded and Approved</span>
+                          <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Awarded and Approved</span>
                         </div>
 
                         <div className="space-y-2 border-t border-b border-white/5 py-4 text-xs">
@@ -1296,7 +1296,7 @@ export default function StudentDashboard() {
                             <span className="text-slate-400">Regular Tuition:</span>
                             <span className="text-white font-bold">₹64,999</span>
                           </div>
-                          <div className="flex justify-between text-emerald-450">
+                          <div className="flex justify-between text-emerald-400">
                             <span>Scholarship Waiver:</span>
                             <span>- ₹{scholarshipResult.discount.toLocaleString()}</span>
                           </div>
@@ -1308,7 +1308,7 @@ export default function StudentDashboard() {
 
                         <button
                           onClick={() => alert("Scholarship claimed! We have reserved your seats for the next 48 hours.")}
-                          className="w-full py-3 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-400 text-brand-navy-950 font-bold text-xs tracking-wider transition-all shadow-md shadow-brand-gold-500/20"
+                          className="min-h-[48px] w-full py-3 rounded-lg bg-white text-black font-bold text-xs tracking-wider transition-all cursor-pointer hover:bg-slate-200"
                         >
                           Lock Net Scholarship Cost
                         </button>
