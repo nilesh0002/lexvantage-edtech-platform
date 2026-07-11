@@ -253,3 +253,16 @@ html:not(.dark) .glass-panel-hover:hover {
   border-color: rgba(15, 23, 42, 0.12) !important;
   box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1) !important;
 }
+
+/* Responsive Root Font Scaling for Native-App Feel on Mobile Phones */
+@media (max-width: 767px) {
+  html {
+    font-size: 90.625% !important; /* Scales base rem down from 16px to 14.5px */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 87.5% !important; /* Scales base rem down to 14px on smaller smartphones */
+  }
+}
