@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
 
           <div className="space-y-6 text-sm leading-relaxed font-light">
             <p>
-              LexVantage ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by LexVantage.
+              JurisPath ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by JurisPath.
             </p>
 
             <h2 className="text-lg font-serif font-bold text-white pt-4">1. Information We Collect</h2>
@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-lg font-serif font-bold text-white pt-4">3. Security Standards</h2>
             <p>
-              All traffic inside the LexVantage portal operates under SSL encryption standards. Access to student answer sheets and academic analytics is restricted to authorized faculty and personal coaches.
+              All traffic inside the JurisPath portal operates under SSL encryption standards. Access to student answer sheets and academic analytics is restricted to authorized faculty and personal coaches.
             </p>
           </div>
 

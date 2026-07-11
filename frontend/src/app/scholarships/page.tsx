@@ -22,7 +22,7 @@ export default function Scholarships() {
               Vantage Scholarship Test
             </span>
             <h1 className="text-4xl font-serif font-bold text-white">
-              LexVantage Merit Scholars Program
+              JurisPath Merit Scholars Program
             </h1>
             <p className="text-slate-400 text-sm font-light">
               We reward academic excellence. Earn up to 100% tuition waivers for our premium CLAT, AILET, and NLU preparation courses.
@@ -42,7 +42,7 @@ export default function Scholarships() {
               <ul className="space-y-3.5">
                 {[
                   "Class 12th Board Score (>=95% unlocks 40% waiver)",
-                  "LexVantage Scholarship Entrance Mocks (AIR percentile)",
+                  "JurisPath Scholarship Entrance Mocks (AIR percentile)",
                   "State quota reservation categories (SC/ST/OBC support)",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">

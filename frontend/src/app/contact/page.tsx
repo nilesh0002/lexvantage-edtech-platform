@@ -66,7 +66,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-white font-serif font-bold text-base">Admissions Desk</h4>
                   <p className="text-slate-400 text-xs mt-1 font-light">
-                    admissions@lexvantage.in
+                    admissions@jurispath.in
                   </p>
                 </div>
               </div>

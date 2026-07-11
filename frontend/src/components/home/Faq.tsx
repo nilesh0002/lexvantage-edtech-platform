@@ -11,7 +11,7 @@ interface FaqItem {
 
 const faqData: FaqItem[] = [
   {
-    question: "Who is eligible to join the LexVantage coaching cohorts?",
+    question: "Who is eligible to join the JurisPath coaching cohorts?",
     answer: "Our classes are architected for aspirants targeting CLAT, AILET, SLAT, and MH CET Law. We have custom curriculums designed specifically for Class 11 students (2-Year Program), Class 12 students (1-Year Foundation), and Droppers (Elite Repeaters Batch).",
   },
   {
@@ -28,7 +28,7 @@ const faqData: FaqItem[] = [
   },
   {
     question: "What is your doubt-resolution system's turnaround time?",
-    answer: "LexVantage has a dedicated 24/7 doubt resolution team. Students can upload screenshots or type text queries directly inside the dashboard. Over 92% of doubts receive comprehensive step-by-step video explanations within 15 minutes.",
+    answer: "JurisPath has a dedicated 24/7 doubt resolution team. Students can upload screenshots or type text queries directly inside the dashboard. Over 92% of doubts receive comprehensive step-by-step video explanations within 15 minutes.",
   },
 ];
 
