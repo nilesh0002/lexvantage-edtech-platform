@@ -547,13 +547,13 @@ export default function StudentDashboard() {
                             subject: "Logical Reasoning",
                             accuracy: selectedAnswers[3] ? (selectedAnswers[3] === "B" ? 100 : 0) : 0,
                             speed: "Moderate",
-                            color: "bg-brand-purple-500",
+                            color: "bg-brand-purple-600",
                           },
                           {
                             subject: "English Language",
                             accuracy: selectedAnswers[4] ? (selectedAnswers[4] === "C" ? 100 : 0) : 0,
                             speed: "Fast",
-                            color: "bg-cyan-500",
+                            color: "bg-brand-blue-600",
                           },
                           {
                             subject: "General Knowledge",
@@ -565,7 +565,7 @@ export default function StudentDashboard() {
                             subject: "Quantitative Techniques",
                             accuracy: selectedAnswers[5] ? (selectedAnswers[5] === "A" ? 100 : 0) : 0,
                             speed: "Slow",
-                            color: "bg-rose-500",
+                            color: "bg-brand-purple-500",
                           },
                         ].map((item) => (
                           <div key={item.subject} className="space-y-1">

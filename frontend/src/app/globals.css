@@ -4,18 +4,19 @@
   --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-serif), Georgia, serif;
   
+  --color-brand-navy-955: var(--bg-navy-955);
   --color-brand-navy-950: var(--bg-navy-950);
   --color-brand-navy-900: var(--bg-navy-900);
   --color-brand-navy-800: var(--bg-navy-800);
   --color-brand-navy-700: var(--bg-navy-700);
-  --color-brand-blue-600: var(--accent-gray-dark);
-  --color-brand-blue-500: var(--accent-white-black);
-  --color-brand-purple-600: var(--accent-gray-dark);
-  --color-brand-purple-500: var(--accent-gray-light);
-  --color-brand-pink-500: var(--accent-gray);
-  --color-brand-gold-500: var(--primary-accent);
-  --color-brand-gold-600: var(--primary-accent-hover);
-  --color-brand-gold-400: var(--primary-accent-subtle);
+  --color-brand-blue-600: #1a56db;
+  --color-brand-blue-500: var(--primary-accent);
+  --color-brand-purple-600: #7c3aed;
+  --color-brand-purple-500: #a78bfa;
+  --color-brand-pink-500: #ec4899;
+  --color-brand-gold-500: #fbbf24;
+  --color-brand-gold-600: #d97706;
+  --color-brand-gold-400: #fde047;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -39,43 +40,43 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #09090b;
+  --background: #f8fafc;
+  --foreground: #0f172a;
   
   --bg-navy-955: #ffffff;
-  --bg-navy-950: #ffffff;
-  --bg-navy-900: #fafafa;
-  --bg-navy-800: #f4f4f5;
-  --bg-navy-700: #e4e4e7;
+  --bg-navy-950: #f8fafc;
+  --bg-navy-900: #ffffff;
+  --bg-navy-800: #f1f5f9;
+  --bg-navy-700: #e2e8f0;
   
-  --accent-gray: #a1a1aa;
-  --accent-gray-dark: #71717a;
-  --accent-gray-light: #d4d4d8;
-  --accent-white-black: #09090b;
+  --accent-gray: #64748b;
+  --accent-gray-dark: #334155;
+  --accent-gray-light: #cbd5e1;
+  --accent-white-black: #0f172a;
   
-  --primary-accent: #09090b;
-  --primary-accent-hover: #27272a;
-  --primary-accent-subtle: #71717a;
+  --primary-accent: #2563eb;
+  --primary-accent-hover: #1d4ed8;
+  --primary-accent-subtle: #93c5fd;
 }
 
 html.dark {
-  --background: #000000;
-  --foreground: #fafafa;
+  --background: #050814;
+  --foreground: #f8fafc;
   
-  --bg-navy-955: #000000;
-  --bg-navy-950: #000000;
-  --bg-navy-900: #09090b;
-  --bg-navy-800: #18181b;
-  --bg-navy-700: #27272a;
+  --bg-navy-955: #02040a;
+  --bg-navy-950: #050814;
+  --bg-navy-900: #0b1329;
+  --bg-navy-800: #111a36;
+  --bg-navy-700: #1c2a54;
   
-  --accent-gray: #3f3f46;
-  --accent-gray-dark: #27272a;
-  --accent-gray-light: #52525b;
+  --accent-gray: #475569;
+  --accent-gray-dark: #1e293b;
+  --accent-gray-light: #334155;
   --accent-white-black: #ffffff;
   
-  --primary-accent: #ffffff;
-  --primary-accent-hover: #e4e4e7;
-  --primary-accent-subtle: #a1a1aa;
+  --primary-accent: #3b82f6;
+  --primary-accent-hover: #60a5fa;
+  --primary-accent-subtle: #2563eb;
 }
 
 /* Custom Scrollbar for premium dark mode */
@@ -155,43 +156,43 @@ body {
 /* Light Mode Global Layout Overrides (when html does not have the .dark class) */
 html:not(.dark) {
   /* Make global backgrounds pure white / light gray */
-  --background: #ffffff;
-  --foreground: #09090b;
+  --background: #f8fafc;
+  --foreground: #0f172a;
 }
 
 html:not(.dark) .text-white {
-  color: #09090b !important;
+  color: #0f172a !important;
 }
 
 html:not(.dark) .text-slate-100,
 html:not(.dark) .text-slate-150,
 html:not(.dark) .text-slate-200 {
-  color: #18181b !important;
+  color: #1e293b !important;
 }
 
 html:not(.dark) .text-slate-300 {
-  color: #27272a !important;
+  color: #334155 !important;
 }
 
 html:not(.dark) .text-slate-400 {
-  color: #4b5563 !important;
+  color: #475569 !important;
 }
 
 html:not(.dark) .text-slate-450 {
-  color: #4b5563 !important;
+  color: #475569 !important;
 }
 
 html:not(.dark) .text-slate-500 {
-  color: #6b7280 !important;
+  color: #64748b !important;
 }
 
 /* Semi-transparent backgrounds dynamic shift */
 html:not(.dark) .bg-white\/5 {
-  background-color: rgba(9, 9, 11, 0.04) !important;
+  background-color: rgba(15, 23, 42, 0.04) !important;
 }
 
 html:not(.dark) .bg-white\/10 {
-  background-color: rgba(9, 9, 11, 0.07) !important;
+  background-color: rgba(15, 23, 42, 0.07) !important;
 }
 
 /* Semi-transparent borders dynamic shift */
@@ -199,24 +200,24 @@ html:not(.dark) .border-white\/5,
 html:not(.dark) .border-white\/10,
 html:not(.dark) .border-white\/15,
 html:not(.dark) .border-white\/20 {
-  border-color: rgba(9, 9, 11, 0.08) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
 }
 
 /* Dividers dynamic shift */
 html:not(.dark) .divide-white\/5,
 html:not(.dark) .divide-white\/10 {
-  border-color: rgba(9, 9, 11, 0.08) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
 }
 
 /* Glassmorphism panel transformation */
 html:not(.dark) .glass-panel {
   background: rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(9, 9, 11, 0.08) !important;
-  box-shadow: 0 4px 20px -2px rgba(9, 9, 11, 0.05) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
 }
 
 html:not(.dark) .glass-panel-hover:hover {
   background: rgba(255, 255, 255, 0.95) !important;
-  border-color: rgba(9, 9, 11, 0.12) !important;
-  box-shadow: 0 10px 30px -10px rgba(9, 9, 11, 0.1) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1) !important;
 }
