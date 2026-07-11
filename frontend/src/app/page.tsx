@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { Home as HomeIcon, GraduationCap, Play, User, LayoutDashboard } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/home/Hero";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -29,6 +31,8 @@ export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userProfile, setUserProfile] = useState<string | null>(null);
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
+  const router = useRouter();
+  const [activeMobileTab, setActiveMobileTab] = useState<"home" | "courses" | "prep" | "mentor">("home");
 
   // Sync auth state with localStorage if client side
   useEffect(() => {
@@ -110,39 +114,109 @@ export default function Home() {
         onOpenWishlist={() => setIsWishlistOpen(true)}
       />
 
-      {/* Main Page Layout */}
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <Hero
-          onStartFree={() => handleOpenAuth("signup")}
-          onBookDemo={() => handleOpenAuth("login")}
-        />
+      {/* Main Page Layout (Desktop Full Scroll / Mobile Tabbed Layout) */}
+      <main className="flex-grow pb-20 md:pb-0">
+        
+        {/* Desktop View: Full Scrolling Sections list */}
+        <div className="hidden md:block">
+          {/* Hero Section */}
+          <Hero
+            onStartFree={() => handleOpenAuth("signup")}
+            onBookDemo={() => handleOpenAuth("login")}
+          />
+          <WhyChooseUs />
+          <Courses
+            wishlist={wishlist.map((c) => c.id)}
+            onToggleWishlist={handleToggleWishlist}
+            onEnroll={(c) => handleEnrollSuccess(c.id)}
+          />
+          <MockTestPreview onStartFullMock={() => handleOpenAuth("signup")} />
+          <Faculty />
+          <CurrentAffairsPreview />
+          <Faq />
+          <Footer />
+        </div>
 
-        {/* Why Choose Us features */}
-        <WhyChooseUs />
+        {/* Mobile View: Dynamic PW-Style Tabbed segments */}
+        <div className="md:hidden">
+          {activeMobileTab === "home" && (
+            <div className="space-y-1">
+              <Hero
+                onStartFree={() => handleOpenAuth("signup")}
+                onBookDemo={() => handleOpenAuth("login")}
+              />
+              <WhyChooseUs />
+              <Faq />
+              <Footer />
+            </div>
+          )}
 
-        {/* Courses listing section */}
-        <Courses
-          wishlist={wishlist.map((c) => c.id)}
-          onToggleWishlist={handleToggleWishlist}
-          onEnroll={(c) => handleEnrollSuccess(c.id)}
-        />
+          {activeMobileTab === "courses" && (
+            <div className="pt-2">
+              <Courses
+                wishlist={wishlist.map((c) => c.id)}
+                onToggleWishlist={handleToggleWishlist}
+                onEnroll={(c) => handleEnrollSuccess(c.id)}
+              />
+              <Footer />
+            </div>
+          )}
 
-        {/* Mock Test Portal Preview */}
-        <MockTestPreview onStartFullMock={() => handleOpenAuth("signup")} />
+          {activeMobileTab === "prep" && (
+            <div className="pt-2 space-y-4">
+              <MockTestPreview onStartFullMock={() => handleOpenAuth("signup")} />
+              <CurrentAffairsPreview />
+              <Footer />
+            </div>
+          )}
 
-        {/* Faculty board */}
-        <Faculty />
-
-        {/* Daily Current affairs */}
-        <CurrentAffairsPreview />
-
-        {/* FAQ panel */}
-        <Faq />
+          {activeMobileTab === "mentor" && (
+            <div className="pt-2">
+              <Faculty />
+              <Footer />
+            </div>
+          )}
+        </div>
       </main>
 
-      {/* Footer */}
-      <Footer />
+      {/* Sticky Bottom Navigation Bar for Mobile (PW-style App Navigation) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-brand-navy-950/95 border-t border-white/10 backdrop-blur-md py-2 px-6 flex justify-between items-center shadow-lg">
+        {[
+          { id: "home", label: "Home", icon: HomeIcon },
+          { id: "courses", label: "Courses", icon: GraduationCap },
+          { id: "prep", label: "Free Prep", icon: Play },
+          { id: "mentor", label: "Mentor", icon: User },
+        ].map((tab) => {
+          const Icon = tab.icon;
+          const isActive = activeMobileTab === tab.id;
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveMobileTab(tab.id as any)}
+              className="flex flex-col items-center justify-center gap-1 cursor-pointer py-1 text-center"
+            >
+              <Icon className={`w-5 h-5 transition-colors ${isActive ? "text-brand-gold-500" : "text-slate-500"}`} />
+              <span className={`text-[10px] font-bold tracking-wider ${isActive ? "text-brand-gold-500" : "text-slate-500"}`}>
+                {tab.label}
+              </span>
+            </button>
+          );
+        })}
+        {/* Direct dashboard portal access */}
+        <button
+          onClick={() => {
+            if (isLoggedIn) {
+              router.push("/dashboard");
+            } else {
+              handleOpenAuth("login");
+            }
+          }}
+          className="flex flex-col items-center justify-center gap-1 cursor-pointer py-1 text-center"
+        >
+          <LayoutDashboard className="w-5 h-5 text-slate-550" />
+          <span className="text-[10px] font-bold tracking-wider text-slate-550">Portal</span>
+        </button>
+      </div>
 
       {/* Slide-over Wishlist Drawer */}
       <WishlistDrawer
