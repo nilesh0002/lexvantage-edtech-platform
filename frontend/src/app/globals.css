@@ -4,18 +4,18 @@
   --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-serif), Georgia, serif;
   
-  --color-brand-navy-950: #020617;
-  --color-brand-navy-900: #0a0f24;
-  --color-brand-navy-800: #0f172a;
-  --color-brand-navy-700: #1e293b;
-  --color-brand-blue-600: #2563eb;
-  --color-brand-blue-500: #3b82f6;
-  --color-brand-purple-600: #7c3aed;
-  --color-brand-purple-500: #8b5cf6;
-  --color-brand-pink-500: #d946ef;
-  --color-brand-gold-500: #f59e0b;
-  --color-brand-gold-600: #d97706;
-  --color-brand-gold-400: #fbbf24;
+  --color-brand-navy-950: #04060f;
+  --color-brand-navy-900: #090d1a;
+  --color-brand-navy-800: #0f1626;
+  --color-brand-navy-700: #1b2536;
+  --color-brand-blue-600: #1e3a8a;
+  --color-brand-blue-500: #3a75c4;
+  --color-brand-purple-600: #4c1d95;
+  --color-brand-purple-500: #6d28d9;
+  --color-brand-pink-500: #be185d;
+  --color-brand-gold-500: #c5a059;
+  --color-brand-gold-600: #9a783e;
+  --color-brand-gold-400: #e3d2b0;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
