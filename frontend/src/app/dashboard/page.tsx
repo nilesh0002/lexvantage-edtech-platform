@@ -778,11 +778,9 @@ export default function StudentDashboard() {
                         <span className="text-[10px] text-slate-500 block uppercase font-bold">Max Marks</span>
                         <span className="text-white font-bold text-sm">5.00</span>
                       </div>
-                    </div>
-
-                    <button
+                                        <button
                       onClick={handleStartTest}
-                      className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-sm tracking-wider transition-all"
+                      className="min-h-[48px] px-8 py-3.5 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-955 font-bold text-sm tracking-wider transition-all cursor-pointer"
                     >
                       Start Test Simulation
                     </button>
@@ -829,15 +827,15 @@ export default function StudentDashboard() {
                               <button
                                 key={opt.id}
                                 onClick={() => handleOptionSelect(mockQuestions[activeQuestionIdx].id, opt.id)}
-                                className={`w-full text-left p-4 rounded-xl border text-xs leading-relaxed transition-all flex items-start gap-3 ${
+                                className={`w-full text-left p-4 rounded-lg border text-xs leading-relaxed transition-all flex items-start gap-3 cursor-pointer min-h-[48px] ${
                                   isSelected
-                                    ? "bg-brand-blue-500/5 border-brand-blue-500/65 text-white shadow-lg"
-                                    : "bg-white/5 border-white/5 text-slate-350 hover:bg-white/10 hover:border-white/10"
+                                    ? "bg-brand-gold-500/5 border-brand-gold-500 text-white font-bold"
+                                    : "bg-white/5 border-white/5 text-slate-355 hover:bg-white/10 hover:border-white/10"
                                 }`}
                               >
                                 <span className={`w-5 h-5 rounded-lg border text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5 ${
                                   isSelected
-                                    ? "bg-brand-blue-500 border-brand-blue-500 text-white"
+                                    ? "bg-brand-gold-500 border-brand-gold-500 text-brand-navy-955"
                                     : "border-white/15 bg-brand-navy-950 text-slate-400"
                                 }`}>
                                   {opt.id}
@@ -849,37 +847,37 @@ export default function StudentDashboard() {
                         </div>
 
                         {/* Navigation Footer */}
-                        <div className="flex justify-between items-center pt-4 border-t border-white/5">
+                        <div className="flex flex-col sm:flex-row gap-3 justify-between items-stretch sm:items-center pt-4 border-t border-white/5">
                           <button
                             onClick={() => toggleFlag(mockQuestions[activeQuestionIdx].id)}
-                            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all border ${
+                            className={`min-h-[44px] px-4 py-2 rounded-lg text-xs font-semibold transition-all border cursor-pointer ${
                               flaggedQuestions.includes(mockQuestions[activeQuestionIdx].id)
-                                ? "bg-brand-purple-500/10 border-brand-purple-500/30 text-brand-purple-400"
-                                : "bg-white/5 border-white/10 text-slate-400 hover:text-white"
+                                ? "bg-white/10 border-white/20 text-white font-bold"
+                                : "bg-white/5 border-white/10 text-slate-350 hover:text-white"
                             }`}
                           >
-                            {flaggedQuestions.includes(mockQuestions[activeQuestionIdx].id) ? "Flagged for Review" : "Flag Question"}
+                            {flaggedQuestions.includes(mockQuestions[activeQuestionIdx].id) ? "✓ Flagged for Review" : "Flag Question"}
                           </button>
 
-                          <div className="flex gap-2">
+                          <div className="flex gap-2 w-full sm:w-auto">
                             <button
                               disabled={activeQuestionIdx === 0}
                               onClick={() => setActiveQuestionIdx((prev) => prev - 1)}
-                              className="px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/10 text-slate-300 disabled:opacity-30 disabled:pointer-events-none transition-all"
+                              className="flex-grow sm:flex-grow-0 min-h-[44px] px-4 py-2 rounded-lg text-xs font-semibold bg-white/5 border border-white/5 hover:bg-white/10 text-slate-300 disabled:opacity-30 disabled:pointer-events-none transition-all cursor-pointer"
                             >
                               Prev
                             </button>
                             {activeQuestionIdx < mockQuestions.length - 1 ? (
                               <button
                                 onClick={() => setActiveQuestionIdx((prev) => prev + 1)}
-                                className="px-5 py-2 rounded-xl text-xs font-bold bg-brand-blue-600 hover:bg-brand-blue-500 text-white transition-all"
+                                className="flex-grow sm:flex-grow-0 min-h-[44px] px-5 py-2 rounded-lg text-xs font-bold bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-955 transition-all cursor-pointer"
                               >
                                 Next Question
                               </button>
                             ) : (
                               <button
                                 onClick={handleFinishTest}
-                                className="px-5 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white transition-all"
+                                className="flex-grow sm:flex-grow-0 min-h-[44px] px-5 py-2 rounded-lg text-xs font-extrabold bg-emerald-500 hover:bg-emerald-600 text-brand-navy-955 transition-all cursor-pointer"
                               >
                                 Submit Mock Test
                               </button>
