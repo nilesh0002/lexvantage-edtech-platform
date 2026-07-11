@@ -40,12 +40,8 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-brand-navy-950">
-      {/* Background Ambient Glows */}
-      <div className="absolute top-1/4 left-1/10 w-[500px] h-[500px] rounded-full bg-brand-blue-500/10 blur-[120px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/10 w-[500px] h-[500px] rounded-full bg-brand-purple-600/10 blur-[120px] pointer-events-none animate-pulse-slow" />
-      
       {/* Grid Pattern overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -58,41 +54,41 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
             className="lg:col-span-7 space-y-6 text-center lg:text-left"
           >
             {/* Pill Badge */}
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-gold-500 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-              <Sparkles className="w-3.5 h-3.5 animate-spin" />
-              <span>India's Premium Law Prep</span>
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-navy-900 border border-white/5 text-brand-gold-500 text-xs font-bold uppercase tracking-wider">
+              <span>National Law University Preparation</span>
             </motion.div>
 
             {/* Main Headline */}
-            <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight text-white leading-[1.1]">
+            <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-white leading-[1.15]">
               Your Gateway to <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-500 via-brand-purple-500 to-brand-gold-400">
+              <span className="text-brand-gold-500">
                 India's Top NLUs
               </span>
             </motion.h1>
 
             {/* Tagline */}
-            <motion.p variants={itemVariants} className="text-slate-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-              Accelerate your CLAT, AILET, & SLAT preparation with elite pedagogy, AI-powered mock analytics, and personalized mentorship from NLU alumni.
+            <motion.p variants={itemVariants} className="text-slate-300 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+              Prepare for CLAT, AILET, & SLAT with structured pedagogy, dynamic mock simulations, and dedicated 1-on-1 mentorship from top NLU alumni.
             </motion.p>
 
             {/* Call to Actions */}
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <button
                 onClick={onStartFree}
-                className="w-full sm:w-auto relative group overflow-hidden px-8 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:shadow-xl hover:shadow-brand-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-brand-navy-950 bg-brand-gold-500 hover:bg-brand-gold-450 transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Sparkles className="w-5 h-5 text-brand-gold-400 animate-pulse" />
                 Start Free Trial
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4" />
               </button>
 
               <button
-                onClick={onBookDemo}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-slate-200 bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                onClick={() => {
+                  const target = document.getElementById("courses");
+                  if (target) target.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-white border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Calendar className="w-5 h-5 text-brand-blue-500" />
-                Book 1-on-1 Demo
+                Explore Courses
               </button>
             </motion.div>
 

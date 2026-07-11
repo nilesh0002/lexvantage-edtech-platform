@@ -68,13 +68,11 @@ export default function Navbar({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-purple-600 via-brand-blue-500 to-brand-gold-500 p-0.5 flex items-center justify-center shadow-md shadow-brand-blue-500/20 group-hover:scale-105 transition-transform">
-                <div className="w-full h-full rounded-[10px] bg-brand-navy-950 flex items-center justify-center">
-                  <Scale className="w-5 h-5 text-brand-gold-500 group-hover:rotate-12 transition-transform" />
-                </div>
+              <div className="w-9 h-9 rounded-lg border border-brand-gold-500/30 bg-brand-navy-900 flex items-center justify-center transition-transform group-hover:scale-105">
+                <Scale className="w-4.5 h-4.5 text-brand-gold-500" />
               </div>
-              <span className="font-sans font-extrabold text-2xl tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-                Lex<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-500 to-brand-purple-500">Vantage</span>
+              <span className="font-sans font-black text-xl tracking-tight text-white">
+                Lex<span className="text-brand-gold-500">Vantage</span>
               </span>
             </Link>
 
@@ -94,7 +92,7 @@ export default function Navbar({
                     {isActive && (
                       <motion.span
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 rounded-full"
+                        className="absolute bottom-0 left-4 right-4 h-0.5 bg-brand-gold-500 rounded-full"
                       />
                     )}
                   </Link>
