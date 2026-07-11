@@ -27,6 +27,7 @@ export default function Courses({
     { id: "Crash Course", label: "Crash Course" },
     { id: "Test Series", label: "Test Series" },
     { id: "SLAT / MHCET", label: "SLAT / MH CET" },
+    { id: "Law School LL.B", label: "5-Year Law College" },
   ];
 
   const filteredCourses = coursesData.filter((course) => {

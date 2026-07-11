@@ -103,15 +103,15 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              India's premier EdTech coaching academy for law school entrance examinations. Empowering CLAT, AILET, and SLAT aspirants with elite pedagogy, AI analytics, and personalized guidance to secure spots in tier-1 NLUs.
+              India's premier EdTech coaching academy for law school entrance examinations and 5-year LL.B semester companion. Empowering CLAT, AILET, and law students with guides, case briefs, and study support to graduate at the top of their class.
             </p>
 
             <div className="space-y-3">
               <a
-                href="https://wa.me/918692086024?text=Hi%20LexVantage!%20I%20want%20to%20know%20more%20about%20your%20coaching%20programs."
+                href="https://wa.me/918692086024?text=Hi%20JurisPath!%20I%20want%20to%20know%20more%20about%20your%20law%20programs."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all shadow-lg shadow-emerald-650/20"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all shadow-lg"
               >
                 <MessageSquare className="w-4 h-4 fill-white text-emerald-600" />
                 Chat on WhatsApp
@@ -155,7 +155,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-blue-500 flex-shrink-0" />
-                <a href="mailto:admissions@lexvantage.in" className="hover:text-white transition-colors">admissions@lexvantage.in</a>
+                <a href="mailto:admissions@jurispath.in" className="hover:text-white transition-colors">admissions@jurispath.in</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-blue-500 flex-shrink-0" />
@@ -181,7 +181,7 @@ export default function Footer() {
         {/* Bottom Legal bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} LexVantage Coaching Private Limited. All rights reserved.
+            © {new Date().getFullYear()} JurisPath Education Private Limited. All rights reserved.
           </p>
 
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-500">

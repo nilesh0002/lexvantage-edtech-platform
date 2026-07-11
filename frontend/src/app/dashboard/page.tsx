@@ -718,7 +718,7 @@ export default function StudentDashboard() {
                     </span>
                     <h3 className="text-white font-serif font-bold text-base">Generate Scholarship & Mock Certificate</h3>
                     <p className="text-slate-400 text-xs font-light max-w-xl">
-                      Complete at least one full Mock Test simulation to generate your official LexVantage Scholar merit credential.
+                      Complete at least one full Mock Test simulation to generate your official JurisPath Scholar merit credential.
                     </p>
                   </div>
 
@@ -1368,7 +1368,7 @@ export default function StudentDashboard() {
                     <Award className="w-9 h-9" />
                   </div>
                 </div>
-                <span className="font-serif italic text-brand-gold-400 text-sm tracking-wide block">LexVantage Institute of Law</span>
+                <span className="font-serif italic text-brand-gold-400 text-sm tracking-wide block">JurisPath Academy of Law</span>
                 <h2 className="text-xl md:text-3xl font-serif font-extrabold text-white uppercase tracking-wider print:text-black">
                   Certificate of Merit
                 </h2>
@@ -1384,7 +1384,7 @@ export default function StudentDashboard() {
                 <p className="text-xs md:text-sm text-slate-300 leading-relaxed font-light">
                   for demonstrating outstanding cognitive competence and analytical rigor, achieving an elite score of{" "}
                   <span className="text-brand-gold-400 font-bold font-mono">{mockScoreCard?.score.toFixed(2)}</span> Marks
-                  in the <span className="font-sans font-bold text-white print:text-black">LexVantage National Mock Diagnostic Simulation (CLAT Format)</span>.
+                  in the <span className="font-sans font-bold text-white print:text-black">JurisPath National Mock Diagnostic Simulation (CLAT Format)</span>.
                 </p>
               </div>
 

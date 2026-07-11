@@ -7,16 +7,16 @@ import { Bot, BookOpen, Clock, Users, Zap, GraduationCap } from "lucide-react";
 export default function WhyChooseUs() {
   const features = [
     {
-      icon: Bot,
-      title: "AI-Powered Learning Analytics",
-      description: "Our predictive engine calculates your NLU admissibility score and details concept-level strengths, identifying section-by-section bottlenecks.",
+      icon: GraduationCap,
+      title: "Law Entrance Preparation",
+      description: "Comprehensive, structured coaching for CLAT, AILET, SLAT, and other top law entrance exams with detailed concept metrics.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
     {
       icon: BookOpen,
-      title: "Vantage Daily Bulletins",
-      description: "Get daily current affairs breakdowns, static GK dossiers, and expert strategy walkthroughs tailored to the latest CLAT formats.",
+      title: "5-Year Law College Companion",
+      description: "We don't leave you after the entrance. JurisPath supports you in law school with premium notes, research articles, and subject guides.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
@@ -28,9 +28,9 @@ export default function WhyChooseUs() {
       bg: "bg-white/5 border-white/10",
     },
     {
-      icon: GraduationCap,
-      title: "NLU Alumni Mentorship",
-      description: "Get weekly 1-on-1 strategy sessions with mentors who have scored top-100 ranks and graduated from NLSIU, NALSAR, and NUJS.",
+      icon: Bot,
+      title: "Legal Research Assistance",
+      description: "Learn how to conduct academic writing and legal research with guides curated by senior advocates and scholars.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
@@ -78,10 +78,10 @@ export default function WhyChooseUs() {
             Engineered for Success
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-            Why India's Top Law Aspirants Choose LexVantage
+            Why Future Lawyers Choose JurisPath
           </h2>
           <p className="text-slate-405 text-base font-light">
-            We combine high-end technology with India's best law tutors to design a platform that goes far beyond standard lectures.
+            We guide you through your law entrance exams, and support you all the way through your 5 years in law school with premium course articles, study guides, and legal notes.
           </p>
         </div>
 

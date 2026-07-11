@@ -100,7 +100,7 @@ export default function Navbar({
                 <Scale className="w-4.5 h-4.5 text-brand-gold-500" />
               </div>
               <span className="font-sans font-black text-xl tracking-tight text-white">
-                Lex<span className="text-brand-gold-500">Vantage</span>
+                Juris<span className="text-brand-gold-500">Path</span>
               </span>
             </Link>
 

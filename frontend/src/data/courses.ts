@@ -93,4 +93,18 @@ export const coursesData: Course[] = [
       "Personalized exam time management",
     ],
   },
+  {
+    id: "law-school-5year",
+    name: "5-Year Law School Semester Companion",
+    price: "₹4,999",
+    originalPrice: "₹9,999",
+    duration: "5-Year Support (Per Semester)",
+    exam: "Law School LL.B",
+    syllabus: [
+      "Semester Subject Notes (Torts, Contracts, Constitutional Law)",
+      "Research guides & academic writing tutorials",
+      "High-yield case briefs & landmark judgment summaries",
+      "Legal drafting & moot court preparation kits",
+    ],
+  },
 ];
