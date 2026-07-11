@@ -4,18 +4,18 @@
   --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-serif), Georgia, serif;
   
-  --color-brand-navy-950: #04060f;
-  --color-brand-navy-900: #090d1a;
-  --color-brand-navy-800: #0f1626;
-  --color-brand-navy-700: #1b2536;
-  --color-brand-blue-600: #1e3a8a;
-  --color-brand-blue-500: #3a75c4;
-  --color-brand-purple-600: #4c1d95;
-  --color-brand-purple-500: #6d28d9;
-  --color-brand-pink-500: #be185d;
-  --color-brand-gold-500: #c5a059;
-  --color-brand-gold-600: #9a783e;
-  --color-brand-gold-400: #e3d2b0;
+  --color-brand-navy-950: var(--bg-navy-950);
+  --color-brand-navy-900: var(--bg-navy-900);
+  --color-brand-navy-800: var(--bg-navy-800);
+  --color-brand-navy-700: var(--bg-navy-700);
+  --color-brand-blue-600: var(--accent-gray-dark);
+  --color-brand-blue-500: var(--accent-white-black);
+  --color-brand-purple-600: var(--accent-gray-dark);
+  --color-brand-purple-500: var(--accent-gray-light);
+  --color-brand-pink-500: var(--accent-gray);
+  --color-brand-gold-500: var(--primary-accent);
+  --color-brand-gold-600: var(--primary-accent-hover);
+  --color-brand-gold-400: var(--primary-accent-subtle);
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -39,8 +39,43 @@
 }
 
 :root {
-  --background: #020617;
-  --foreground: #f8fafc;
+  --background: #ffffff;
+  --foreground: #09090b;
+  
+  --bg-navy-955: #ffffff;
+  --bg-navy-950: #ffffff;
+  --bg-navy-900: #fafafa;
+  --bg-navy-800: #f4f4f5;
+  --bg-navy-700: #e4e4e7;
+  
+  --accent-gray: #a1a1aa;
+  --accent-gray-dark: #71717a;
+  --accent-gray-light: #d4d4d8;
+  --accent-white-black: #09090b;
+  
+  --primary-accent: #09090b;
+  --primary-accent-hover: #27272a;
+  --primary-accent-subtle: #71717a;
+}
+
+html.dark {
+  --background: #000000;
+  --foreground: #fafafa;
+  
+  --bg-navy-955: #000000;
+  --bg-navy-950: #000000;
+  --bg-navy-900: #09090b;
+  --bg-navy-800: #18181b;
+  --bg-navy-700: #27272a;
+  
+  --accent-gray: #3f3f46;
+  --accent-gray-dark: #27272a;
+  --accent-gray-light: #52525b;
+  --accent-white-black: #ffffff;
+  
+  --primary-accent: #ffffff;
+  --primary-accent-hover: #e4e4e7;
+  --primary-accent-subtle: #a1a1aa;
 }
 
 /* Custom Scrollbar for premium dark mode */
@@ -50,16 +85,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: var(--bg-navy-700);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: var(--accent-gray);
 }
 
 body {

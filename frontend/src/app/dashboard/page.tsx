@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Scale, BookOpen, Trophy, FileText, LayoutDashboard, BrainCircuit, Play, Award, HelpCircle,
   TrendingUp, Sparkles, User, LogOut, ChevronRight, CheckCircle2, XCircle, AlertCircle, Bookmark,
-  Calendar, Clock, ShieldCheck, Compass, MessageSquare, Send, ChevronDown, Download, RefreshCw
+  Calendar, Clock, ShieldCheck, Compass, MessageSquare, Send, ChevronDown, Download, RefreshCw, Sun, Moon
 } from "lucide-react";
 
 import { Question, mockQuestions } from "@/data/mockQuestions";
@@ -17,6 +17,34 @@ export default function StudentDashboard() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<"overview" | "mock" | "chatbot" | "quiz" | "scholarship">("overview");
   
+  // Theme state
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("lexvantage_theme") as "dark" | "light";
+    if (savedTheme) {
+      setTheme(savedTheme);
+      if (savedTheme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("lexvantage_theme", nextTheme);
+    if (nextTheme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  };
+
   // Auth state
   const [userName, setUserName] = useState("Aspirant");
   const [targetExam, setTargetExam] = useState("CLAT 2026");
@@ -368,12 +396,30 @@ export default function StudentDashboard() {
         </div>
 
         {/* Bottom actions */}
-        <div className="pt-4 border-t border-white/5 mt-6 lg:mt-0">
+        <div className="pt-4 border-t border-white/5 mt-6 lg:mt-0 space-y-2">
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-xs font-bold text-slate-350 hover:text-white hover:bg-white/5 transition-all cursor-pointer border border-white/10"
+          >
+            {theme === "dark" ? (
+              <>
+                <Sun className="w-4.5 h-4.5 text-brand-gold-500" />
+                <span>Switch to Light Theme</span>
+              </>
+            ) : (
+              <>
+                <Moon className="w-4.5 h-4.5 text-brand-gold-500" />
+                <span>Switch to Dark Theme</span>
+              </>
+            )}
+          </button>
+          
           <Link
             href="/"
-            className="w-full flex items-center gap-2 px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+            className="w-full flex items-center gap-2 px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-450 hover:text-white hover:bg-white/5 transition-colors"
           >
-            <Compass className="w-4 h-4 text-slate-500" />
+            <Compass className="w-4 h-4 text-slate-550" />
             Return to Homepage
           </Link>
         </div>

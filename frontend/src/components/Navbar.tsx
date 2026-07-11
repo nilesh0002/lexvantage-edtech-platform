@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Scale, Heart, User, Menu, X, ChevronDown, Sparkles, BookOpen, GraduationCap, Trophy, FileText, LayoutDashboard, LogOut } from "lucide-react";
+import { Scale, Heart, User, Menu, X, ChevronDown, Sparkles, BookOpen, GraduationCap, Trophy, FileText, LayoutDashboard, LogOut, Sun, Moon } from "lucide-react";
 
 interface NavbarProps {
   onOpenAuth?: (tab: "login" | "signup") => void;
@@ -26,6 +26,34 @@ export default function Navbar({
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+
+  // Theme states
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("lexvantage_theme") as "dark" | "light";
+    if (savedTheme) {
+      setTheme(savedTheme);
+      if (savedTheme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("lexvantage_theme", nextTheme);
+    if (nextTheme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -144,14 +172,23 @@ export default function Navbar({
 
             {/* Navigation Actions */}
             <div className="hidden md:flex items-center gap-4">
+              {/* Theme Toggle Button */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-xl text-slate-350 hover:text-white hover:bg-white/5 transition-colors border border-white/10 cursor-pointer"
+                title="Toggle Theme"
+              >
+                {theme === "dark" ? <Sun className="w-5 h-5 text-brand-gold-500" /> : <Moon className="w-5 h-5 text-brand-gold-500" />}
+              </button>
+
               {/* Wishlist Button */}
               <button
                 onClick={onOpenWishlist}
-                className="relative p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors border border-white/5"
+                className="relative p-2 rounded-xl text-slate-350 hover:text-white hover:bg-white/5 transition-colors border border-white/10"
               >
                 <Heart className="w-5 h-5" />
                 {wishlistCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-gradient-to-tr from-brand-pink-500 to-brand-purple-600 text-white text-[10px] font-bold flex items-center justify-center border border-brand-navy-950 animate-bounce">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brand-pink-500 text-white text-[10px] font-bold flex items-center justify-center border border-brand-navy-950">
                     {wishlistCount}
                   </span>
                 )}
@@ -162,14 +199,14 @@ export default function Navbar({
                 <div className="flex items-center gap-3">
                   <Link
                     href="/dashboard"
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold glass-panel text-brand-blue-500 hover:text-white hover:bg-brand-blue-600/20 border border-brand-blue-500/30 transition-all shadow-md shadow-brand-blue-600/10"
+                    className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold bg-brand-gold-500 text-brand-navy-950 hover:bg-brand-gold-600 transition-all cursor-pointer"
                   >
                     <LayoutDashboard className="w-4 h-4" />
                     Dashboard
                   </Link>
                   <button
                     onClick={onLogout}
-                    className="p-2.5 rounded-xl text-slate-400 hover:text-rose-400 hover:bg-rose-500/5 transition-colors border border-white/5"
+                    className="p-2.5 rounded-lg text-slate-450 hover:text-rose-500 hover:bg-rose-500/5 transition-colors border border-white/10 cursor-pointer"
                     title="Logout"
                   >
                     <LogOut className="w-5 h-5" />
@@ -179,15 +216,14 @@ export default function Navbar({
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => onOpenAuth("login")}
-                    className="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-200 hover:text-white transition-colors"
+                    className="px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-300 hover:text-white transition-colors cursor-pointer"
                   >
                     Sign In
                   </button>
                   <button
                     onClick={() => onOpenAuth("signup")}
-                    className="relative group overflow-hidden px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:shadow-lg hover:shadow-brand-blue-600/25 transition-all duration-300 flex items-center gap-1.5"
+                    className="px-5 py-2.5 rounded-lg text-sm font-bold text-brand-navy-950 bg-brand-gold-500 hover:bg-brand-gold-600 transition-all flex items-center gap-1.5 cursor-pointer"
                   >
-                    <Sparkles className="w-4 h-4 text-brand-gold-400 animate-pulse" />
                     Start Free
                   </button>
                 </div>
