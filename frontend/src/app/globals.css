@@ -164,6 +164,14 @@ html:not(.dark) .text-white {
   color: #09090b !important;
 }
 
+/* Retain white text inside dark buttons, active links, and tags */
+html:not(.dark) button.text-white,
+html:not(.dark) button .text-white,
+html:not(.dark) a.text-white,
+html:not(.dark) a .text-white {
+  color: #ffffff !important;
+}
+
 html:not(.dark) .text-slate-50,
 html:not(.dark) .text-slate-100,
 html:not(.dark) .text-slate-150,
