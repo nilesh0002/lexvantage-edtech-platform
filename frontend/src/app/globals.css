@@ -164,11 +164,7 @@ html:not(.dark) .text-white {
   color: #09090b !important;
 }
 
-/* Retain white text inside dark buttons, active links, and dark backgrounds */
-html:not(.dark) button.text-white,
-html:not(.dark) button .text-white,
-html:not(.dark) a.text-white,
-html:not(.dark) a .text-white,
+/* Retain white text inside dark backgrounds and gradient elements */
 html:not(.dark) .bg-brand-gold-500,
 html:not(.dark) .bg-brand-gold-500 *,
 html:not(.dark) .bg-brand-blue-600,
@@ -188,7 +184,11 @@ html:not(.dark) .bg-zinc-950 *,
 html:not(.dark) .bg-zinc-900,
 html:not(.dark) .bg-zinc-900 *,
 html:not(.dark) .bg-black,
-html:not(.dark) .bg-black * {
+html:not(.dark) .bg-black *,
+html:not(.dark) [class*="from-brand-"],
+html:not(.dark) [class*="from-brand-"] *,
+html:not(.dark) [class*="from-zinc-"],
+html:not(.dark) [class*="from-zinc-"] * {
   color: #ffffff !important;
 }
 
