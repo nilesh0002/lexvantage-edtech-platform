@@ -23,12 +23,39 @@ export default function StudentDashboard() {
 
   // Certificate State
   const [mockScoreCard, setMockScoreCard] = useState<{ completed: boolean; score: number } | null>(null);
+  const [isCertificateOpen, setIsCertificateOpen] = useState(false);
+  const [isLiveClassOpen, setIsLiveClassOpen] = useState(false);
+  const [liveChats, setLiveChats] = useState<any[]>([
+    { name: "Rahul S.", msg: "Does Article 21 protect foreign nationals?" },
+    { name: "Sneha G.", msg: "Yes, the word used is 'person' not 'citizen'." },
+  ]);
+
+  // Live Chat Stream Simulation
+  useEffect(() => {
+    if (!isLiveClassOpen) return;
+    const interval = setInterval(() => {
+      const names = ["Aman K.", "Diya B.", "Tanvi S.", "Kritika S.", "Rohan D."];
+      const msgs = [
+        "What about procedure established by law?",
+        "Maneka Gandhi case changed everything",
+        "Does that mean due process is now implicit?",
+        "Yes, substantive due process is read into Article 21",
+        "Excellent explanation sir!",
+        "When is the next mock test analysis?",
+        "Are these slides downloadable in the notes section?"
+      ];
+      const randomName = names[Math.floor(Math.random() * names.length)];
+      const randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
+      setLiveChats((prev) => [...prev, { name: randomName, msg: randomMsg }]);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [isLiveClassOpen]);
   
   // NLU Predictor
   const [currentMockScore, setCurrentMockScore] = useState("85");
   const [quota, setQuota] = useState("General");
   const [predictions, setPredictions] = useState<any[] | null>(null);
-
+  
   // Mock test states
   const [testStarted, setTestStarted] = useState(false);
   const [activeQuestionIdx, setActiveQuestionIdx] = useState(0);
@@ -528,6 +555,69 @@ export default function StudentDashboard() {
                   </div>
                 </div>
 
+                {/* Live Cohort Class Schedule */}
+                <div className="p-6 rounded-2xl glass-panel border border-white/5 space-y-4">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="text-white font-serif font-bold text-sm">Today's Live Cohort Schedules</h3>
+                      <p className="text-slate-400 text-[10px]">Interact with top law minds live inside our virtual court classroom.</p>
+                    </div>
+                    <div className="flex items-center gap-1 text-[10px] text-brand-gold-500 font-bold uppercase">
+                      <Calendar className="w-3.5 h-3.5" /> Batch CLAT-2026
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/5 flex flex-col justify-between gap-4">
+                      <div className="space-y-1">
+                        <span className="text-[9px] font-bold text-emerald-400 uppercase tracking-widest block bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded w-max">
+                          Live Now
+                        </span>
+                        <h4 className="text-white text-xs font-bold">Constitutional Case Laws & Article 21</h4>
+                        <p className="text-slate-400 text-[10px] font-light">With Adv. Vikramaditya Singh • Oxford Alumni</p>
+                      </div>
+                      <button
+                        onClick={() => setIsLiveClassOpen(true)}
+                        className="w-full py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-brand-navy-950 font-bold text-xs transition-all shadow-md shadow-emerald-500/10 flex items-center justify-center gap-1.5"
+                      >
+                        <Play className="w-3.5 h-3.5" /> Join Live Classroom
+                      </button>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/5 flex flex-col justify-between gap-4 opacity-75">
+                      <div className="space-y-1">
+                        <span className="text-[9px] font-bold text-brand-gold-500 uppercase tracking-widest block bg-brand-gold-500/10 border border-brand-gold-500/20 px-2 py-0.5 rounded w-max">
+                          02:00 PM Today
+                        </span>
+                        <h4 className="text-white text-xs font-bold">Critical Reasoning: Fallacy & Syllogism</h4>
+                        <p className="text-slate-400 text-[10px] font-light">With Prof. Meenakshi Iyer • Cognitive Expert</p>
+                      </div>
+                      <button
+                        disabled
+                        className="w-full py-2 rounded-lg bg-white/5 text-slate-500 font-bold text-xs cursor-not-allowed border border-white/5"
+                      >
+                        Starts in 4 Hours
+                      </button>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/5 flex flex-col justify-between gap-4 opacity-75">
+                      <div className="space-y-1">
+                        <span className="text-[9px] font-bold text-brand-gold-500 uppercase tracking-widest block bg-brand-gold-500/10 border border-brand-gold-500/20 px-2 py-0.5 rounded w-max">
+                          05:00 PM Today
+                        </span>
+                        <h4 className="text-white text-xs font-bold">GK Vantage Bulletin: Major Bilaterals</h4>
+                        <p className="text-slate-400 text-[10px] font-light">With Priya Nair, IFS (Retd.) • Ex-Diplomat</p>
+                      </div>
+                      <button
+                        disabled
+                        className="w-full py-2 rounded-lg bg-white/5 text-slate-500 font-bold text-xs cursor-not-allowed border border-white/5"
+                      >
+                        Starts in 7 Hours
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Certificate Generator Section */}
                 <div className="p-6 rounded-2xl glass-panel border border-white/5 bg-gradient-to-r from-brand-navy-900 via-brand-navy-900 to-brand-purple-950/20 flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="space-y-2 text-center md:text-left">
@@ -542,13 +632,11 @@ export default function StudentDashboard() {
 
                   {mockScoreCard?.completed ? (
                     <button
-                      onClick={() => {
-                        alert(`Generating PDF Certificate of merit for ${userName} (Score: ${mockScoreCard.score.toFixed(2)})`);
-                      }}
+                      onClick={() => setIsCertificateOpen(true)}
                       className="px-5 py-3 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-400 text-brand-navy-950 font-bold text-xs flex items-center gap-1.5 transition-all shadow-md shadow-brand-gold-500/15"
                     >
                       <Download className="w-4.5 h-4.5" />
-                      Download Scholar Certificate
+                      View & Print Certificate
                     </button>
                   ) : (
                     <button
@@ -1156,6 +1244,207 @@ export default function StudentDashboard() {
         </div>
       </main>
 
+      {/* LUXURY DIGITAL MERIT CERTIFICATE MODAL */}
+      <AnimatePresence>
+        {isCertificateOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 print:p-0"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              className="relative max-w-3xl w-full bg-[#0d0f19] border-2 border-brand-gold-500/40 rounded-3xl p-8 md:p-12 shadow-2xl shadow-brand-gold-500/10 text-center font-sans space-y-6 md:space-y-8 overflow-hidden print:border-none print:shadow-none print:bg-white print:text-black print:p-0"
+            >
+              {/* Certificate Gold Borders */}
+              <div className="absolute inset-4 border border-brand gold-500/10 rounded-2xl pointer-events-none print:hidden" />
+              <div className="absolute inset-6 border border-brand-gold-500/25 rounded-2xl pointer-events-none print:hidden" />
+              
+              {/* Close button */}
+              <button
+                onClick={() => setIsCertificateOpen(false)}
+                className="absolute top-8 right-8 text-slate-500 hover:text-white transition-colors print:hidden"
+              >
+                <XCircle className="w-6 h-6" />
+              </button>
+
+              {/* Certificate Header */}
+              <div className="space-y-2">
+                <div className="flex justify-center">
+                  <div className="w-16 h-16 rounded-full bg-brand-gold-500/10 border border-brand-gold-500/30 flex items-center justify-center text-brand-gold-500">
+                    <Award className="w-9 h-9" />
+                  </div>
+                </div>
+                <span className="font-serif italic text-brand-gold-400 text-sm tracking-wide block">LexVantage Institute of Law</span>
+                <h2 className="text-xl md:text-3xl font-serif font-extrabold text-white uppercase tracking-wider print:text-black">
+                  Certificate of Merit
+                </h2>
+                <div className="h-0.5 bg-gradient-to-r from-transparent via-brand-gold-500 to-transparent w-40 mx-auto" />
+              </div>
+
+              {/* Certificate Body */}
+              <div className="space-y-4 md:space-y-6 font-serif max-w-xl mx-auto print:text-black">
+                <p className="text-xs md:text-sm text-slate-400 italic">This credential is proudly presented to</p>
+                <h3 className="text-2xl md:text-4xl font-extrabold text-white tracking-wide border-b border-brand-gold-500/20 pb-2 max-w-md mx-auto print:text-black print:border-black">
+                  {userName}
+                </h3>
+                <p className="text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                  for demonstrating outstanding cognitive competence and analytical rigor, achieving an elite score of{" "}
+                  <span className="text-brand-gold-400 font-bold font-mono">{mockScoreCard?.score.toFixed(2)}</span> Marks
+                  in the <span className="font-sans font-bold text-white print:text-black">LexVantage National Mock Diagnostic Simulation (CLAT Format)</span>.
+                </p>
+              </div>
+
+              {/* Signatures */}
+              <div className="grid grid-cols-2 gap-8 pt-6 max-w-lg mx-auto print:text-black">
+                <div className="space-y-1">
+                  <div className="h-8 font-serif italic text-sm text-brand-gold-400 flex items-end justify-center">
+                    Vikramaditya Singh
+                  </div>
+                  <div className="h-px bg-slate-700/40 w-full print:bg-black" />
+                  <span className="text-[10px] text-slate-500 block uppercase tracking-wider font-bold">Co-Founder, Advocate</span>
+                </div>
+                <div className="space-y-1">
+                  <div className="h-8 font-serif italic text-sm text-brand-gold-400 flex items-end justify-center">
+                    Priya Nair
+                  </div>
+                  <div className="h-px bg-slate-700/40 w-full print:bg-black" />
+                  <span className="text-[10px] text-slate-500 block uppercase tracking-wider font-bold">Director of GK</span>
+                </div>
+              </div>
+
+              {/* Action triggers */}
+              <div className="flex justify-center gap-4 pt-4 print:hidden">
+                <button
+                  onClick={() => window.print()}
+                  className="px-6 py-2.5 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-400 text-brand-navy-950 font-bold text-xs flex items-center gap-1.5 transition-all shadow-lg shadow-brand-gold-500/20"
+                >
+                  <Download className="w-4 h-4" />
+                  Print / Save PDF
+                </button>
+                <button
+                  onClick={() => setIsCertificateOpen(false)}
+                  className="px-6 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-slate-300 hover:text-white font-bold text-xs transition-all"
+                >
+                  Dismiss
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* COHORT VIRTUAL LIVE COURTROOM SIMULATOR */}
+      <AnimatePresence>
+        {isLiveClassOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.95, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 15 }}
+              className="bg-brand-navy-900 border border-white/10 rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[550px] md:h-[620px]"
+            >
+              {/* Left Panel: Lecture Video Stream */}
+              <div className="flex-1 bg-black flex flex-col relative justify-between p-6">
+                {/* Top Bar */}
+                <div className="flex justify-between items-center z-10">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" />
+                    <span className="text-xs text-white font-semibold uppercase tracking-wider">LIVE • Constitutional Law Analysis</span>
+                  </div>
+                  <span className="text-slate-400 text-[10px] bg-white/5 px-2 py-0.5 rounded border border-white/5 font-mono">1,248 attending</span>
+                </div>
+
+                {/* Simulated Whiteboard slides */}
+                <div className="my-auto text-center space-y-4 max-w-md mx-auto">
+                  <span className="text-[10px] text-brand-gold-500 font-bold uppercase tracking-widest block">Lecture Slide 14/25</span>
+                  <h2 className="text-white font-serif font-bold text-xl md:text-2xl leading-relaxed">
+                    Article 21: Expanding Boundaries of Personal Liberty
+                  </h2>
+                  <div className="bg-brand-navy-950/80 border border-brand-gold-500/20 rounded-xl p-4 text-left font-sans text-xs space-y-2 text-slate-350">
+                    <p className="font-bold text-brand-gold-400 font-serif">Key Landmark Precedents:</p>
+                    <p>1. <span className="text-white">A.K. Gopalan (1950)</span>: Restricted definition (only protection against executive action).</p>
+                    <p>2. <span className="text-white">Maneka Gandhi (1978)</span>: Expansive definition (protection against arbitrary legislative action; "just, fair & reasonable" test).</p>
+                    <p>3. <span className="text-white">Puttaswamy (2017)</span>: Right to Privacy declared a fundamental right under Article 21.</p>
+                  </div>
+                </div>
+
+                {/* Video controls bottom bar */}
+                <div className="flex justify-between items-center text-xs text-slate-400 pt-2 border-t border-white/5">
+                  <div className="flex items-center gap-3">
+                    <span className="font-bold text-white">Adv. Vikramaditya Singh</span>
+                    <span className="text-[10px] bg-brand-blue-500/20 text-brand-blue-400 px-1.5 py-0.5 rounded font-bold uppercase">HOST</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    <span>HD Streaming Active</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Panel: Live Student Chat Chatroom */}
+              <div className="w-full md:w-80 border-t md:border-t-0 md:border-l border-white/5 flex flex-col justify-between bg-brand-navy-950">
+                <div className="p-4 border-b border-white/5 flex justify-between items-center bg-brand-navy-900">
+                  <h4 className="text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <MessageSquare className="w-4 h-4 text-brand-gold-500" />
+                    Live Chatroom
+                  </h4>
+                  <button
+                    onClick={() => setIsLiveClassOpen(false)}
+                    className="text-slate-500 hover:text-white transition-colors"
+                  >
+                    <XCircle className="w-5 h-5" />
+                  </button>
+                </div>
+
+                {/* Chat list */}
+                <div className="flex-grow p-4 overflow-y-auto space-y-3 font-sans text-xs flex flex-col-reverse">
+                  <div className="space-y-3">
+                    {liveChats.map((chat, idx) => (
+                      <div key={idx} className="space-y-0.5">
+                        <span className="text-brand-gold-500/80 font-bold block">{chat.name}</span>
+                        <p className="text-slate-300 font-light">{chat.msg}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Chat action input */}
+                <div className="p-4 border-t border-white/5 bg-brand-navy-900/50">
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      const input = (e.target as any).elements.chatInput.value;
+                      if (!input.trim()) return;
+                      setLiveChats((prev) => [...prev, { name: "You (Aspirant)", msg: input }]);
+                      (e.target as any).reset();
+                    }}
+                    className="flex gap-2"
+                  >
+                    <input
+                      name="chatInput"
+                      type="text"
+                      placeholder="Ask the advocate..."
+                      className="flex-1 px-3 py-1.5 bg-brand-navy-950 border border-white/10 rounded-lg text-white text-xs focus:outline-none focus:border-brand-gold-500/50"
+                    />
+                    <button type="submit" className="p-2 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-400 text-brand-navy-950 transition-colors">
+                      <Send className="w-3.5 h-3.5" />
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
