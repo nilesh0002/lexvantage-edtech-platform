@@ -99,7 +99,7 @@ export default function Navbar({
               <div className="w-9 h-9 rounded-lg border border-brand-gold-500/30 bg-brand-navy-900 flex items-center justify-center transition-transform group-hover:scale-105">
                 <Scale className="w-4.5 h-4.5 text-brand-gold-500" />
               </div>
-              <span className="font-sans font-black text-xl tracking-tight text-white">
+              <span className="font-sans font-black text-xl tracking-tight text-foreground">
                 Juris<span className="text-brand-gold-500">Path</span>
               </span>
             </Link>

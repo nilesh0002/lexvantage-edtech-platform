@@ -98,7 +98,7 @@ export default function Footer() {
                   <Scale className="w-4 h-4 text-brand-gold-500" />
                 </div>
               </div>
-              <span className="font-sans font-extrabold text-xl tracking-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+              <span className="font-sans font-extrabold text-xl tracking-tight text-foreground">
                 Juris<span className="text-brand-gold-500">Path</span>
               </span>
             </Link>
