@@ -92,38 +92,14 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
               </button>
             </motion.div>
 
-            {/* Social Trust Metrics */}
+            {/* Startup Mission Focus Details */}
             <motion.div variants={itemVariants} className="pt-8 border-t border-white/5 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4">
-              <div className="flex items-center gap-2.5">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((num) => (
-                    <div key={num} className="w-9 h-9 rounded-full border-2 border-brand-navy-950 bg-brand-navy-800 flex items-center justify-center text-[10px] font-bold text-white relative">
-                      <img
-                        src={`https://api.dicebear.com/7.x/avataaars/svg?seed=student-${num}`}
-                        alt="Student"
-                        className="rounded-full w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <div className="flex items-center text-brand-gold-500">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                    ))}
-                  </div>
-                  <span className="text-xs text-slate-400 font-medium">18,500+ Aspirants Trained</span>
-                </div>
-              </div>
-
-              <div className="h-8 w-px bg-white/5 hidden sm:block" />
-
               <div className="text-center lg:text-left">
-                <div className="text-white text-lg font-bold flex items-center justify-center lg:justify-start gap-1">
+                <div className="text-white text-base font-bold flex items-center justify-center lg:justify-start gap-1.5">
                   <Trophy className="w-4.5 h-4.5 text-brand-gold-500" />
-                  <span>420+ Selections</span>
+                  <span>Personalized Mentorship Focus</span>
                 </div>
-                <span className="text-xs text-slate-400 font-medium">In Top 5 NLUs (CLAT 2025)</span>
+                <span className="text-xs text-slate-450 font-medium">Designed around small-batch individual growth rather than mass enrollment.</span>
               </div>
             </motion.div>
           </motion.div>
@@ -152,11 +128,11 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
                 <div className="space-y-4">
                   <div className="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                     <div>
-                      <span className="text-slate-450 text-[10px] font-bold block uppercase tracking-wide">Overall Percentile</span>
-                      <span className="text-2xl font-bold text-white">99.86 %</span>
+                      <span className="text-slate-450 text-[10px] font-bold block uppercase tracking-wide">Diagnostic Evaluation</span>
+                      <span className="text-2xl font-bold text-white">CLAT 2026</span>
                     </div>
-                    <div className="w-12 h-12 rounded-full border border-brand-gold-500 flex items-center justify-center text-[10px] font-bold text-brand-gold-500 bg-brand-gold-500/5">
-                      Rank 4
+                    <div className="px-3 py-1.5 rounded-lg border border-brand-gold-500 text-[10px] font-bold text-brand-gold-500 bg-brand-gold-500/5">
+                      Interactive Portal
                     </div>
                   </div>
 

@@ -5,9 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/home/Hero";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Courses from "@/components/home/Courses";
-import SocialProof from "@/components/home/SocialProof";
 import Faculty from "@/components/home/Faculty";
-import Results from "@/components/home/Results";
 import MockTestPreview from "@/components/home/MockTestPreview";
 import CurrentAffairsPreview from "@/components/home/CurrentAffairsPreview";
 import Faq from "@/components/home/Faq";
@@ -133,14 +131,8 @@ export default function Home() {
         {/* Mock Test Portal Preview */}
         <MockTestPreview onStartFullMock={() => handleOpenAuth("signup")} />
 
-        {/* Social Proof reviews */}
-        <SocialProof />
-
         {/* Faculty board */}
         <Faculty />
-
-        {/* Success results and metrics */}
-        <Results />
 
         {/* Daily Current affairs */}
         <CurrentAffairsPreview />
