@@ -1,0 +1,134 @@
+"use client";
+
+import React from "react";
+import { motion, Variants } from "framer-motion";
+import { Bot, BookOpen, Clock, Users, Zap, GraduationCap } from "lucide-react";
+
+export default function WhyChooseUs() {
+  const features = [
+    {
+      icon: Bot,
+      title: "AI-Powered Learning Analytics",
+      description: "Our predictive engine calculates your NLU admissibility score and details concept-level strengths, identifying section-by-section bottlenecks.",
+      color: "text-brand-blue-500",
+      bg: "bg-brand-blue-500/5 border-brand-blue-500/10",
+    },
+    {
+      icon: BookOpen,
+      title: "Vantage Daily Bulletins",
+      description: "Get daily current affairs breakdowns, static GK dossiers, and expert strategy walkthroughs tailored to the latest CLAT formats.",
+      color: "text-brand-purple-500",
+      bg: "bg-brand-purple-500/5 border-brand-purple-500/10",
+    },
+    {
+      icon: Zap,
+      title: "Elite Mock Simulations",
+      description: "Access 120+ full-length mock tests modeled exactly on modern CLAT & AILET interfaces, with comprehensive analytics post-exam.",
+      color: "text-brand-gold-500",
+      bg: "bg-brand-gold-500/5 border-brand-gold-500/10",
+    },
+    {
+      icon: GraduationCap,
+      title: "NLU Alumni Mentorship",
+      description: "Get weekly 1-on-1 strategy sessions with mentors who have scored top-100 ranks and graduated from NLSIU, NALSAR, and NUJS.",
+      color: "text-brand-blue-500",
+      bg: "bg-brand-blue-500/5 border-brand-blue-500/10",
+    },
+    {
+      icon: Users,
+      title: "Ultra-Small Cohorts",
+      description: "Strictly limited batch sizes of 40 students ensure personalized attention, individual feedback on essays, and interactive law discussion.",
+      color: "text-brand-purple-500",
+      bg: "bg-brand-purple-500/5 border-brand-purple-500/10",
+    },
+    {
+      icon: Clock,
+      title: "Instant Doubt Resolutions",
+      description: "Submit doubts 24/7 inside the portal and get rich video or text explanations from senior faculty within 15 minutes.",
+      color: "text-brand-gold-500",
+      bg: "bg-brand-gold-500/5 border-brand-gold-500/10",
+    },
+  ];
+
+  const containerVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+  };
+
+  return (
+    <section className="py-24 bg-brand-navy-950 relative z-10">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
+            Engineered for Success
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+            Why India's Top Law Aspirants Choose LexVantage
+          </h2>
+          <p className="text-slate-400 text-base font-light">
+            We combine high-end technology with India's best law tutors to design a platform that goes far beyond standard lectures.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
+          {features.map((feature, idx) => {
+            const Icon = feature.icon;
+            return (
+              <motion.div
+                key={feature.title}
+                variants={itemVariants}
+                className="group rounded-2xl glass-panel glass-panel-hover p-6 sm:p-8 flex flex-col justify-between"
+              >
+                <div className="space-y-4">
+                  {/* Icon Wrapper */}
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${feature.bg} group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className={`w-6 h-6 ${feature.color}`} />
+                  </div>
+
+                  {/* Text */}
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-blue-500 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-slate-400 text-sm leading-relaxed font-light">
+                    {feature.description}
+                  </p>
+                </div>
+
+                <div className="pt-6 mt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-xs font-bold text-slate-300 flex items-center gap-1">
+                    Learn more <Zap className="w-3 h-3 text-brand-gold-500" />
+                  </span>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
