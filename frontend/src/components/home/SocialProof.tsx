@@ -118,7 +118,7 @@ export default function SocialProof() {
                 }}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
                   filterType === tab.id
-                    ? "bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 text-white shadow-md"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
                     : "text-slate-400 hover:text-white"
                 }`}
               >

@@ -1050,7 +1050,7 @@ export default function StudentDashboard() {
                     >
                       <div className={`max-w-[75%] p-3.5 rounded-2xl text-xs leading-relaxed ${
                         m.sender === "user"
-                          ? "bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 text-white shadow-md rounded-tr-none"
+                          ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md rounded-tr-none"
                           : "bg-white/5 border border-white/5 text-slate-200 rounded-tl-none"
                       }`}>
                         {m.text}
@@ -1098,7 +1098,7 @@ export default function StudentDashboard() {
                   />
                   <button
                     type="submit"
-                    className="px-4 py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white transition-all shadow-md flex items-center justify-center shrink-0"
+                    className="px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white transition-all shadow-md flex items-center justify-center shrink-0"
                   >
                     <Send className="w-4 h-4" />
                   </button>

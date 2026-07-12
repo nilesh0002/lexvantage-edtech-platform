@@ -134,7 +134,7 @@ export default function AuthModal({
                 }}
                 className={`w-1/2 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                   activeTab === "login"
-                    ? "bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 text-white shadow-md"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
                     : "text-slate-400 hover:text-white"
                 }`}
               >
@@ -148,7 +148,7 @@ export default function AuthModal({
                 }}
                 className={`w-1/2 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                   activeTab === "signup"
-                    ? "bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 text-white shadow-md"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
                     : "text-slate-400 hover:text-white"
                 }`}
               >
@@ -230,7 +230,7 @@ export default function AuthModal({
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-2 relative group overflow-hidden py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:shadow-lg hover:shadow-brand-blue-600/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full mt-2 relative group overflow-hidden py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {loading ? (
                   "Verifying identity..."

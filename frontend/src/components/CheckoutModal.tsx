@@ -236,7 +236,7 @@ export default function CheckoutModal({
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full relative group overflow-hidden py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:shadow-xl hover:shadow-brand-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full relative group overflow-hidden py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   {submitting ? (
                     <>

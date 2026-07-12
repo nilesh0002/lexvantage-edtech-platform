@@ -221,8 +221,8 @@ export default function Home() {
               onClick={() => handleMobileTabChange(tab.id as any)}
               className="flex flex-col items-center justify-center gap-1 cursor-pointer py-1 text-center"
             >
-              <Icon className={`w-5 h-5 transition-colors ${isActive ? "text-brand-gold-500" : "text-slate-500"}`} />
-              <span className={`text-[10px] font-bold tracking-wider ${isActive ? "text-brand-gold-500" : "text-slate-500"}`}>
+              <Icon className={`w-5 h-5 transition-colors ${isActive ? "text-brand-gold-500" : "text-slate-400 dark:text-slate-350"}`} />
+              <span className={`text-[10px] font-bold tracking-wider ${isActive ? "text-brand-gold-500" : "text-slate-400 dark:text-slate-350"}`}>
                 {tab.label}
               </span>
             </button>
@@ -239,8 +239,8 @@ export default function Home() {
           }}
           className="flex flex-col items-center justify-center gap-1 cursor-pointer py-1 text-center"
         >
-          <LayoutDashboard className="w-5 h-5 text-slate-550" />
-          <span className="text-[10px] font-bold tracking-wider text-slate-550">Portal</span>
+          <LayoutDashboard className="w-5 h-5 text-slate-400 dark:text-slate-350" />
+          <span className="text-[10px] font-bold tracking-wider text-slate-400 dark:text-slate-350">Portal</span>
         </button>
       </div>
 

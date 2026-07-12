@@ -117,7 +117,7 @@ export default function WishlistDrawer({
                           </button>
                           <button
                             onClick={() => onCheckout(course)}
-                            className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white text-xs font-bold transition-all shadow-md"
+                            className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-xs font-bold transition-all shadow-md"
                           >
                             <CreditCard className="w-3.5 h-3.5" />
                             Enroll

@@ -195,7 +195,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                         </button>
                         <button
                           onClick={onStartFullMock}
-                          className="w-full sm:w-2/3 py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white text-xs font-bold transition-all shadow-md shadow-brand-blue-500/25 flex items-center justify-center gap-1.5"
+                          className="w-full sm:w-2/3 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-xs font-bold transition-all shadow-md shadow-blue-500/25 flex items-center justify-center gap-1.5"
                         >
                           <Play className="w-4 h-4 fill-white" />
                           Take Full 120-Q Mock Test
