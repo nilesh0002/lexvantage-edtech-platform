@@ -100,7 +100,7 @@ export default function AuthModal({
                     <CheckCircle className="w-10 h-10 text-brand-gold-400" />
                   </motion.div>
                   <h3 className="text-2xl font-serif font-bold text-white mb-2">
-                    Welcome to JurisPath
+                    Welcome to Shreya's Law Desk
                   </h3>
                   <p className="text-slate-400 text-sm">
                     Redirecting you to the Elite Student Portal...
@@ -245,7 +245,7 @@ export default function AuthModal({
 
             <div className="mt-5 text-center">
               <p className="text-xs text-slate-500">
-                By accessing JurisPath you agree to our{" "}
+                By accessing Shreya's Law Desk you agree to our{" "}
                 <a href="#" className="text-slate-400 hover:underline">
                   Honor Code
                 </a>{" "}

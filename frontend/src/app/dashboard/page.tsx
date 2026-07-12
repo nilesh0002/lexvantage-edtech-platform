@@ -21,7 +21,7 @@ export default function StudentDashboard() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("lexvantage_theme") as "dark" | "light";
+    const savedTheme = localStorage.getItem("shreyaslawdesk_theme") as "dark" | "light";
     if (savedTheme) {
       setTheme(savedTheme);
       if (savedTheme === "light") {
@@ -37,7 +37,7 @@ export default function StudentDashboard() {
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
-    localStorage.setItem("lexvantage_theme", nextTheme);
+    localStorage.setItem("shreyaslawdesk_theme", nextTheme);
     if (nextTheme === "light") {
       document.documentElement.classList.remove("dark");
     } else {
@@ -68,7 +68,7 @@ export default function StudentDashboard() {
         "Maneka Gandhi case changed everything",
         "Does that mean due process is now implicit?",
         "Yes, substantive due process is read into Article 21",
-        "Excellent explanation sir!",
+        "Excellent explanation ma'am!",
         "When is the next mock test analysis?",
         "Are these slides downloadable in the notes section?"
       ];
@@ -718,7 +718,7 @@ export default function StudentDashboard() {
                     </span>
                     <h3 className="text-white font-serif font-bold text-base">Generate Scholarship & Mock Certificate</h3>
                     <p className="text-slate-400 text-xs font-light max-w-xl">
-                      Complete at least one full Mock Test simulation to generate your official JurisPath Scholar merit credential.
+                      Complete at least one full Mock Test simulation to generate your official Shreya's Law Desk Scholar merit credential.
                     </p>
                   </div>
 
@@ -1368,7 +1368,7 @@ export default function StudentDashboard() {
                     <Award className="w-9 h-9" />
                   </div>
                 </div>
-                <span className="font-serif italic text-brand-gold-400 text-sm tracking-wide block">JurisPath Academy of Law</span>
+                <span className="font-serif italic text-brand-gold-400 text-sm tracking-wide block">Shreya's Law Desk</span>
                 <h2 className="text-xl md:text-3xl font-serif font-extrabold text-white uppercase tracking-wider print:text-black">
                   Certificate of Merit
                 </h2>
@@ -1384,25 +1384,18 @@ export default function StudentDashboard() {
                 <p className="text-xs md:text-sm text-slate-300 leading-relaxed font-light">
                   for demonstrating outstanding cognitive competence and analytical rigor, achieving an elite score of{" "}
                   <span className="text-brand-gold-400 font-bold font-mono">{mockScoreCard?.score.toFixed(2)}</span> Marks
-                  in the <span className="font-sans font-bold text-white print:text-black">JurisPath National Mock Diagnostic Simulation (CLAT Format)</span>.
+                  in the <span className="font-sans font-bold text-white print:text-black">Shreya's Law Desk National Mock Diagnostic Simulation (CLAT Format)</span>.
                 </p>
               </div>
 
               {/* Signatures */}
-              <div className="grid grid-cols-2 gap-8 pt-6 max-w-lg mx-auto print:text-black">
-                <div className="space-y-1">
+              <div className="flex justify-center pt-6 max-w-xs mx-auto print:text-black">
+                <div className="space-y-1 w-full text-center">
                   <div className="h-8 font-serif italic text-sm text-brand-gold-400 flex items-end justify-center">
-                    Vikramaditya Singh
+                    Shreya Nadar
                   </div>
                   <div className="h-px bg-slate-700/40 w-full print:bg-black" />
-                  <span className="text-[10px] text-slate-500 block uppercase tracking-wider font-bold">Co-Founder, Advocate</span>
-                </div>
-                <div className="space-y-1">
-                  <div className="h-8 font-serif italic text-sm text-brand-gold-400 flex items-end justify-center">
-                    Priya Nair
-                  </div>
-                  <div className="h-px bg-slate-700/40 w-full print:bg-black" />
-                  <span className="text-[10px] text-slate-500 block uppercase tracking-wider font-bold">Director of GK</span>
+                  <span className="text-[10px] text-slate-500 block uppercase tracking-wider font-bold">Founder & Lead Law Mentor</span>
                 </div>
               </div>
 

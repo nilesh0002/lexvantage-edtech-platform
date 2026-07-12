@@ -116,7 +116,7 @@ export default function CheckoutModal({
                     <Sparkles className="w-4 h-4" /> Enrolled in {course.name}
                   </p>
                   <p className="text-slate-400 text-sm max-w-sm">
-                    Welcome to JurisPath! We've sent credentials and batch allocations to your registered phone number. Dashboard access is now unlocked.
+                    Welcome to Shreya's Law Desk! We've sent credentials and batch allocations to your registered phone number. Dashboard access is now unlocked.
                   </p>
                 </motion.div>
               )}

@@ -66,7 +66,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-white font-serif font-bold text-base">Admissions Desk</h4>
                   <p className="text-slate-400 text-xs mt-1 font-light">
-                    admissions@jurispath.in
+                    admissions@shreyaslawdesk.in
                   </p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   {loading ? (
                     "Transmitting..."

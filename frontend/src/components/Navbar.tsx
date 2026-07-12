@@ -31,7 +31,7 @@ export default function Navbar({
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("lexvantage_theme") as "dark" | "light";
+    const savedTheme = localStorage.getItem("shreyaslawdesk_theme") as "dark" | "light";
     if (savedTheme) {
       setTheme(savedTheme);
       if (savedTheme === "light") {
@@ -47,7 +47,7 @@ export default function Navbar({
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
-    localStorage.setItem("lexvantage_theme", nextTheme);
+    localStorage.setItem("shreyaslawdesk_theme", nextTheme);
     if (nextTheme === "light") {
       document.documentElement.classList.remove("dark");
     } else {
@@ -99,8 +99,8 @@ export default function Navbar({
               <div className="w-9 h-9 rounded-lg border border-brand-gold-500/30 bg-brand-navy-900 flex items-center justify-center transition-transform group-hover:scale-105">
                 <Scale className="w-4.5 h-4.5 text-brand-gold-500" />
               </div>
-              <span className="font-sans font-black text-xl tracking-tight text-foreground">
-                Juris<span className="text-brand-gold-500">Path</span>
+              <span className="font-sans font-black text-base sm:text-xl tracking-tight text-foreground">
+                Shreya's <span className="text-brand-gold-500">Law Desk</span>
               </span>
             </Link>
 

@@ -36,7 +36,7 @@ export default function Home() {
 
   // Sync active mobile tab on refresh
   useEffect(() => {
-    const savedTab = sessionStorage.getItem("jurispath_active_tab");
+    const savedTab = sessionStorage.getItem("shreyaslawdesk_active_tab");
     if (savedTab && ["home", "courses", "prep", "mentor"].includes(savedTab)) {
       setActiveMobileTab(savedTab as any);
     }
@@ -44,17 +44,17 @@ export default function Home() {
 
   const handleMobileTabChange = (tabId: "home" | "courses" | "prep" | "mentor") => {
     setActiveMobileTab(tabId);
-    sessionStorage.setItem("jurispath_active_tab", tabId);
+    sessionStorage.setItem("shreyaslawdesk_active_tab", tabId);
   };
 
   // Sync auth state with localStorage if client side
   useEffect(() => {
-    const savedUser = localStorage.getItem("jurispath_user");
+    const savedUser = localStorage.getItem("shreyaslawdesk_user");
     if (savedUser) {
       setIsLoggedIn(true);
       setUserProfile(savedUser);
     }
-    const savedWishlist = localStorage.getItem("jurispath_wishlist");
+    const savedWishlist = localStorage.getItem("shreyaslawdesk_wishlist");
     if (savedWishlist) {
       try {
         setWishlist(JSON.parse(savedWishlist));
@@ -73,7 +73,7 @@ export default function Home() {
       } else {
         updated = [...prev, course];
       }
-      localStorage.setItem("jurispath_wishlist", JSON.stringify(updated));
+      localStorage.setItem("shreyaslawdesk_wishlist", JSON.stringify(updated));
       return updated;
     });
   };
@@ -81,7 +81,7 @@ export default function Home() {
   const handleRemoveWishlist = (courseId: string) => {
     setWishlist((prev) => {
       const updated = prev.filter((item) => item.id !== courseId);
-      localStorage.setItem("jurispath_wishlist", JSON.stringify(updated));
+      localStorage.setItem("shreyaslawdesk_wishlist", JSON.stringify(updated));
       return updated;
     });
   };
@@ -94,21 +94,21 @@ export default function Home() {
   const handleLoginSuccess = (name: string) => {
     setIsLoggedIn(true);
     setUserProfile(name);
-    localStorage.setItem("jurispath_user", name);
+    localStorage.setItem("shreyaslawdesk_user", name);
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setUserProfile(null);
-    localStorage.removeItem("jurispath_user");
+    localStorage.removeItem("shreyaslawdesk_user");
   };
 
   const handleEnrollSuccess = (courseId: string) => {
     // Add to enrolled in localstorage
-    const enrolled = JSON.parse(localStorage.getItem("jurispath_enrolled") || "[]");
+    const enrolled = JSON.parse(localStorage.getItem("shreyaslawdesk_enrolled") || "[]");
     if (!enrolled.includes(courseId)) {
       enrolled.push(courseId);
-      localStorage.setItem("jurispath_enrolled", JSON.stringify(enrolled));
+      localStorage.setItem("shreyaslawdesk_enrolled", JSON.stringify(enrolled));
     }
     // Automatically log user in if not logged in to unlock dashboard
     if (!isLoggedIn) {

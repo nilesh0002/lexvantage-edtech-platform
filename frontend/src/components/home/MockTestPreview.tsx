@@ -151,7 +151,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                     <button
                       onClick={handleSubmit}
                       disabled={!selectedOption}
-                      className="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1.5 disabled:opacity-50"
+                      className="w-full py-3.5 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1.5 disabled:opacity-50 cursor-pointer"
                     >
                       Submit Response
                       <ArrowRight className="w-4 h-4" />

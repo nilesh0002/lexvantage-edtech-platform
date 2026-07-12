@@ -68,7 +68,7 @@ export default function Footer() {
               <button
                 type="submit"
                 disabled={submitting || subscribed}
-                className="px-5 py-3 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-semibold text-sm transition-all shadow-md shadow-brand-blue-600/10 flex items-center justify-center gap-2 disabled:opacity-50 whitespace-nowrap"
+                className="px-5 py-3 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 whitespace-nowrap cursor-pointer"
               >
                 {subscribed ? (
                   <>
@@ -93,22 +93,20 @@ export default function Footer() {
           {/* Logo & Contact details */}
           <div className="col-span-2 md:col-span-3 lg:col-span-4 space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-purple-600 to-brand-gold-500 p-0.5 flex items-center justify-center shadow-md">
-                <div className="w-full h-full rounded-[10px] bg-brand-navy-950 flex items-center justify-center">
-                  <Scale className="w-4 h-4 text-brand-gold-500" />
-                </div>
+              <div className="w-9 h-9 rounded-lg border border-brand-gold-500/30 bg-brand-navy-900 flex items-center justify-center shadow-md">
+                <Scale className="w-4 h-4 text-brand-gold-500" />
               </div>
-              <span className="font-sans font-extrabold text-xl tracking-tight text-foreground">
-                Juris<span className="text-brand-gold-500">Path</span>
+              <span className="font-sans font-extrabold text-base sm:text-xl tracking-tight text-foreground">
+                Shreya's <span className="text-brand-gold-500">Law Desk</span>
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              India's premier EdTech coaching academy for law school entrance examinations and 5-year LL.B semester companion. Empowering CLAT, AILET, and law students with guides, case briefs, and study support to graduate at the top of their class.
+              India's premier law coaching academy for law school entrance examinations and 5-year LL.B semester companion. Empowering CLAT, AILET, and law students under the direct guidance of Shreya Nadar to graduate at the top of their class.
             </p>
 
             <div className="space-y-3">
               <a
-                href="https://wa.me/918692086024?text=Hi%20JurisPath!%20I%20want%20to%20know%20more%20about%20your%20law%20programs."
+                href="https://wa.me/918692086024?text=Hi%20Shreya's%20Law%20Desk!%20I%20want%20to%20know%20more%20about%20your%20law%20programs."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all shadow-lg"
@@ -126,7 +124,7 @@ export default function Footer() {
               <li><Link href="/courses" className="hover:text-white transition-colors">CLAT & AILET Prep</Link></li>
               <li><Link href="/courses" className="hover:text-white transition-colors">SLAT & MH CET Law</Link></li>
               <li><Link href="/courses" className="hover:text-white transition-colors">5-Year LL.B Companion</Link></li>
-              <li><Link href="/courses" className="hover:text-white transition-colors">JurisPath Mock Series</Link></li>
+              <li><Link href="/courses" className="hover:text-white transition-colors">Shreya's Law Desk Mock Series</Link></li>
             </ul>
           </div>
 
@@ -151,7 +149,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-blue-500 flex-shrink-0" />
-                <a href="mailto:admissions@jurispath.in" className="hover:text-white transition-colors">admissions@jurispath.in</a>
+                <a href="mailto:admissions@shreyaslawdesk.in" className="hover:text-white transition-colors">admissions@shreyaslawdesk.in</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-blue-500 flex-shrink-0" />
@@ -177,7 +175,7 @@ export default function Footer() {
         {/* Bottom Legal bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} JurisPath Education Private Limited. All rights reserved.
+            © {new Date().getFullYear()} Shreya's Law Desk. All rights reserved.
           </p>
 
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-500">

@@ -22,7 +22,7 @@ export default function Scholarships() {
               Vantage Scholarship Test
             </span>
             <h1 className="text-4xl font-serif font-bold text-white">
-              JurisPath Merit Scholars Program
+              Shreya's Law Desk Merit Scholars Program
             </h1>
             <p className="text-slate-400 text-sm font-light">
               We reward academic excellence. Earn up to 100% tuition waivers for our premium CLAT, AILET, and NLU preparation courses.
@@ -42,7 +42,7 @@ export default function Scholarships() {
               <ul className="space-y-3.5">
                 {[
                   "Class 12th Board Score (>=95% unlocks 40% waiver)",
-                  "JurisPath Scholarship Entrance Mocks (AIR percentile)",
+                  "Shreya's Law Desk Scholarship Entrance Mocks (AIR percentile)",
                   "State quota reservation categories (SC/ST/OBC support)",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
@@ -64,7 +64,7 @@ export default function Scholarships() {
 
               <button
                 onClick={() => setIsAuthOpen(true)}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-purple-600 hover:from-brand-blue-500 hover:to-brand-purple-500 text-white font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1"
+                className="w-full py-3.5 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1 cursor-pointer"
               >
                 Start Scholarship Evaluation
                 <ChevronRight className="w-4 h-4" />

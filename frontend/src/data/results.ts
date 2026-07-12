@@ -14,7 +14,7 @@ export const rankersData: Ranker[] = [
     nlu: "NLSIU Bangalore",
     exam: "CLAT 2025",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=rohan",
-    quote: "LexVantage mock analytics pinpointed that I was taking too long to digest GK. Modifying my speed allowed me to hit 114/120 on D-day.",
+    quote: "Shreya's Law Desk mock analytics pinpointed that I was taking too long to digest GK. Modifying my speed allowed me to hit 114/120 on D-day.",
   },
   {
     name: "Tanvi Saxena",
@@ -22,7 +22,7 @@ export const rankersData: Ranker[] = [
     nlu: "NALSAR Hyderabad",
     exam: "CLAT 2025",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=tanvi",
-    quote: "The 1-on-1 strategy sessions with alumni mentors were incredibly helpful. It gave me real, actionable insights on paper solving orders.",
+    quote: "The 1-on-1 strategy sessions with Shreya ma'am were incredibly helpful. It gave me real, actionable insights on paper solving orders.",
   },
   {
     name: "Aman Malhotra",
@@ -30,7 +30,7 @@ export const rankersData: Ranker[] = [
     nlu: "NLU Delhi",
     exam: "AILET 2025",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=aman",
-    quote: "Having former judges guest lecture on Constitutional Law made legal reasoning extremely simple. I scored a perfect 32 in that section.",
+    quote: "Having Shreya ma'am lecture on Constitutional Law made legal reasoning extremely simple. I scored a perfect 32 in that section.",
   },
   {
     name: "Dipti Sen",
@@ -38,6 +38,6 @@ export const rankersData: Ranker[] = [
     nlu: "WBNUJS Kolkata",
     exam: "CLAT 2025",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=dipti",
-    quote: "LexVantage's ultra-small cohorts allowed tutors to read my essay mock answers. The personalized comments helped me secure NUJS.",
+    quote: "Shreya's Law Desk's ultra-small cohorts allowed Shreya ma'am to read my essay mock answers. The personalized comments helped me secure NUJS.",
   },
 ];

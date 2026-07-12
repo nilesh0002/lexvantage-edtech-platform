@@ -13,9 +13,9 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "JurisPath | Law Entrance & 5-Year Law College Companion",
-  description: "Prepare for CLAT, AILET, & Law Entrances, and access curated study guides, course articles, and semester notes throughout your entire 5 years of law school (LL.B / B.A. LL.B).",
-  keywords: "CLAT coaching, law school companion, NLU prep, LL.B notes, B.A. LL.B semester guides, law college articles, AILET prep, JurisPath",
+  title: "Shreya's Law Desk | Law Entrance & 5-Year Law College Companion",
+  description: "Prepare for CLAT, AILET, & Law Entrances under Shreya Nadar's mentorship, and access curated study guides, course articles, and semester notes throughout your entire 5 years of law school (LL.B / B.A. LL.B).",
+  keywords: "CLAT coaching, law school companion, NLU prep, LL.B notes, B.A. LL.B semester guides, law college articles, AILET prep, Shreya's Law Desk",
 };
 
 export default function RootLayout({

@@ -65,7 +65,7 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
 
           {/* Tagline */}
           <motion.p variants={itemVariants} className="text-slate-350 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
-            Direct, focused guidance and structured mocks from top law mentors. We keep our batches small to focus entirely on your individual success.
+            Direct, focused guidance and structured mocks from Shreya Nadar. We keep our batches small to focus entirely on your individual success.
           </motion.p>
 
           {/* Call to Actions */}
@@ -96,9 +96,9 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
                 <Trophy className="w-4 h-4 text-brand-gold-500 inline-block mr-1" />
                 <span>Small Batch Focus</span>
                 <span className="text-slate-600">•</span>
-                <span>Personalized Mock Analysis</span>
+                <span>Coaching by Shreya Nadar</span>
                 <span className="text-slate-600">•</span>
-                <span>Dedicated 1-on-1 Mentorship</span>
+                <span>Dedicated 1-on-1 Doubt Clearing</span>
               </div>
             </div>
           </motion.div>

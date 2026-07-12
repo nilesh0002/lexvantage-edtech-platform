@@ -25,7 +25,7 @@ export default function About() {
               Pioneering Elite Law Education in India
             </h1>
             <p className="text-slate-400 text-sm font-light leading-relaxed">
-              JurisPath was born from a singular vision: to break the standard, rote-learning coaching model and build a tech-enabled, highly analytical learning academy for prospective law scholars.
+              Shreya's Law Desk was born from a singular vision: to break the standard, rote-learning coaching model and build a tech-enabled, highly analytical learning academy for prospective law scholars.
             </p>
           </div>
 
@@ -66,13 +66,13 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white leading-tight">
-                Founded by NLU alumni, built for future jurists.
+                Founded by Shreya Nadar, built for future jurists.
               </h2>
               <p className="text-slate-450 text-xs sm:text-sm font-light leading-relaxed">
-                In 2021, a group of legal professionals from NLSIU Bangalore and NALSAR Hyderabad noticed a recurring trend: while law entrance tests evolved to focus on rapid reading and logical deduction, coachings continued to rely on stale current affairs files and static handouts.
+                Shreya Nadar noticed a recurring trend: while law entrance tests evolved to focus on rapid reading and logical deduction, traditional coaching continued to rely on stale current affairs files and static handouts.
               </p>
               <p className="text-slate-450 text-xs sm:text-sm font-light leading-relaxed">
-                JurisPath was created to solve this gap. We combine Supreme Court litigation expertise with modern cognitive diagnostics, creating a platform that simulates the exact intensity of law entrance challenges.
+                Shreya's Law Desk was created to solve this gap. We combine intensive exam coaching expertise with modern cognitive diagnostics, creating a platform that simulates the exact intensity of law entrance challenges.
               </p>
             </div>
 
@@ -83,7 +83,7 @@ export default function About() {
                 <div className="text-4xl sm:text-5xl font-serif font-extrabold text-brand-gold-500">100%</div>
                 <h4 className="text-white font-bold text-sm">Commitment to Student Integrity</h4>
                 <p className="text-slate-400 text-xs font-light leading-relaxed">
-                  Every JurisPath mentor signs our Student Honor Pledge, committing to absolute clarity, zero hidden fees, and dedicated support for every single cohort.
+                  Shreya Nadar is committed to our Student Honor Pledge, committing to absolute clarity, zero hidden fees, and dedicated support for every single cohort.
                 </p>
               </div>
             </div>

@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
     {
       icon: BookOpen,
       title: "5-Year Law College Companion",
-      description: "We don't leave you after the entrance. JurisPath supports you in law school with premium notes, research articles, and subject guides.",
+      description: "We don't leave you after the entrance. Shreya's Law Desk supports you in law school with premium notes, research articles, and subject guides.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
     {
       icon: Bot,
       title: "Legal Research Assistance",
-      description: "Learn how to conduct academic writing and legal research with guides curated by senior advocates and scholars.",
+      description: "Learn how to conduct academic writing and legal research with guides curated personally by Shreya Nadar.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
     {
       icon: Clock,
       title: "Instant Doubt Resolutions",
-      description: "Submit doubts 24/7 inside the portal and get rich video or text explanations from senior faculty within 15 minutes.",
+      description: "Submit doubts 24/7 inside the portal and get rich video or text explanations from Shreya Nadar within 15 minutes.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
@@ -78,7 +78,7 @@ export default function WhyChooseUs() {
             Engineered for Success
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-            Why Future Lawyers Choose JurisPath
+            Why Future Lawyers Choose Shreya's Law Desk
           </h2>
           <p className="text-slate-405 text-base font-light">
             We guide you through your law entrance exams, and support you all the way through your 5 years in law school with premium course articles, study guides, and legal notes.
