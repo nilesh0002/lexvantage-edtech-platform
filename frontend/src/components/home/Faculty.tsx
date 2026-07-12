@@ -67,15 +67,15 @@ export default function Faculty() {
                 className="group rounded-2xl bg-brand-navy-900 border border-white/5 p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-center hover:border-white/10 transition-all duration-300"
               >
                 {/* Avatar wrapper */}
-                <div className="w-44 h-44 rounded-xl p-0.5 bg-white/5 overflow-hidden shrink-0 relative">
-                  <div className="w-full h-full rounded-[10px] bg-brand-navy-950 overflow-hidden relative flex items-center justify-center">
+                <div className="w-44 h-44 rounded-xl p-0.5 bg-gradient-to-tr from-purple-600 via-blue-500 to-amber-500 overflow-hidden shrink-0 relative shadow-lg shadow-brand-blue-500/10">
+                  <div className="w-full h-full rounded-[10px] bg-brand-navy-900 overflow-hidden relative flex items-center justify-center">
                     <img
                       src={member.avatar}
                       alt={member.name}
                       className="w-4/5 h-4/5 object-contain"
                     />
                     {/* Overlay specialty badge */}
-                    <div className="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-brand-navy-950 border border-white/10 flex items-center justify-center shadow-lg">
+                    <div className="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-brand-navy-900 border border-white/10 flex items-center justify-center shadow-lg">
                       <Icon className="w-4 h-4 text-brand-gold-500" />
                     </div>
                   </div>

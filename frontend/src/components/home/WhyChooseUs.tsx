@@ -85,13 +85,13 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        {/* Features Grid */}
+        {/* Features Grid / Carousel */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-x-visible md:snap-none md:gap-6 sm:gap-8"
         >
           {features.map((feature, idx) => {
             const Icon = feature.icon;
@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="group rounded-2xl glass-panel glass-panel-hover p-6 sm:p-8 flex flex-col justify-between"
+                className="group rounded-2xl glass-panel glass-panel-hover p-6 sm:p-8 flex flex-col justify-between snap-start min-w-[85vw] sm:min-w-[400px] md:min-w-0 shrink-0"
               >
                 <div className="space-y-4">
                   {/* Icon Wrapper */}

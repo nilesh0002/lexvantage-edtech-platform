@@ -7,9 +7,10 @@ import { Scale, Sparkles, Trophy, Calendar, CheckCircle2, ChevronRight, Users, S
 interface HeroProps {
   onStartFree: () => void;
   onBookDemo: () => void;
+  onExploreCourses?: () => void;
 }
 
-export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
+export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: HeroProps) {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -80,8 +81,12 @@ export default function Hero({ onStartFree, onBookDemo }: HeroProps) {
 
             <button
               onClick={() => {
-                const target = document.getElementById("courses");
-                if (target) target.scrollIntoView({ behavior: "smooth" });
+                if (onExploreCourses) {
+                  onExploreCourses();
+                } else {
+                  const target = document.getElementById("courses");
+                  if (target) target.scrollIntoView({ behavior: "smooth" });
+                }
               }}
               className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-white border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >

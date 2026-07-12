@@ -186,7 +186,7 @@ export default function CurrentAffairsPreview() {
 
                   <div className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between">
                     <p className="text-[10px] text-slate-550 max-w-[320px] leading-snug">
-                      Subscribe to the Vantage Dispatch in the footer to get these summaries delivered to your inbox every morning.
+                      Subscribe to the Law Desk Briefing in the footer to get these summaries delivered to your inbox every morning.
                     </p>
                     <button
                       onClick={() => setActiveSummary(null)}

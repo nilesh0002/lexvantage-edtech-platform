@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="lg:col-span-6 space-y-2">
             <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white tracking-tight flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-brand-gold-500" />
-              Subscribe to the Vantage Dispatch
+              Subscribe to the Law Desk Briefing
             </h3>
             <p className="text-slate-400 text-sm max-w-md">
               Receive weekly curated legal news, current affairs summaries, mock test strategy tips, and exclusive course discounts.

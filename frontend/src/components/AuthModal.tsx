@@ -111,7 +111,7 @@ export default function AuthModal({
 
             {/* Header */}
             <div className="flex flex-col items-center mb-6 text-center">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-purple-600 via-brand-blue-500 to-brand-gold-500 p-0.5 flex items-center justify-center shadow-lg shadow-brand-blue-500/10 mb-3">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 via-blue-500 to-amber-500 p-0.5 flex items-center justify-center shadow-lg shadow-brand-blue-500/10 mb-3">
                 <div className="w-full h-full rounded-[14px] bg-brand-navy-950 flex items-center justify-center">
                   <Scale className="w-6 h-6 text-brand-gold-500" />
                 </div>

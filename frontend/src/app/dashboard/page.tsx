@@ -347,12 +347,12 @@ export default function StudentDashboard() {
         <div className="space-y-8">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 px-2">
-            <div className="w-8 h-8 rounded-lg border border-brand-gold-500/30 bg-brand-navy-950 flex items-center justify-center">
+          <Link href="/" className="flex items-center gap-2 px-2 group">
+            <div className="w-8 h-8 rounded-lg border border-brand-gold-500/30 bg-brand-navy-950 dark:bg-brand-navy-900 flex items-center justify-center transition-transform group-hover:scale-105">
               <Scale className="w-4 h-4 text-brand-gold-500" />
             </div>
-            <span className="font-sans font-black text-lg tracking-tight text-white">
-              Lex<span className="text-brand-gold-500">Vantage</span>
+            <span className="font-sans font-black text-base tracking-tight text-foreground">
+              Shreya's <span className="text-brand-gold-500">Law Desk</span>
             </span>
           </Link>
 
@@ -682,7 +682,7 @@ export default function StudentDashboard() {
                           02:00 PM Today
                         </span>
                         <h4 className="text-white text-xs font-bold">Critical Reasoning: Fallacy & Syllogism</h4>
-                        <p className="text-slate-400 text-[10px] font-light">With Prof. Meenakshi Iyer • Cognitive Expert</p>
+                        <p className="text-slate-400 text-[10px] font-light">With Shreya Nadar • Founder & Lead Mentor</p>
                       </div>
                       <button
                         disabled

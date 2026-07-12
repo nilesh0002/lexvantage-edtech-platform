@@ -116,6 +116,17 @@ export default function Home() {
     }
   };
 
+  const handleExploreCourses = () => {
+    setActiveMobileTab("courses");
+    sessionStorage.setItem("shreyaslawdesk_active_tab", "courses");
+    setTimeout(() => {
+      const target = document.getElementById("courses");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <>
       {/* Sticky Navbar */}
@@ -136,6 +147,7 @@ export default function Home() {
           <Hero
             onStartFree={() => handleOpenAuth("signup")}
             onBookDemo={() => handleOpenAuth("login")}
+            onExploreCourses={handleExploreCourses}
           />
           <WhyChooseUs />
           <Courses
@@ -157,6 +169,7 @@ export default function Home() {
               <Hero
                 onStartFree={() => handleOpenAuth("signup")}
                 onBookDemo={() => handleOpenAuth("login")}
+                onExploreCourses={handleExploreCourses}
               />
               <WhyChooseUs />
               <Faq />
