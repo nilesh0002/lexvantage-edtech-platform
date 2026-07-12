@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="group rounded-2xl glass-panel glass-panel-hover p-6 sm:p-8 flex flex-col justify-between snap-start min-w-[85vw] sm:min-w-[400px] md:min-w-0 shrink-0"
+                className="group rounded-2xl glass-panel glass-panel-hover p-6 sm:p-8 flex flex-col justify-between snap-start w-[85vw] sm:w-[400px] md:w-auto shrink-0"
               >
                 <div className="space-y-4">
                   {/* Icon Wrapper */}
