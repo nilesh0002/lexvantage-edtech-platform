@@ -18,6 +18,18 @@
   --color-brand-gold-600: var(--primary-accent-hover);
   --color-brand-gold-400: var(--primary-accent-subtle);
 
+  /* Mappings for non-standard slate colors used in components */
+  --color-slate-150: var(--slate-150);
+  --color-slate-250: var(--slate-250);
+  --color-slate-335: var(--slate-335);
+  --color-slate-350: var(--slate-350);
+  --color-slate-355: var(--slate-355);
+  --color-slate-405: var(--slate-405);
+  --color-slate-450: var(--slate-450);
+  --color-slate-455: var(--slate-455);
+  --color-slate-550: var(--slate-550);
+  --color-slate-555: var(--slate-555);
+
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-shimmer: shimmer 2s linear infinite;
@@ -57,6 +69,18 @@
   --primary-accent: #09090b;
   --primary-accent-hover: #27272a;
   --primary-accent-subtle: #71717a;
+
+  /* Custom slate definitions for Light Mode */
+  --slate-150: #09090b;
+  --slate-250: #09090b;
+  --slate-335: #09090b;
+  --slate-350: #334155;
+  --slate-355: #334155;
+  --slate-405: #334155;
+  --slate-450: #64748b;
+  --slate-455: #64748b;
+  --slate-550: #64748b;
+  --slate-555: #64748b;
 }
 
 html.dark {
@@ -77,6 +101,18 @@ html.dark {
   --primary-accent: #ffffff;
   --primary-accent-hover: #e4e4e7;
   --primary-accent-subtle: #a1a1aa;
+
+  /* Custom slate definitions for Dark Mode (bright slate shades for readable text) */
+  --slate-150: #f1f5f9;
+  --slate-250: #cbd5e1;
+  --slate-335: #94a3b8;
+  --slate-350: #e2e8f0;
+  --slate-355: #cbd5e1;
+  --slate-405: #cbd5e1;
+  --slate-450: #94a3b8;
+  --slate-455: #94a3b8;
+  --slate-550: #64748b;
+  --slate-555: #64748b;
 }
 
 /* Custom Scrollbar for premium dark mode */
