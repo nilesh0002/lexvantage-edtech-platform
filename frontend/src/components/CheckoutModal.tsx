@@ -116,7 +116,7 @@ export default function CheckoutModal({
                     <Sparkles className="w-4 h-4" /> Request for {course.name}
                   </p>
                   <p className="text-slate-405 text-sm max-w-sm">
-                    Thank you! Your enrollment request has been registered. Shreya Nadar will contact you directly to confirm your schedule and batch details.
+                    Thank you! Your enrollment request has been registered. Adv. Shreya Nadar will contact you directly to confirm your schedule and batch details.
                   </p>
                 </motion.div>
               )}

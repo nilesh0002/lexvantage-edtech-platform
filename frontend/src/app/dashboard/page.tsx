@@ -682,7 +682,7 @@ export default function StudentDashboard() {
                           02:00 PM Today
                         </span>
                         <h4 className="text-white text-xs font-bold">Critical Reasoning: Fallacy & Syllogism</h4>
-                        <p className="text-slate-400 text-[10px] font-light">With Shreya Nadar • Founder & Lead Mentor</p>
+                        <p className="text-slate-400 text-[10px] font-light">With Adv. Shreya Nadar • Founder & Lead Mentor</p>
                       </div>
                       <button
                         disabled
@@ -1392,7 +1392,7 @@ export default function StudentDashboard() {
               <div className="flex justify-center pt-6 max-w-xs mx-auto print:text-black">
                 <div className="space-y-1 w-full text-center">
                   <div className="h-8 font-serif italic text-sm text-brand-gold-400 flex items-end justify-center">
-                    Shreya Nadar
+                    Adv. Shreya Nadar
                   </div>
                   <div className="h-px bg-slate-700/40 w-full print:bg-black" />
                   <span className="text-[10px] text-slate-500 block uppercase tracking-wider font-bold">Founder & Lead Law Mentor</span>

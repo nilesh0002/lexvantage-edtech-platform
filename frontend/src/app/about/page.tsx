@@ -69,7 +69,7 @@ export default function About() {
                 About the Founder
               </h2>
               <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
-                Hello! I'm Shreya Nadar, the founder of Shreya's Law Desk. I am a B.L.S. LL.B. graduate with a passion for making legal education simple, practical, and accessible. During my academic journey, I realized that many law students struggle with lengthy provisions and complex legal concepts. That's why I created Shreya's Law Desk—to help students understand the law through clear explanations, structured notes, and exam-oriented guidance.
+                Hello! I'm Adv. Shreya Nadar, the founder of Shreya's Law Desk. I am a B.L.S. LL.B. graduate with a passion for making legal education simple, practical, and accessible. During my academic journey, I realized that many law students struggle with lengthy provisions and complex legal concepts. That's why I created Shreya's Law Desk—to help students understand the law through clear explanations, structured notes, and exam-oriented guidance.
               </p>
               <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
                 Whether you're preparing for LL.B. exams, CLAT UG/PG, LL.M. entrances, AIBE, Judiciary, or other competitive law examinations, my goal is to help you build a strong conceptual foundation and study with confidence.
@@ -86,7 +86,7 @@ export default function About() {
                 <div className="text-4xl sm:text-5xl font-serif font-extrabold text-brand-gold-500">100%</div>
                 <h4 className="text-white font-bold text-sm">Commitment to Student Integrity</h4>
                 <p className="text-slate-400 text-xs font-light leading-relaxed">
-                  Shreya Nadar is committed to our Student Honor Pledge, committing to absolute clarity, zero cost barriers, and dedicated support for every single cohort.
+                  Adv. Shreya Nadar is committed to our Student Honor Pledge, committing to absolute clarity, zero cost barriers, and dedicated support for every single cohort.
                 </p>
               </div>
             </div>

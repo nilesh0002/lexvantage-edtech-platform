@@ -65,8 +65,8 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           </motion.h1>
 
           {/* Tagline */}
-          <motion.p variants={itemVariants} className="text-slate-350 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
-            Direct, focused guidance and structured mocks from Shreya Nadar. We keep our batches small to focus entirely on your individual success.
+          <motion.p variants={itemVariants} className="text-slate-355 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
+            Direct, focused guidance and structured mocks from Adv. Shreya Nadar. We keep our batches small to focus entirely on your individual success.
           </motion.p>
 
           {/* Call to Actions */}
@@ -101,7 +101,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
                 <Trophy className="w-4 h-4 text-brand-gold-500 inline-block mr-1" />
                 <span>Small Batch Focus</span>
                 <span className="text-slate-600">•</span>
-                <span>Coaching by Shreya Nadar</span>
+                <span>Coaching by Adv. Shreya Nadar</span>
                 <span className="text-slate-600">•</span>
                 <span>Dedicated 1-on-1 Doubt Clearing</span>
               </div>

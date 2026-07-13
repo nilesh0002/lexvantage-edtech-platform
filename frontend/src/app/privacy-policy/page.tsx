@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-lg font-serif font-bold text-white pt-4">3. Security Standards</h2>
             <p>
-              All traffic inside the Shreya's Law Desk portal operates under SSL encryption standards. Access to student answer sheets and academic analytics is restricted to Shreya Nadar.
+              All traffic inside the Shreya's Law Desk portal operates under SSL encryption standards. Access to student answer sheets and academic analytics is restricted to Adv. Shreya Nadar.
             </p>
           </div>
 

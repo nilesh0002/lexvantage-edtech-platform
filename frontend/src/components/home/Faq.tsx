@@ -79,7 +79,7 @@ const faqData: FaqItem[] = [
   },
   {
     question: "What is your doubt-resolution system's turnaround time?",
-    answer: "Shreya's Law Desk provides dedicated doubt resolution directly by Shreya Nadar. Students can upload screenshots or type text queries directly inside the dashboard. Over 92% of doubts receive comprehensive step-by-step video explanations within 15 minutes.",
+    answer: "Shreya's Law Desk provides dedicated doubt resolution directly by Adv. Shreya Nadar. Students can upload screenshots or type text queries directly inside the dashboard. Over 92% of doubts receive comprehensive step-by-step video explanations within 15 minutes.",
   },
 ];
 

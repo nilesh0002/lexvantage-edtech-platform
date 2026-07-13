@@ -117,7 +117,7 @@ export const coursesData: Course[] = [
     syllabus: [
       "Select individual subjects based on your choice",
       "Handwritten & easy-to-understand notes for the selected subject",
-      "Dedicated doubt support by Shreya Nadar",
+      "Dedicated doubt support by Adv. Shreya Nadar",
       "Perfect for university exams or targeted prep",
     ],
   },

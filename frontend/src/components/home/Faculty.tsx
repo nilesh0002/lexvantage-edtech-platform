@@ -37,7 +37,7 @@ export default function Faculty() {
               Learn Directly From the Founder
             </h2>
             <p className="text-slate-450 text-sm font-light leading-relaxed">
-              No generic tutors. Get direct, unmediated guidance from Shreya Nadar, who personally teaches and anchors all core subject streams.
+              No generic tutors. Get direct, unmediated guidance from Adv. Shreya Nadar, who personally teaches and anchors all core subject streams.
             </p>
           </div>
 
