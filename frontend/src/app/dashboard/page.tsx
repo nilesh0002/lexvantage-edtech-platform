@@ -18,7 +18,7 @@ export default function StudentDashboard() {
   const [activeTab, setActiveTab] = useState<"overview" | "mock" | "chatbot" | "quiz" | "scholarship">("overview");
   
   // Theme state
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<"dark" | "light">("light");
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("shreyaslawdesk_theme") as "dark" | "light";
@@ -30,7 +30,7 @@ export default function StudentDashboard() {
         document.documentElement.classList.add("dark");
       }
     } else {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
