@@ -121,7 +121,7 @@ export default function Courses({
                           {course.exam}
                         </span>
                         <span className="text-[10px] text-slate-450 font-bold uppercase tracking-wider">
-                          By Adv. Meera Sharma
+                          By Adv. Shreya Nadar
                         </span>
                       </div>
                       
