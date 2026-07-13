@@ -141,15 +141,11 @@ export default function Footer() {
 
           {/* Links Column 3: Contact & Info */}
           <div className="col-span-2 md:col-span-1 lg:col-span-4 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Headquarters</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Contact Info</h4>
             <ul className="space-y-3.5 text-sm text-slate-400">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-brand-blue-500 flex-shrink-0 mt-0.5" />
-                <span>402, Elite Arcade, Janpath Road, Connaught Place, New Delhi - 110001</span>
-              </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-blue-500 flex-shrink-0" />
-                <a href="mailto:admissions@shreyaslawdesk.in" className="hover:text-white transition-colors">admissions@shreyaslawdesk.in</a>
+                <a href="mailto:legalconcept.01@gmail.com" className="hover:text-white transition-colors">legalconcept.01@gmail.com</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-blue-500 flex-shrink-0" />

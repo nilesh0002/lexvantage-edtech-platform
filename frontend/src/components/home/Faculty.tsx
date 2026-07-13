@@ -94,7 +94,7 @@ export default function Faculty() {
                       {member.credentials}
                     </p>
                   </div>
-                  <p className="text-slate-300 text-sm font-light leading-relaxed border-t border-white/5 pt-4">
+                  <p className="text-slate-300 text-sm font-light leading-relaxed border-t border-white/5 pt-4 whitespace-pre-line">
                     {member.bio}
                   </p>
                 </div>

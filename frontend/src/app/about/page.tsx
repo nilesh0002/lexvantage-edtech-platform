@@ -66,13 +66,16 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white leading-tight">
-                Founded by Shreya Nadar, built for future jurists.
+                About the Founder
               </h2>
-              <p className="text-slate-450 text-xs sm:text-sm font-light leading-relaxed">
-                Shreya Nadar noticed a recurring trend: while law entrance tests evolved to focus on rapid reading and logical deduction, traditional coaching continued to rely on stale current affairs files and static handouts.
+              <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                Hello! I'm Shreya Nadar, the founder of Shreya's Law Desk. I am a B.L.S. LL.B. graduate with a passion for making legal education simple, practical, and accessible. During my academic journey, I realized that many law students struggle with lengthy provisions and complex legal concepts. That's why I created Shreya's Law Desk—to help students understand the law through clear explanations, structured notes, and exam-oriented guidance.
               </p>
-              <p className="text-slate-450 text-xs sm:text-sm font-light leading-relaxed">
-                Shreya's Law Desk was created to solve this gap. We combine intensive exam coaching expertise with modern cognitive diagnostics, creating a platform that simulates the exact intensity of law entrance challenges.
+              <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                Whether you're preparing for LL.B. exams, CLAT UG/PG, LL.M. entrances, AIBE, Judiciary, or other competitive law examinations, my goal is to help you build a strong conceptual foundation and study with confidence.
+              </p>
+              <p className="text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                At Shreya's Law Desk, you'll find quality learning, regular practice, and a supportive environment designed to help every aspiring legal professional succeed.
               </p>
             </div>
 
@@ -83,7 +86,7 @@ export default function About() {
                 <div className="text-4xl sm:text-5xl font-serif font-extrabold text-brand-gold-500">100%</div>
                 <h4 className="text-white font-bold text-sm">Commitment to Student Integrity</h4>
                 <p className="text-slate-400 text-xs font-light leading-relaxed">
-                  Shreya Nadar is committed to our Student Honor Pledge, committing to absolute clarity, zero hidden fees, and dedicated support for every single cohort.
+                  Shreya Nadar is committed to our Student Honor Pledge, committing to absolute clarity, zero cost barriers, and dedicated support for every single cohort.
                 </p>
               </div>
             </div>

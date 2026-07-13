@@ -52,21 +52,11 @@ export default function Contact() {
             {/* Contact details */}
             <div className="lg:col-span-5 space-y-6">
               <div className="p-6 rounded-2xl glass-panel border border-white/5 flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-brand-gold-500 shrink-0 mt-1" />
-                <div>
-                  <h4 className="text-white font-serif font-bold text-base">Delhi Headquarters</h4>
-                  <p className="text-slate-400 text-xs mt-1 font-light leading-relaxed">
-                    402, Elite Arcade, Janpath Road, Connaught Place, New Delhi - 110001
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-2xl glass-panel border border-white/5 flex items-start gap-4">
                 <Mail className="w-5 h-5 text-brand-blue-500 shrink-0 mt-1" />
                 <div>
                   <h4 className="text-white font-serif font-bold text-base">Admissions Desk</h4>
                   <p className="text-slate-400 text-xs mt-1 font-light">
-                    admissions@shreyaslawdesk.in
+                    legalconcept.01@gmail.com
                   </p>
                 </div>
               </div>

@@ -28,6 +28,7 @@ export default function Courses({
     { id: "Test Series", label: "Test Series" },
     { id: "SLAT / MHCET", label: "SLAT / MH CET" },
     { id: "Law School LL.B", label: "5-Year Law College" },
+    { id: "Other", label: "Other / Single Subject" },
   ];
 
   const filteredCourses = coursesData.filter((course) => {
@@ -140,34 +141,23 @@ export default function Courses({
                     </ul>
                   </div>
 
-                  {/* Right Side: Pricing & CTA Action */}
-                  <div className="sm:w-48 border-t sm:border-t-0 sm:border-l border-white/5 pt-5 sm:pt-0 sm:pl-6 flex flex-col justify-between items-start sm:items-end">
-                    <div className="flex justify-between sm:justify-start items-center sm:items-end w-full sm:flex-col gap-2 mb-4 sm:mb-0">
-                      <button
-                        onClick={() => onToggleWishlist(course)}
-                        className={`p-2.5 rounded-lg border transition-all cursor-pointer ${
-                          isWishlisted
-                            ? "bg-rose-500/10 border-rose-500/20 text-rose-500"
-                            : "bg-white/5 border-white/10 text-slate-400 hover:text-rose-500 hover:bg-white/10"
-                        }`}
-                        title="Add to Wishlist"
-                      >
-                        <Heart className={`w-4 h-4 ${isWishlisted ? "fill-current" : ""}`} />
-                      </button>
-
-                      <div className="text-right">
-                        <div className="text-white font-extrabold text-2xl tracking-tight">
-                          {course.price}
-                        </div>
-                        <div className="text-slate-500 line-through text-xs mt-0.5">
-                          {course.originalPrice}
-                        </div>
-                      </div>
-                    </div>
+                  {/* Right Side: Action */}
+                  <div className="sm:w-48 border-t sm:border-t-0 sm:border-l border-white/5 pt-5 sm:pt-0 sm:pl-6 flex flex-col justify-between items-start sm:items-end gap-4">
+                    <button
+                      onClick={() => onToggleWishlist(course)}
+                      className={`p-2.5 rounded-lg border transition-all cursor-pointer ${
+                        isWishlisted
+                          ? "bg-rose-500/10 border-rose-500/20 text-rose-500"
+                          : "bg-white/5 border-white/10 text-slate-400 hover:text-rose-500 hover:bg-white/10"
+                      }`}
+                      title="Add to Wishlist"
+                    >
+                      <Heart className={`w-4 h-4 ${isWishlisted ? "fill-current" : ""}`} />
+                    </button>
 
                     <button
                       onClick={() => setCheckoutCourse(course)}
-                      className="min-h-[48px] w-full px-5 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer"
+                      className="min-h-[48px] w-full px-5 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer mt-auto"
                     >
                       Enroll Now
                       <ChevronRight className="w-4 h-4 animate-pulse" />

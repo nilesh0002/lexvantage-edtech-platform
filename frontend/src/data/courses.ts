@@ -12,8 +12,8 @@ export const coursesData: Course[] = [
   {
     id: "clat-2027",
     name: "CLAT Achievers Cohort 2027",
-    price: "₹84,999",
-    originalPrice: "₹1,19,999",
+    price: "",
+    originalPrice: "",
     duration: "2 Year Program (Class 11)",
     exam: "CLAT & AILET",
     syllabus: [
@@ -26,8 +26,8 @@ export const coursesData: Course[] = [
   {
     id: "clat-droppers",
     name: "CLAT Elite Droppers Batch 2026",
-    price: "₹64,999",
-    originalPrice: "₹89,999",
+    price: "",
+    originalPrice: "",
     duration: "1 Year Program (Droppers)",
     exam: "CLAT & AILET",
     syllabus: [
@@ -40,8 +40,8 @@ export const coursesData: Course[] = [
   {
     id: "clat-foundation",
     name: "NLU Foundation Program 2026",
-    price: "₹54,999",
-    originalPrice: "₹74,999",
+    price: "",
+    originalPrice: "",
     duration: "1 Year Program (Class 12)",
     exam: "CLAT",
     syllabus: [
@@ -54,8 +54,8 @@ export const coursesData: Course[] = [
   {
     id: "crash-course",
     name: "Vantage Crash Course (CLAT 2026)",
-    price: "₹19,999",
-    originalPrice: "₹29,999",
+    price: "",
+    originalPrice: "",
     duration: "3-Month Fastrack",
     exam: "Crash Course",
     syllabus: [
@@ -68,8 +68,8 @@ export const coursesData: Course[] = [
   {
     id: "test-series",
     name: "Vantage Mock Test Series Pro",
-    price: "₹7,999",
-    originalPrice: "₹12,999",
+    price: "",
+    originalPrice: "",
     duration: "Till Exam Date",
     exam: "Test Series",
     syllabus: [
@@ -82,8 +82,8 @@ export const coursesData: Course[] = [
   {
     id: "mhcet-slat",
     name: "SLAT & MH CET Law Target Batch",
-    price: "₹24,999",
-    originalPrice: "₹39,999",
+    price: "",
+    originalPrice: "",
     duration: "6-Month Targeted",
     exam: "SLAT / MHCET",
     syllabus: [
@@ -96,8 +96,8 @@ export const coursesData: Course[] = [
   {
     id: "law-school-5year",
     name: "5-Year Law School Semester Companion",
-    price: "₹4,999",
-    originalPrice: "₹9,999",
+    price: "",
+    originalPrice: "",
     duration: "5-Year Support (Per Semester)",
     exam: "Law School LL.B",
     syllabus: [
@@ -105,6 +105,20 @@ export const coursesData: Course[] = [
       "Research guides & academic writing tutorials",
       "High-yield case briefs & landmark judgment summaries",
       "Legal drafting & moot court preparation kits",
+    ],
+  },
+  {
+    id: "other-subject",
+    name: "Other / Individual Subject Option",
+    price: "",
+    originalPrice: "",
+    duration: "Flexible Support",
+    exam: "Other",
+    syllabus: [
+      "Select individual subjects based on your choice",
+      "Handwritten & easy-to-understand notes for the selected subject",
+      "Dedicated doubt support by Shreya Nadar",
+      "Perfect for university exams or targeted prep",
     ],
   },
 ];

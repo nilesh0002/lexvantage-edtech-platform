@@ -110,13 +110,13 @@ export default function CheckoutModal({
                     <CheckCircle2 className="w-12 h-12 text-brand-gold-400" />
                   </motion.div>
                   <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
-                    Payment Successful!
+                    Enrollment Request Sent!
                   </h3>
                   <p className="text-brand-gold-500 font-bold mb-4 flex items-center gap-1.5 text-sm">
-                    <Sparkles className="w-4 h-4" /> Enrolled in {course.name}
+                    <Sparkles className="w-4 h-4" /> Request for {course.name}
                   </p>
-                  <p className="text-slate-400 text-sm max-w-sm">
-                    Welcome to Shreya's Law Desk! We've sent credentials and batch allocations to your registered phone number. Dashboard access is now unlocked.
+                  <p className="text-slate-405 text-sm max-w-sm">
+                    Thank you! Your enrollment request has been registered. Shreya Nadar will contact you directly to confirm your schedule and batch details.
                   </p>
                 </motion.div>
               )}
@@ -124,11 +124,11 @@ export default function CheckoutModal({
 
             {/* Header */}
             <div className="mb-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
-                Secure Checkout
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
+                Admissions Desk
               </span>
               <h2 className="text-2xl font-serif font-bold text-white tracking-tight mt-1">
-                Complete Enrollment
+                Complete Enrollment Request
               </h2>
             </div>
 
@@ -142,18 +142,12 @@ export default function CheckoutModal({
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Selected Course Summary */}
-              <div className="p-4 rounded-xl bg-white/5 border border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-blue-500/10 text-brand-blue-500 border border-brand-blue-500/20 uppercase">
-                    {course.exam}
-                  </span>
-                  <h4 className="text-white font-bold mt-1.5">{course.name}</h4>
-                  <p className="text-slate-400 text-xs mt-0.5">{course.duration}</p>
-                </div>
-                <div className="text-right flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto border-t sm:border-t-0 border-white/5 pt-2 sm:pt-0">
-                  <span className="text-white font-extrabold text-xl">{course.price}</span>
-                  <span className="text-slate-500 line-through text-xs ml-2 sm:ml-0">{course.originalPrice}</span>
-                </div>
+              <div className="p-4 rounded-xl bg-white/5 border border-white/5">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-gold-500/10 text-brand-gold-500 border border-brand-gold-500/20 uppercase">
+                  {course.exam}
+                </span>
+                <h4 className="text-white font-bold mt-1.5">{course.name}</h4>
+                <p className="text-slate-405 text-xs mt-0.5">{course.duration}</p>
               </div>
 
               {/* Student Information Fields */}
@@ -241,19 +235,19 @@ export default function CheckoutModal({
                   {submitting ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      Contacting Gateway & Verifying OTP...
+                      Registering Enrollment Request...
                     </>
                   ) : (
                     <>
-                      <CreditCard className="w-5 h-5" />
-                      Pay {course.price} & Secure NLU Seat
+                      <CheckCircle2 className="w-5 h-5" />
+                      Submit Admission Request
                     </>
                   )}
                 </button>
 
                 <div className="flex items-center justify-center gap-1.5 text-xs text-slate-500 mt-4 text-center">
-                  <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                  <span>SSL Encrypted Payments • Refundable Mock Fees</span>
+                  <ShieldCheck className="w-4 h-4 text-brand-gold-500" />
+                  <span>SSL Encrypted Connection • Priority Admissions Contact</span>
                 </div>
               </div>
             </form>

@@ -14,8 +14,8 @@ export const facultyData: Educator[] = [
   {
     name: "Shreya Nadar",
     role: "Founder & Lead Law Mentor",
-    credentials: "BLS LL.B Candidate (D.Y. Patil College of Law) • Company Secretary (ICSI)",
-    bio: "Detail-oriented professional with experience as a Legal Aid Officer at Belapur Court and content developer for InAmigos Foundation. Currently pursuing BLS LL.B to enhance legal knowledge through practical engagement, Shreya brings strong research, drafting, and compliance skills to guide aspirants into top law colleges.",
+    credentials: "B.L.S. LL.B. Graduate • Company Secretary (ICSI)",
+    bio: "Hello! I'm Shreya Nadar, the founder of Shreya's Law Desk.\n\nI am a B.L.S. LL.B. graduate with a passion for making legal education simple, practical, and accessible. During my academic journey, I realized that many law students struggle with lengthy provisions and complex legal concepts. That's why I created Shreya's Law Desk—to help students understand the law through clear explanations, structured notes, and exam-oriented guidance.\n\nWhether you're preparing for LL.B. exams, CLAT UG/PG, LL.M. entrances, AIBE, Judiciary, or other competitive law examinations, my goal is to help you build a strong conceptual foundation and study with confidence.\n\nAt Shreya's Law Desk, you'll find quality learning, regular practice, and a supportive environment designed to help every aspiring legal professional succeed.",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Shreya",
     specialtyIcon: Scale,
   }

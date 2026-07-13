@@ -6,13 +6,64 @@ import { ChevronDown, HelpCircle, Scale } from "lucide-react";
 
 interface FaqItem {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
 }
 
 const faqData: FaqItem[] = [
   {
-    question: "Who is eligible to join the Shreya's Law Desk coaching cohorts?",
-    answer: "Our classes are architected for aspirants targeting CLAT, AILET, SLAT, and MH CET Law. We have custom curriculums designed specifically for Class 11 students (2-Year Program), Class 12 students (1-Year Foundation), and Droppers (Elite Repeaters Batch).",
+    question: "Who is eligible to join Shreya's Law Desk coaching?",
+    answer: (
+      <div className="space-y-4">
+        <div>
+          <p className="font-semibold text-slate-200 mb-2">Our courses are designed for:</p>
+          <ul className="list-disc list-inside space-y-1 text-slate-400 pl-1">
+            <li>LL.B. students (All Years/Semesters)</li>
+            <li>CLAT UG & CLAT PG Aspirants</li>
+            <li>MH CET Law Aspirants (3-Year & 5-Year)</li>
+            <li>Judiciary Aspirants</li>
+            <li>AIBE Aspirants</li>
+            <li>LL.M. Entrance Aspirants</li>
+            <li>Students preparing for university examinations</li>
+          </ul>
+        </div>
+        <div>
+          <p className="font-semibold text-slate-200 mb-2">We provide comprehensive coverage of major law subjects, including:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-slate-400 pl-1">
+            <span>• Constitutional Law</span>
+            <span>• Contract Law</span>
+            <span>• Law of Torts</span>
+            <span>• Criminal Law (BNS, BNSS & BSA)</span>
+            <span>• Family Law</span>
+            <span>• Company Law</span>
+            <span>• Administrative Law</span>
+            <span>• Jurisprudence</span>
+            <span>• Public International Law</span>
+            <span>• Environmental Law</span>
+            <span>• Labour Law</span>
+            <span>• Intellectual Property Rights (IPR)</span>
+            <span>• Human Rights Law</span>
+            <span>• Property Law</span>
+            <span>• Evidence Law</span>
+            <span>• CPC & CrPC/BNSS</span>
+            <span>• Interpretation of Statutes</span>
+            <span>• Arbitration</span>
+            <span>• Cyber Law</span>
+            <span>• Banking & Insurance Law</span>
+            <span>• Taxation Law</span>
+            <span>• Consumer Protection Law</span>
+            <span>• Transfer of Property Act</span>
+            <span>• Specific Relief Act</span>
+            <span>• Negotiable Instruments Act</span>
+            <span>• Limitation Act</span>
+            <span>• Partnership Act</span>
+            <span>• Sale of Goods Act</span>
+            <span>• Competition Law</span>
+            <span>• Insolvency & Bankruptcy Law</span>
+            <span className="sm:col-span-2 italic font-medium mt-1 text-slate-350">And other university-prescribed subjects.</span>
+          </div>
+        </div>
+      </div>
+    ),
   },
   {
     question: "How does the simulated Mock Test Portal mirror the actual exams?",

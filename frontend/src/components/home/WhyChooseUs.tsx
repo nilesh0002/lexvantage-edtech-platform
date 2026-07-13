@@ -2,49 +2,63 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { Bot, BookOpen, Clock, Users, Zap, GraduationCap } from "lucide-react";
+import { Scale, BookOpen, ClipboardList, PenTool, Target, MessageSquare, Smartphone, Sparkles, Zap } from "lucide-react";
 
 export default function WhyChooseUs() {
   const features = [
     {
-      icon: GraduationCap,
-      title: "Law Entrance Preparation",
-      description: "Comprehensive, structured coaching for CLAT, AILET, SLAT, and other top law entrance exams with detailed concept metrics.",
+      icon: Scale,
+      title: "Concept-Based Learning",
+      description: "Understand the law instead of memorizing it.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
     {
       icon: BookOpen,
-      title: "5-Year Law College Companion",
-      description: "We don't leave you after the entrance. Shreya's Law Desk supports you in law school with premium notes, research articles, and subject guides.",
+      title: "Complete Syllabus Coverage",
+      description: "Covers major Acts and subjects for law exams.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
     {
-      icon: Zap,
-      title: "Elite Mock Simulations",
-      description: "Access 120+ full-length mock tests modeled exactly on modern CLAT & AILET interfaces, with comprehensive analytics post-exam.",
+      icon: ClipboardList,
+      title: "Regular Mock Tests & Practice MCQs",
+      description: "Build exam confidence with consistent practice.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
     {
-      icon: Bot,
-      title: "Legal Research Assistance",
-      description: "Learn how to conduct academic writing and legal research with guides curated personally by Shreya Nadar.",
+      icon: PenTool,
+      title: "Handwritten & Easy-to-Understand Notes",
+      description: "Concise notes designed for quick revision.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
     {
-      icon: Users,
-      title: "Ultra-Small Cohorts",
-      description: "Strictly limited batch sizes of 40 students ensure personalized attention, individual feedback on essays, and interactive law discussion.",
+      icon: Target,
+      title: "Exam-Oriented Preparation",
+      description: "Focused strategies for LL.B., CLAT, LL.M., AIBE, Judiciary, and other law entrance exams.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },
     {
-      icon: Clock,
-      title: "Instant Doubt Resolutions",
-      description: "Submit doubts 24/7 inside the portal and get rich video or text explanations from Shreya Nadar within 15 minutes.",
+      icon: MessageSquare,
+      title: "Dedicated Doubt Support",
+      description: "Get your questions answered with timely guidance.",
+      color: "text-brand-gold-500",
+      bg: "bg-white/5 border-white/10",
+    },
+    {
+      icon: Smartphone,
+      title: "Learn Anytime, Anywhere",
+      description: "Access recorded lectures and study materials at your convenience.",
+      color: "text-brand-gold-500",
+      bg: "bg-white/5 border-white/10",
+    },
+    {
+      icon: Sparkles,
+      title: "Affordable & Student-Focused",
+      description: "Quality legal education at reasonable fees.",
       color: "text-brand-gold-500",
       bg: "bg-white/5 border-white/10",
     },

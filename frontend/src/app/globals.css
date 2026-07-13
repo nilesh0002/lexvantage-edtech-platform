@@ -84,23 +84,23 @@
 }
 
 html.dark {
-  --background: #000000;
-  --foreground: #fafafa;
+  --background: #6D1F3A;
+  --foreground: #F8FAFC;
   
-  --bg-navy-955: #000000;
-  --bg-navy-950: #000000;
-  --bg-navy-900: #09090b;
-  --bg-navy-800: #18181b;
-  --bg-navy-700: #27272a;
+  --bg-navy-955: #6D1F3A;
+  --bg-navy-950: #5A1930;
+  --bg-navy-900: #481426;
+  --bg-navy-800: #360F1D;
+  --bg-navy-700: #240A13;
   
-  --accent-gray: #3f3f46;
-  --accent-gray-dark: #27272a;
-  --accent-gray-light: #52525b;
-  --accent-white-black: #ffffff;
+  --accent-gray: #E2C154;
+  --accent-gray-dark: #C2A032;
+  --accent-gray-light: #F5E5A3;
+  --accent-white-black: #F8FAFC;
   
-  --primary-accent: #ffffff;
-  --primary-accent-hover: #e4e4e7;
-  --primary-accent-subtle: #a1a1aa;
+  --primary-accent: #D4AF37;
+  --primary-accent-hover: #C2A032;
+  --primary-accent-subtle: #E2C154;
 
   /* Custom slate definitions for Dark Mode (bright slate shades for readable text) */
   --slate-150: #f1f5f9;
@@ -174,7 +174,7 @@ body {
 }
 
 .text-gradient-purple-blue {
-  background: linear-gradient(135deg, #2dd4bf 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #fbbf24 0%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

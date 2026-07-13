@@ -99,14 +99,7 @@ export default function WishlistDrawer({
                         </h4>
                       </div>
 
-                      <div className="flex items-center justify-between mt-2">
-                        <div>
-                          <span className="text-white font-bold text-base">{course.price}</span>
-                          <span className="text-slate-400 line-through text-xs ml-2">
-                            {course.originalPrice}
-                          </span>
-                        </div>
-
+                      <div className="flex items-center justify-end mt-2 w-full">
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => onRemove(course.id)}
@@ -117,7 +110,7 @@ export default function WishlistDrawer({
                           </button>
                           <button
                             onClick={() => onCheckout(course)}
-                            className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-xs font-bold transition-all shadow-md"
+                            className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 text-xs font-bold transition-all shadow-md cursor-pointer"
                           >
                             <CreditCard className="w-3.5 h-3.5" />
                             Enroll
