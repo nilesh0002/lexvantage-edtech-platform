@@ -9,10 +9,10 @@ export default function PrivacyPolicy() {
     <>
       <Navbar />
 
-      <main className="flex-grow pt-28 bg-brand-navy-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8 text-slate-300">
+      <main className="flex-grow pt-28 bg-brand-navy-955">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8 text-slate-350">
           
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 mb-6">
             Privacy Policy
           </h1>
           <p className="text-xs text-slate-500 font-mono">Last Updated: July 11, 2026</p>
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
               Shreya's Law Desk ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by Shreya's Law Desk.
             </p>
 
-            <h2 className="text-lg font-serif font-bold text-white pt-4">1. Information We Collect</h2>
+            <h2 className="text-lg font-serif font-bold text-slate-150 pt-4">1. Information We Collect</h2>
             <p>
               We collect information that you identify or provide directly to us when creating a Student Account, registering for Mock Tests, completing Scholarship Claim forms, or subscribing to our email newsletters. This information may include:
             </p>
@@ -33,14 +33,14 @@ export default function PrivacyPolicy() {
               <li>Simulated transaction metrics necessary for processing admissions.</li>
             </ul>
 
-            <h2 className="text-lg font-serif font-bold text-white pt-4">2. How We Use Your Information</h2>
+            <h2 className="text-lg font-serif font-bold text-slate-150 pt-4">2. How We Use Your Information</h2>
             <p>
               We utilize collected information to administer your learning portal, deliver daily GK summaries, verify doubt logs, compile accuracy charts, and issue merit achievements certificates. We do not sell or trade user information with advertising third parties.
             </p>
 
-            <h2 className="text-lg font-serif font-bold text-white pt-4">3. Security Standards</h2>
+            <h2 className="text-lg font-serif font-bold text-slate-150 pt-4">3. Security Standards</h2>
             <p>
-              All traffic inside the Shreya's Law Desk portal operates under SSL encryption standards. Access to student answer sheets and academic analytics is restricted to Adv. Shreya Nadar.
+              All traffic inside the Shreya's Law Desk portal operates under SSL encryption standards. Access to student answer sheets and academic analytics is restricted to Shreya Nadar.
             </p>
           </div>
 

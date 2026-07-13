@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
           <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
             Engineered for Success
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Why Future Lawyers Choose Shreya's Law Desk
           </h2>
           <p className="text-slate-405 text-base font-light">
@@ -122,7 +122,7 @@ export default function WhyChooseUs() {
                   </div>
 
                   {/* Text */}
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-blue-500 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-150 group-hover:text-brand-blue-500 transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-slate-405 text-sm leading-relaxed font-light">

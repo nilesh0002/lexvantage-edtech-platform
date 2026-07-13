@@ -33,17 +33,17 @@ export default function Faculty() {
             <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
               Master Mentor
             </span>
-            <h2 className="text-3xl sm:text-4xl font-sans font-black text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-sans font-black text-slate-150 tracking-tight">
               Learn Directly From the Founder
             </h2>
-            <p className="text-slate-450 text-sm font-light leading-relaxed">
-              No generic tutors. Get direct, unmediated guidance from Adv. Shreya Nadar, who personally teaches and anchors all core subject streams.
+            <p className="text-slate-350 text-sm font-light leading-relaxed">
+              No generic tutors. Get direct, unmediated guidance from Shreya Nadar, who personally teaches and anchors all core subject streams.
             </p>
           </div>
 
           <a
             href="#courses"
-            className="flex items-center gap-1.5 px-5 py-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold text-xs transition-all self-start md:self-auto cursor-pointer"
+            className="flex items-center gap-1.5 px-5 py-3 rounded-lg border border-slate-150/20 bg-slate-150/5 hover:bg-slate-150/10 text-slate-150 font-bold text-xs transition-all self-start md:self-auto cursor-pointer"
           >
             Schedule Free Demo Class
             <ArrowUpRight className="w-4 h-4 text-brand-gold-500" />
@@ -64,11 +64,11 @@ export default function Faculty() {
               <motion.div
                 key={member.name}
                 variants={itemVariants}
-                className="group rounded-2xl bg-brand-navy-900 border border-white/5 p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-center hover:border-white/10 transition-all duration-300"
+                className="group rounded-2xl glass-panel glass-panel-hover p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-center transition-all duration-300"
               >
                 {/* Avatar wrapper */}
                 <div className="w-44 h-44 rounded-xl p-0.5 bg-gradient-to-tr from-purple-600 via-blue-500 to-amber-500 overflow-hidden shrink-0 relative shadow-lg shadow-brand-blue-500/10">
-                  <div className="w-full h-full rounded-[10px] bg-brand-navy-900 overflow-hidden relative flex items-center justify-center">
+                  <div className="w-full h-full rounded-[10px] bg-brand-navy-950 overflow-hidden relative flex items-center justify-center">
                     <img
                       src={member.avatar}
                       alt={member.name}
@@ -84,17 +84,17 @@ export default function Faculty() {
                 {/* Info */}
                 <div className="space-y-4 flex-1">
                   <div className="space-y-1 text-center md:text-left">
-                    <h3 className="text-white font-black text-xl leading-tight">
+                    <h3 className="text-slate-150 font-black text-xl leading-tight">
                       {member.name}
                     </h3>
                     <p className="text-brand-gold-500 text-xs font-bold font-mono">
                       {member.role}
                     </p>
-                    <p className="text-slate-400 text-xs font-medium leading-relaxed">
+                    <p className="text-slate-350 text-xs font-medium leading-relaxed">
                       {member.credentials}
                     </p>
                   </div>
-                  <p className="text-slate-300 text-sm font-light leading-relaxed border-t border-white/5 pt-4 whitespace-pre-line">
+                  <p className="text-slate-350 text-sm font-light leading-relaxed border-t border-white/5 pt-4 whitespace-pre-line">
                     {member.bio}
                   </p>
                 </div>

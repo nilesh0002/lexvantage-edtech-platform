@@ -57,7 +57,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           </motion.div>
 
           {/* Main Headline */}
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-white leading-[1.15] max-w-2xl">
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-slate-150 leading-[1.15] max-w-2xl">
             Personalized CLAT & <br />
             <span className="text-brand-gold-500">
               Law Entrance Prep
@@ -65,8 +65,8 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           </motion.h1>
 
           {/* Tagline */}
-          <motion.p variants={itemVariants} className="text-slate-355 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
-            Direct, focused guidance and structured mocks from Adv. Shreya Nadar. We keep our batches small to focus entirely on your individual success.
+          <motion.p variants={itemVariants} className="text-slate-350 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
+            Direct, focused guidance and structured mocks from Shreya Nadar. We keep our batches small to focus entirely on your individual success.
           </motion.p>
 
           {/* Call to Actions */}
@@ -97,11 +97,11 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           {/* Startup Focus Detail */}
           <motion.div variants={itemVariants} className="pt-8 border-t border-white/5 w-full flex justify-center">
             <div className="text-center">
-              <div className="text-white text-xs sm:text-sm font-semibold flex flex-wrap items-center justify-center gap-2 text-slate-350">
+              <div className="text-xs sm:text-sm font-semibold flex flex-wrap items-center justify-center gap-2 text-slate-350">
                 <Trophy className="w-4 h-4 text-brand-gold-500 inline-block mr-1" />
                 <span>Small Batch Focus</span>
                 <span className="text-slate-600">•</span>
-                <span>Coaching by Adv. Shreya Nadar</span>
+                <span>Coaching by Shreya Nadar</span>
                 <span className="text-slate-600">•</span>
                 <span>Dedicated 1-on-1 Doubt Clearing</span>
               </div>

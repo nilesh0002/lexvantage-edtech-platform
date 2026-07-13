@@ -51,10 +51,10 @@ export default function Courses({
             <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
               Elite Curriculums
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 tracking-tight">
               Invest in Your NLU Future
             </h2>
-            <p className="text-slate-400 text-sm font-light leading-relaxed">
+            <p className="text-slate-350 text-sm font-light leading-relaxed">
               Explore our range of comprehensive classes and test series meticulously architected to help you conquer law school entrance examinations.
             </p>
           </div>
@@ -121,14 +121,14 @@ export default function Courses({
                           {course.exam}
                         </span>
                         <span className="text-[10px] text-slate-450 font-bold uppercase tracking-wider">
-                          By Adv. Shreya Nadar
+                          By Shreya Nadar
                         </span>
                       </div>
                       
-                      <h3 className="text-lg font-bold text-white group-hover:text-brand-gold-500 transition-colors leading-tight mb-1">
+                      <h3 className="text-lg font-bold text-slate-150 group-hover:text-brand-gold-500 transition-colors leading-tight mb-1">
                         {course.name}
                       </h3>
-                      <p className="text-xs text-slate-400 font-medium mb-4">{course.duration}</p>
+                      <p className="text-xs text-slate-350 font-medium mb-4">{course.duration}</p>
                     </div>
 
                     <ul className="space-y-2.5 border-t border-white/5 pt-4 my-4 flex-grow">

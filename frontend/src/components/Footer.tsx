@@ -101,7 +101,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              India's premier law coaching academy for law school entrance examinations and 5-year LL.B semester companion. Empowering CLAT, AILET, and law students under the direct guidance of Adv. Shreya Nadar to graduate at the top of their class.
+              India's premier law coaching academy for law school entrance examinations and 5-year LL.B semester companion. Empowering CLAT, AILET, and law students under the direct guidance of Shreya Nadar to graduate at the top of their class.
             </p>
 
             <div className="space-y-3">
