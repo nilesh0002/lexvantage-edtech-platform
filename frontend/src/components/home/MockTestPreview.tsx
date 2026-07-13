@@ -11,6 +11,7 @@ interface MockTestPreviewProps {
 export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProps) {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [passageExpanded, setPassageExpanded] = useState(false);
 
   const questionData = {
     passage: "Article 21 of the Indian Constitution declares that 'No person shall be deprived of his life or personal liberty except according to procedure established by law.' In the landmark Maneka Gandhi v. Union of India (1978) case, the Supreme Court expanded this scope, ruling that the 'procedure' established by law must not be arbitrary, oppressive, or fanciful; it must satisfy the requirements of being 'right, just, and fair'. Thus, procedural due process became an implicit part of Article 21.",
@@ -79,15 +80,33 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-white/5">
-            {/* Left Side: Passage */}
-            <div className="p-6 sm:p-8 space-y-4 max-h-[380px] overflow-y-auto">
-              <h3 className="text-xs font-bold uppercase text-slate-400 flex items-center gap-1.5">
-                <HelpCircle className="w-4 h-4 text-brand-blue-500" />
-                Read the Passage
-              </h3>
-              <p className="text-slate-300 text-sm leading-relaxed font-light">
-                {questionData.passage}
-              </p>
+            {/* Left Side: Passage (Collapsible on Mobile) */}
+            <div className="relative border-b lg:border-b-0 lg:border-r border-white/5">
+              <div className={`p-6 sm:p-8 space-y-4 overflow-y-auto transition-all duration-300 ${
+                passageExpanded ? "max-h-none lg:max-h-[380px]" : "max-h-[160px] lg:max-h-[380px]"
+              }`}>
+                <h3 className="text-xs font-bold uppercase text-slate-400 flex items-center gap-1.5">
+                  <HelpCircle className="w-4 h-4 text-brand-gold-500" />
+                  Read the Passage
+                </h3>
+                <p className="text-slate-350 text-sm leading-relaxed font-light">
+                  {questionData.passage}
+                </p>
+              </div>
+              
+              {/* Mobile collapse gradient fade and button */}
+              <div className={`lg:hidden absolute bottom-0 left-0 right-0 p-4 flex justify-center pointer-events-none ${
+                passageExpanded 
+                  ? "bg-transparent pointer-events-auto pb-4 relative mt-[-20px]" 
+                  : "pt-10 bg-gradient-to-t from-brand-navy-900/90 to-transparent"
+              }`}>
+                <button
+                  onClick={() => setPassageExpanded(!passageExpanded)}
+                  className="pointer-events-auto px-4 py-1.5 rounded-full bg-brand-navy-950 text-slate-300 hover:text-white border border-white/10 hover:border-white/20 text-[10px] font-bold shadow-lg flex items-center gap-1 transition-all"
+                >
+                  {passageExpanded ? "Collapse Passage" : "Show Full Passage"}
+                </button>
+              </div>
             </div>
 
             {/* Right Side: Questions & Options */}
@@ -125,7 +144,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                       key={opt.id}
                       onClick={() => handleOptionClick(opt.id)}
                       disabled={submitted}
-                      className={`w-full text-left p-4 rounded-xl border text-xs font-medium leading-relaxed transition-all flex items-start gap-3 focus:outline-none ${optionClass}`}
+                      className={`w-full text-left p-4 rounded-xl border text-xs font-medium leading-relaxed transition-all flex items-start gap-3 focus:outline-none min-h-[48px] ${optionClass}`}
                     >
                       <span className={`w-5 h-5 rounded-lg border flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5 ${
                         isSelected && !submitted

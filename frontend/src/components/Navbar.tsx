@@ -267,52 +267,81 @@ export default function Navbar({
       {/* Mobile Menu Drawer */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed top-[73px] left-0 right-0 z-40 bg-brand-navy-950/95 backdrop-blur-lg border-b border-white/10 overflow-hidden md:hidden shadow-2xl"
-          >
-            <div className="px-4 pt-3 pb-6 space-y-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="block px-4 py-3.5 rounded-xl text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px]"
-                >
-                  {link.name}
-                </Link>
-              ))}
+          <>
+            {/* Backdrop Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 z-40 bg-black/60 md:hidden backdrop-blur-sm"
+            />
 
-              <div className="border-t border-white/5 my-2 pt-2">
-                <span className="px-4 py-1 text-xs font-semibold uppercase tracking-wider text-slate-500 block">
-                  Resources
+            {/* Sliding Drawer Panel */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", bounce: 0, duration: 0.3 }}
+              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] z-50 bg-brand-navy-955 border-l border-white/10 shadow-2xl p-6 flex flex-col md:hidden overflow-y-auto"
+            >
+              {/* Drawer Header */}
+              <div className="flex items-center justify-between pb-4 border-b border-white/5 mb-6">
+                <span className="font-sans font-black text-lg tracking-tight text-foreground">
+                  Shreya's <span className="text-brand-gold-500">Law Desk</span>
                 </span>
-                {resourceLinks.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px]"
-                    >
-                      <Icon className="w-5 h-5 text-brand-blue-500" />
-                      {item.name}
-                    </Link>
-                  );
-                })}
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Links list */}
+              <div className="space-y-1.5 flex-grow">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-3 rounded-xl text-base font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px] flex items-center"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+
+                <div className="border-t border-white/5 my-4 pt-4">
+                  <span className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">
+                    Resources
+                  </span>
+                  {resourceLinks.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px]"
+                      >
+                        <Icon className="w-5 h-5 text-brand-gold-500" />
+                        {item.name}
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
 
               {/* Login / Actions on mobile */}
-              <div className="border-t border-white/5 mt-4 pt-4 flex flex-col gap-3">
+              <div className="border-t border-white/5 pt-6 mt-auto flex flex-col gap-3">
                 {isLoggedIn ? (
                   <>
                     <Link
                       href="/dashboard"
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-base font-bold bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-colors min-h-[48px]"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-base font-bold bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-colors min-h-[48px]"
                     >
-                      <LayoutDashboard className="w-5 h-5 text-brand-blue-500" />
+                      <LayoutDashboard className="w-5 h-5 text-brand-gold-500" />
                       Dashboard Portal
                     </Link>
                     <button
@@ -320,7 +349,7 @@ export default function Navbar({
                         onLogout();
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full py-3 rounded-lg text-base font-bold text-rose-450 hover:bg-rose-500/5 transition-colors border border-rose-500/10 min-h-[48px]"
+                      className="w-full py-3 rounded-xl text-base font-bold text-rose-450 hover:bg-rose-500/5 transition-colors border border-rose-500/10 min-h-[48px] cursor-pointer"
                     >
                       Sign Out
                     </button>
@@ -332,7 +361,7 @@ export default function Navbar({
                         onOpenAuth("login");
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full py-3 rounded-lg text-base font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px]"
+                      className="w-full py-3 rounded-xl text-base font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors min-h-[48px] cursor-pointer"
                     >
                       Sign In
                     </button>
@@ -341,15 +370,15 @@ export default function Navbar({
                         onOpenAuth("signup");
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full min-h-[48px] py-3 rounded-lg text-base font-bold text-brand-navy-955 bg-brand-gold-500 hover:bg-brand-gold-600 text-center flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full min-h-[48px] py-3 rounded-xl text-base font-bold text-brand-navy-955 bg-brand-gold-500 hover:bg-brand-gold-600 text-center flex items-center justify-center gap-2 cursor-pointer"
                     >
                       Start Free Trial
                     </button>
                   </>
                 )}
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

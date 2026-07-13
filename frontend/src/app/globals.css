@@ -52,67 +52,67 @@
 }
 
 :root {
-  --background: #FAF9F6;
-  --foreground: #0F2D52;
+  --background: #FAF7EF;
+  --foreground: #0A1F44;
   
-  --bg-navy-955: #FAF9F6;
-  --bg-navy-950: #FAF6EE;
-  --bg-navy-900: #F5EFEB;
-  --bg-navy-800: #EDE6DB;
-  --bg-navy-700: #E0D7C6;
+  --bg-navy-955: #FAF7EF;
+  --bg-navy-950: #FFFFFF;
+  --bg-navy-900: #0F2D52;
+  --bg-navy-800: #EAE4D7;
+  --bg-navy-700: #DDD5C5;
   
-  --accent-gray: #7A7265;
-  --accent-gray-dark: #4F483D;
-  --accent-gray-light: #B5AC9E;
-  --accent-white-black: #0F2D52;
+  --accent-gray: #7C7565;
+  --accent-gray-dark: #4F4A3E;
+  --accent-gray-light: #CBBFAD;
+  --accent-white-black: #0A1F44;
   
-  --primary-accent: #C9A227;
-  --primary-accent-hover: #B59123;
-  --primary-accent-subtle: #D8B53C;
+  --primary-accent: #C99A2E;
+  --primary-accent-hover: #B28827;
+  --primary-accent-subtle: #DDB34E;
 
   /* Custom slate definitions for Light Mode */
-  --slate-150: #0F2D52;
-  --slate-250: #1D416D;
-  --slate-335: #2D5483;
-  --slate-350: #3D6799;
-  --slate-355: #4D7BAF;
-  --slate-405: #5D8EC5;
-  --slate-450: #74A2DB;
-  --slate-455: #89B5EC;
-  --slate-550: #9FC9FD;
-  --slate-555: #B5DCFF;
+  --slate-150: #0A1F44;
+  --slate-250: #1A3B6B;
+  --slate-335: #2B548F;
+  --slate-350: #3D68A8;
+  --slate-355: #4E7BC2;
+  --slate-405: #5F8EDE;
+  --slate-450: #7DA4EB;
+  --slate-455: #91B3ED;
+  --slate-550: #A6C2EE;
+  --slate-555: #BCD2EF;
 }
 
 html.dark {
-  --background: #6D1F3A;
-  --foreground: #F8FAFC;
+  --background: #0A1F44;
+  --foreground: #FAF7EF;
   
-  --bg-navy-955: #6D1F3A;
-  --bg-navy-950: #5A1930;
-  --bg-navy-900: #481426;
-  --bg-navy-800: #360F1D;
-  --bg-navy-700: #240A13;
+  --bg-navy-955: #0A1F44;
+  --bg-navy-950: #0F2754;
+  --bg-navy-900: #081A3C;
+  --bg-navy-800: #14326A;
+  --bg-navy-700: #1D4386;
   
-  --accent-gray: #E2C154;
-  --accent-gray-dark: #C2A032;
-  --accent-gray-light: #F5E5A3;
-  --accent-white-black: #F8FAFC;
+  --accent-gray: #D2C8B5;
+  --accent-gray-dark: #A59B88;
+  --accent-gray-light: #FAF5EB;
+  --accent-white-black: #FAF7EF;
   
-  --primary-accent: #D4AF37;
-  --primary-accent-hover: #C2A032;
-  --primary-accent-subtle: #E2C154;
+  --primary-accent: #C99A2E;
+  --primary-accent-hover: #B28827;
+  --primary-accent-subtle: #DDB34E;
 
   /* Custom slate definitions for Dark Mode (bright slate shades for readable text) */
-  --slate-150: #f1f5f9;
-  --slate-250: #cbd5e1;
-  --slate-335: #94a3b8;
-  --slate-350: #e2e8f0;
-  --slate-355: #cbd5e1;
-  --slate-405: #cbd5e1;
-  --slate-450: #94a3b8;
-  --slate-455: #94a3b8;
-  --slate-550: #64748b;
-  --slate-555: #64748b;
+  --slate-150: #FAF7EF;
+  --slate-250: #EAE4D7;
+  --slate-335: #D2C8B5;
+  --slate-350: #C3B6A0;
+  --slate-355: #B5A891;
+  --slate-405: #978B78;
+  --slate-450: #C3B6A0;
+  --slate-455: #C3B6A0;
+  --slate-550: #7C7565;
+  --slate-555: #7C7565;
 }
 
 /* Custom Scrollbar for premium dark mode */
@@ -192,12 +192,12 @@ body {
 /* Light Mode Global Layout Overrides (when html does not have the .dark class) */
 html:not(.dark) {
   /* Make global backgrounds pure white / light gray */
-  --background: #FAF9F6;
-  --foreground: #0F2D52;
+  --background: #FAF7EF;
+  --foreground: #0A1F44;
 }
 
 html:not(.dark) .text-white {
-  color: #0F2D52 !important;
+  color: #0A1F44 !important;
 }
 
 /* Retain white text inside dark backgrounds and gradient elements */
@@ -235,14 +235,14 @@ html:not(.dark) .text-slate-200,
 html:not(.dark) .text-slate-250,
 html:not(.dark) .text-slate-300,
 html:not(.dark) .text-slate-335 {
-  color: #0F2D52 !important;
+  color: #0A1F44 !important;
 }
 
 html:not(.dark) .text-slate-350,
 html:not(.dark) .text-slate-355,
 html:not(.dark) .text-slate-400,
 html:not(.dark) .text-slate-405 {
-  color: #2D5483 !important;
+  color: #2B548F !important;
 }
 
 html:not(.dark) .text-slate-450,
@@ -251,16 +251,16 @@ html:not(.dark) .text-slate-500,
 html:not(.dark) .text-slate-555,
 html:not(.dark) .text-slate-550,
 html:not(.dark) .text-slate-600 {
-  color: #5D8EC5 !important;
+  color: #5F8EDE !important;
 }
 
 /* Semi-transparent backgrounds dynamic shift */
 html:not(.dark) .bg-white\/5 {
-  background-color: rgba(15, 45, 82, 0.04) !important;
+  background-color: rgba(10, 31, 68, 0.04) !important;
 }
 
 html:not(.dark) .bg-white\/10 {
-  background-color: rgba(15, 45, 82, 0.07) !important;
+  background-color: rgba(10, 31, 68, 0.07) !important;
 }
 
 /* Semi-transparent borders dynamic shift */
@@ -268,26 +268,26 @@ html:not(.dark) .border-white\/5,
 html:not(.dark) .border-white\/10,
 html:not(.dark) .border-white\/15,
 html:not(.dark) .border-white\/20 {
-  border-color: rgba(15, 45, 82, 0.08) !important;
+  border-color: rgba(10, 31, 68, 0.08) !important;
 }
 
 /* Dividers dynamic shift */
 html:not(.dark) .divide-white\/5,
 html:not(.dark) .divide-white\/10 {
-  border-color: rgba(15, 45, 82, 0.08) !important;
+  border-color: rgba(10, 31, 68, 0.08) !important;
 }
 
 /* Glassmorphism panel transformation */
 html:not(.dark) .glass-panel {
-  background: rgba(250, 249, 246, 0.8) !important;
-  border-color: rgba(15, 45, 82, 0.08) !important;
-  box-shadow: 0 4px 20px -2px rgba(15, 45, 82, 0.05) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(10, 31, 68, 0.08) !important;
+  box-shadow: 0 4px 20px -2px rgba(10, 31, 68, 0.05) !important;
 }
 
 html:not(.dark) .glass-panel-hover:hover {
-  background: rgba(250, 249, 246, 0.95) !important;
-  border-color: rgba(15, 45, 82, 0.12) !important;
-  box-shadow: 0 10px 30px -10px rgba(15, 45, 82, 0.1) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(10, 31, 68, 0.12) !important;
+  box-shadow: 0 10px 30px -10px rgba(10, 31, 68, 0.1) !important;
 }
 
 /* Responsive Root Font Scaling for Native-App Feel on Mobile Phones */

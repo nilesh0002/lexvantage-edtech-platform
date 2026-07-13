@@ -35,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-brand-navy-950 border-t border-white/5 relative z-10 pt-16 pb-12 overflow-hidden">
+    <footer className="bg-brand-navy-900 border-t border-white/5 relative z-10 pt-16 pb-12 overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-brand-purple-600/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-[350px] h-[350px] bg-brand-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
@@ -53,9 +53,9 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="lg:col-span-6">
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2.5 max-w-md lg:ml-auto">
-              <div className="relative flex-grow">
+          <div className="lg:col-span-6 w-full">
+            <form onSubmit={handleSubscribe} className="flex flex-col min-[480px]:flex-row gap-2.5 max-w-md lg:ml-auto w-full">
+              <div className="relative flex-grow w-full">
                 <input
                   type="email"
                   placeholder="Enter your student email..."
@@ -68,7 +68,7 @@ export default function Footer() {
               <button
                 type="submit"
                 disabled={submitting || subscribed}
-                className="px-5 py-3 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 whitespace-nowrap cursor-pointer"
+                className="w-full min-[480px]:w-auto px-5 py-3 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 whitespace-nowrap cursor-pointer"
               >
                 {subscribed ? (
                   <>
@@ -89,9 +89,9 @@ export default function Footer() {
         </div>
 
         {/* Main Footer Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
           {/* Logo & Contact details */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-4 space-y-6">
+          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 space-y-6">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-9 h-9 rounded-lg border border-brand-gold-500/30 bg-brand-navy-900 flex items-center justify-center shadow-md">
                 <Scale className="w-4 h-4 text-brand-gold-500" />
@@ -140,7 +140,7 @@ export default function Footer() {
           </div>
 
           {/* Links Column 3: Contact & Info */}
-          <div className="col-span-2 md:col-span-1 lg:col-span-4 space-y-4">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-4 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Contact Info</h4>
             <ul className="space-y-3.5 text-sm text-slate-400">
               <li className="flex items-center gap-2.5">

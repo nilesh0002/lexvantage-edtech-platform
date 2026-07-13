@@ -99,13 +99,13 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        {/* Features Grid / Carousel */}
+        {/* Features Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-x-visible md:snap-none md:gap-6 sm:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
         >
           {features.map((feature, idx) => {
             const Icon = feature.icon;
@@ -113,11 +113,11 @@ export default function WhyChooseUs() {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="group rounded-2xl glass-panel glass-panel-hover p-6 sm:p-8 flex flex-col justify-between snap-start w-[85vw] sm:w-[400px] md:w-auto shrink-0"
+                className="group rounded-2xl glass-panel glass-panel-hover p-6 sm:p-8 flex flex-col justify-between h-full"
               >
                 <div className="space-y-4">
                   {/* Icon Wrapper */}
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${feature.bg} group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center border bg-slate-150/5 dark:bg-white/5 border-slate-150/10 dark:border-white/10 group-hover:scale-110 transition-transform duration-300">
                     <Icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
 
@@ -125,14 +125,14 @@ export default function WhyChooseUs() {
                   <h3 className="text-lg font-bold text-white group-hover:text-brand-blue-500 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed font-light">
+                  <p className="text-slate-405 text-sm leading-relaxed font-light">
                     {feature.description}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-xs font-bold text-slate-300 flex items-center gap-1">
-                    Learn more <Zap className="w-3 h-3 text-brand-gold-500" />
+                <div className="pt-6 mt-4 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-400 group-hover:text-brand-gold-500 transition-colors flex items-center gap-1.5">
+                    Learn more <Zap className="w-3 h-3 text-brand-gold-500 transition-transform group-hover:scale-110" />
                   </span>
                 </div>
               </motion.div>

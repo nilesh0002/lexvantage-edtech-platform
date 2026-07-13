@@ -88,7 +88,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
                   if (target) target.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-white border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-slate-150 border border-slate-150/20 bg-slate-150/5 hover:bg-slate-150/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
               Explore Courses
             </button>

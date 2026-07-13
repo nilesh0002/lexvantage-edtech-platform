@@ -69,15 +69,15 @@ export default function Courses({
         {/* Search and Filters Panel */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8 p-4 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-md">
           {/* Filters List */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-2 w-full pb-2 lg:pb-0 lg:flex-wrap">
             {filters.map((f) => (
               <button
                 key={f.id}
                 onClick={() => setSelectedFilter(f.id)}
-                className={`min-h-[44px] px-4 py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
+                className={`min-h-[44px] px-4 py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer border shrink-0 snap-start ${
                   selectedFilter === f.id
                     ? "bg-brand-gold-500 text-brand-navy-950 border-brand-gold-500"
-                    : "text-slate-350 hover:text-white hover:bg-white/5 border-white/5"
+                    : "text-slate-355 hover:text-white hover:bg-white/5 border-white/5"
                 }`}
               >
                 {f.label}
@@ -99,7 +99,7 @@ export default function Courses({
         </div>
 
         {/* Courses Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           <AnimatePresence mode="popLayout">
             {filteredCourses.map((course) => {
               const isWishlisted = wishlist.includes(course.id);
@@ -111,10 +111,10 @@ export default function Courses({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.25 }}
-                  className="rounded-2xl glass-panel p-6 sm:p-8 flex flex-col sm:flex-row gap-6 justify-between items-stretch relative group hover:border-white/15 transition-all shadow-xl"
+                  className="rounded-2xl glass-panel p-6 sm:p-8 flex flex-col gap-6 justify-between relative group hover:border-white/15 transition-all shadow-xl h-full"
                 >
-                  {/* Left Side: Text Details */}
-                  <div className="flex-1 flex flex-col justify-between">
+                  {/* Card Main Info */}
+                  <div className="flex-grow flex flex-col justify-between">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
                         <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-brand-blue-500/10 text-brand-blue-500 border border-brand-blue-500/20 uppercase tracking-wide">
@@ -125,13 +125,13 @@ export default function Courses({
                         </span>
                       </div>
                       
-                      <h3 className="text-lg font-bold text-white group-hover:text-brand-blue-500 transition-colors leading-tight mb-1">
+                      <h3 className="text-lg font-bold text-white group-hover:text-brand-gold-500 transition-colors leading-tight mb-1">
                         {course.name}
                       </h3>
                       <p className="text-xs text-slate-400 font-medium mb-4">{course.duration}</p>
                     </div>
 
-                    <ul className="space-y-2 border-t border-white/5 pt-4 mb-4 sm:mb-0">
+                    <ul className="space-y-2.5 border-t border-white/5 pt-4 my-4 flex-grow">
                       {course.syllabus.map((syl, i) => (
                         <li key={i} className="flex items-start gap-2 text-xs text-slate-350">
                           <CheckCircle2 className="w-3.5 h-3.5 text-brand-gold-500 flex-shrink-0 mt-0.5" />
@@ -141,26 +141,26 @@ export default function Courses({
                     </ul>
                   </div>
 
-                  {/* Right Side: Action */}
-                  <div className="sm:w-48 border-t sm:border-t-0 sm:border-l border-white/5 pt-5 sm:pt-0 sm:pl-6 flex flex-col justify-between items-start sm:items-end gap-4">
-                    <button
-                      onClick={() => onToggleWishlist(course)}
-                      className={`p-2.5 rounded-lg border transition-all cursor-pointer ${
-                        isWishlisted
-                          ? "bg-rose-500/10 border-rose-500/20 text-rose-500"
-                          : "bg-white/5 border-white/10 text-slate-400 hover:text-rose-500 hover:bg-white/10"
-                      }`}
-                      title="Add to Wishlist"
-                    >
-                      <Heart className={`w-4 h-4 ${isWishlisted ? "fill-current" : ""}`} />
-                    </button>
-
+                  {/* Card Bottom CTA Actions */}
+                  <div className="border-t border-white/5 pt-5 flex items-center gap-3 w-full">
                     <button
                       onClick={() => setCheckoutCourse(course)}
-                      className="min-h-[48px] w-full px-5 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer mt-auto"
+                      className="min-h-[48px] flex-1 px-5 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-955 font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer"
                     >
                       Enroll Now
                       <ChevronRight className="w-4 h-4 animate-pulse" />
+                    </button>
+
+                    <button
+                      onClick={() => onToggleWishlist(course)}
+                      className={`p-3 rounded-lg border transition-all cursor-pointer min-h-[48px] flex items-center justify-center ${
+                        isWishlisted
+                          ? "bg-rose-500/10 border-rose-500/20 text-rose-500"
+                          : "bg-slate-150/5 border-slate-150/10 dark:bg-white/5 dark:border-white/10 text-slate-400 hover:text-rose-500 hover:bg-white/10"
+                      }`}
+                      title="Add to Wishlist"
+                    >
+                      <Heart className={`w-5 h-5 ${isWishlisted ? "fill-current" : ""}`} />
                     </button>
                   </div>
                 </motion.div>
