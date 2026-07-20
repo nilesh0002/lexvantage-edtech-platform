@@ -15,8 +15,8 @@ const faqData: FaqItem[] = [
     answer: (
       <div className="space-y-4">
         <div>
-          <p className="font-semibold text-slate-200 mb-2">Our courses are designed for:</p>
-          <ul className="list-disc list-inside space-y-1 text-slate-400 pl-1">
+          <p className="font-semibold text-slate-150 mb-2">Our courses are designed for:</p>
+          <ul className="list-disc list-inside space-y-1 text-slate-250 pl-1">
             <li>LL.B. students (All Years/Semesters)</li>
             <li>CLAT UG & CLAT PG Aspirants</li>
             <li>MH CET Law Aspirants (3-Year & 5-Year)</li>
@@ -27,8 +27,8 @@ const faqData: FaqItem[] = [
           </ul>
         </div>
         <div>
-          <p className="font-semibold text-slate-200 mb-2">We provide comprehensive coverage of major law subjects, including:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-slate-400 pl-1">
+          <p className="font-semibold text-slate-150 mb-2">We provide comprehensive coverage of major law subjects, including:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-slate-250 pl-1">
             <span>• Constitutional Law</span>
             <span>• Contract Law</span>
             <span>• Law of Torts</span>
@@ -59,7 +59,7 @@ const faqData: FaqItem[] = [
             <span>• Sale of Goods Act</span>
             <span>• Competition Law</span>
             <span>• Insolvency & Bankruptcy Law</span>
-            <span className="sm:col-span-2 italic font-medium mt-1 text-slate-350">And other university-prescribed subjects.</span>
+            <span className="sm:col-span-2 italic font-medium mt-1 text-slate-250">And other university-prescribed subjects.</span>
           </div>
         </div>
       </div>
