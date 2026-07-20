@@ -48,10 +48,10 @@ export default function FreeNotes() {
             <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
               Study Material
             </span>
-            <h1 className="text-4xl font-serif font-bold text-white">
+            <h1 className="text-4xl font-serif font-bold text-slate-150">
               Unlock Elite Legal Resources
             </h1>
-            <p className="text-slate-400 text-sm font-light">
+            <p className="text-slate-335 text-sm font-light">
               Get immediate access to our high-yield static GK briefs and law exam cheatsheets compiled by NLU graduates.
             </p>
           </div>
@@ -73,13 +73,13 @@ export default function FreeNotes() {
                     </div>
 
                     <div className="space-y-1">
-                      <span className="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-white/5 text-slate-400 border border-white/5 uppercase">
+                      <span className="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-white/5 text-slate-335 border border-white/5 uppercase">
                         {note.category}
                       </span>
-                      <h3 className="text-white font-bold text-sm leading-tight pt-1">
+                      <h3 className="text-slate-150 font-bold text-sm leading-tight pt-1">
                         {note.title}
                       </h3>
-                      <p className="text-slate-500 text-[10px]">
+                      <p className="text-slate-350 text-[10px]">
                         Size: {note.size} • {note.downloads} downloads
                       </p>
                     </div>
@@ -91,7 +91,7 @@ export default function FreeNotes() {
                     className={`p-3 rounded-xl border flex items-center justify-center transition-all shrink-0 ${
                       isDownloaded
                         ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400"
-                        : "bg-white/5 border-white/10 text-slate-350 hover:bg-white/10 hover:text-white"
+                        : "bg-white/5 border-white/10 text-slate-250 hover:bg-white/10 hover:text-slate-150"
                     }`}
                   >
                     {isDownloading ? (

@@ -37,10 +37,10 @@ export default function Results() {
             <Trophy className="w-4 h-4 text-brand-gold-500 fill-brand-gold-500/10 animate-bounce" />
             Hall of Fame 2025
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Transforming Aspirants Into NLU Scholars
           </h2>
-          <p className="text-slate-400 text-sm font-light">
+          <p className="text-slate-335 text-sm font-light">
             Our results speak for our pedagogical methodology. Meets the rankers who scored top-20 ranks this past academic year.
           </p>
         </div>
@@ -80,20 +80,20 @@ export default function Results() {
 
               {/* Student details */}
               <div className="space-y-1">
-                <h3 className="text-white font-extrabold text-base leading-none group-hover:text-brand-gold-500 transition-colors">
+                <h3 className="text-slate-150 font-extrabold text-base leading-none group-hover:text-brand-gold-500 transition-colors">
                   {ranker.name}
                 </h3>
-                <div className="flex items-center gap-1.5 text-slate-400 text-xs font-medium">
+                <div className="flex items-center gap-1.5 text-slate-335 text-xs font-medium">
                   <GraduationCap className="w-3.5 h-3.5 text-brand-blue-500" />
                   {ranker.nlu}
                 </div>
-                <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500 font-mono block">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-slate-350 font-mono block">
                   {ranker.exam}
                 </span>
               </div>
 
               {/* Quote Quote */}
-              <p className="text-slate-350 text-xs font-light leading-relaxed italic border-t border-white/5 pt-4 mt-4 font-serif">
+              <p className="text-slate-250 text-xs font-light leading-relaxed italic border-t border-white/5 pt-4 mt-4 font-serif">
                 "{ranker.quote}"
               </p>
             </motion.div>
@@ -103,20 +103,20 @@ export default function Results() {
         {/* Statistical highlights */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 sm:p-12 rounded-2xl glass-panel border border-white/5 backdrop-blur-md text-center">
           <div className="space-y-1.5">
-            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-white">420+</div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-450">NLU Selections (Total)</div>
+            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-slate-150">420+</div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-350">NLU Selections (Total)</div>
           </div>
           <div className="space-y-1.5 border-l border-white/5">
             <div className="text-3xl sm:text-4xl font-serif font-extrabold text-brand-gold-500">12%</div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-450">Top 100 Ranks share</div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-350">Top 100 Ranks share</div>
           </div>
           <div className="space-y-1.5 border-l border-white/5">
-            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-white">98.4%</div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-450">Student Mock Completion</div>
+            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-slate-150">98.4%</div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-350">Student Mock Completion</div>
           </div>
           <div className="space-y-1.5 border-l border-white/5">
             <div className="text-3xl sm:text-4xl font-serif font-extrabold text-brand-blue-500">+24.5</div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-450">Avg Mock Mark Shift</div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-350">Avg Mock Mark Shift</div>
           </div>
         </div>
       </div>

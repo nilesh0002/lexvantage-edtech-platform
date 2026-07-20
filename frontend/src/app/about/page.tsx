@@ -21,10 +21,10 @@ export default function About() {
             <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
               Our Identity
             </span>
-            <h1 className="text-4xl font-serif font-bold text-white">
+            <h1 className="text-4xl font-serif font-bold text-slate-150">
               Pioneering Elite Law Education in India
             </h1>
-            <p className="text-slate-400 text-sm font-light leading-relaxed">
+            <p className="text-slate-335 text-sm font-light leading-relaxed">
               Shreya's Law Desk was born from a singular vision: to break the standard, rote-learning coaching model and build a tech-enabled, highly analytical learning academy for prospective law scholars.
             </p>
           </div>
@@ -35,8 +35,8 @@ export default function About() {
               <div className="w-12 h-12 rounded-xl bg-brand-blue-500/10 border border-brand-blue-500/25 flex items-center justify-center text-brand-blue-500">
                 <Scale className="w-6 h-6" />
               </div>
-              <h3 className="text-white font-serif font-bold text-lg">Rigorous Legal Logic</h3>
-              <p className="text-slate-400 text-xs font-light leading-relaxed">
+              <h3 className="text-slate-150 font-serif font-bold text-lg">Rigorous Legal Logic</h3>
+              <p className="text-slate-335 text-xs font-light leading-relaxed">
                 We believe law entrance exams test analytical comprehension, not memory capacity. Our pedagogy is structured entirely around decoding core legal principles.
               </p>
             </div>
@@ -45,8 +45,8 @@ export default function About() {
               <div className="w-12 h-12 rounded-xl bg-brand-purple-500/10 border border-brand-purple-500/25 flex items-center justify-center text-brand-purple-500">
                 <Users className="w-6 h-6" />
               </div>
-              <h3 className="text-white font-serif font-bold text-lg">Individual Attention</h3>
-              <p className="text-slate-400 text-xs font-light leading-relaxed">
+              <h3 className="text-slate-150 font-serif font-bold text-lg">Individual Attention</h3>
+              <p className="text-slate-335 text-xs font-light leading-relaxed">
                 By restricting batch sizes strictly to 40, we verify that every essay draft is reviewed, and mock scores are discussed one-on-one.
               </p>
             </div>
@@ -55,8 +55,8 @@ export default function About() {
               <div className="w-12 h-12 rounded-xl bg-brand-gold-500/10 border border-brand-gold-500/25 flex items-center justify-center text-brand-gold-500">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-white font-serif font-bold text-lg">Predictive Technology</h3>
-              <p className="text-slate-400 text-xs font-light leading-relaxed">
+              <h3 className="text-slate-150 font-serif font-bold text-lg">Predictive Technology</h3>
+              <p className="text-slate-335 text-xs font-light leading-relaxed">
                 Our mock simulators leverage diagnostic graphs to pinpoint accuracy ratios, removing guessing games from exam preparations.
               </p>
             </div>
@@ -68,13 +68,13 @@ export default function About() {
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-150 leading-tight">
                 About the Founder
               </h2>
-              <p className="text-slate-350 text-xs sm:text-sm font-light leading-relaxed">
+              <p className="text-slate-250 text-xs sm:text-sm font-light leading-relaxed">
                 Hello! I'm Shreya Nadar, the founder of Shreya's Law Desk. I am a B.L.S. LL.B. graduate with a passion for making legal education simple, practical, and accessible. During my academic journey, I realized that many law students struggle with lengthy provisions and complex legal concepts. That's why I created Shreya's Law Desk—to help students understand the law through clear explanations, structured notes, and exam-oriented guidance.
               </p>
-              <p className="text-slate-350 text-xs sm:text-sm font-light leading-relaxed">
+              <p className="text-slate-250 text-xs sm:text-sm font-light leading-relaxed">
                 Whether you're preparing for LL.B. exams, CLAT UG/PG, LL.M. entrances, AIBE, Judiciary, or other competitive law examinations, my goal is to help you build a strong conceptual foundation and study with confidence.
               </p>
-              <p className="text-slate-350 text-xs sm:text-sm font-light leading-relaxed">
+              <p className="text-slate-250 text-xs sm:text-sm font-light leading-relaxed">
                 At Shreya's Law Desk, you'll find quality learning, regular practice, and a supportive environment designed to help every aspiring legal professional succeed.
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function About() {
               <div className="space-y-4">
                 <div className="text-4xl sm:text-5xl font-serif font-extrabold text-brand-gold-500">100%</div>
                 <h4 className="text-slate-150 font-bold text-sm">Commitment to Student Integrity</h4>
-                <p className="text-slate-350 text-xs font-light leading-relaxed">
+                <p className="text-slate-250 text-xs font-light leading-relaxed">
                   Shreya Nadar is committed to our Student Honor Pledge, committing to absolute clarity, zero cost barriers, and dedicated support for every single cohort.
                 </p>
               </div>
