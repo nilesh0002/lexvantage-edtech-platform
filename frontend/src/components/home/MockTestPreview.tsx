@@ -59,9 +59,9 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
         </div>
 
         {/* Interactive Mockup Widget */}
-        <div className="rounded-2xl border border-white/10 bg-brand-navy-900/60 shadow-2xl overflow-hidden backdrop-blur-md">
+        <div className="rounded-2xl border border-white/10 bg-brand-navy-950 shadow-2xl overflow-hidden backdrop-blur-md">
           {/* Mock Top bar */}
-          <div className="px-6 py-4 bg-brand-navy-950/80 border-b border-white/5 flex items-center justify-between flex-wrap gap-4">
+          <div className="px-6 py-4 bg-brand-navy-900 border-b border-white/5 flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
               <Scale className="w-5 h-5 text-brand-gold-500" />
               <span className="text-xs font-bold text-white font-serif uppercase tracking-wider">
@@ -70,10 +70,10 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="px-3 py-1 rounded bg-white/5 text-[10px] font-bold text-slate-335">
+              <div className="px-3 py-1 rounded bg-white/10 text-[10px] font-bold text-slate-300">
                 Correct: +1.00
               </div>
-              <div className="px-3 py-1 rounded bg-white/5 text-[10px] font-bold text-slate-335">
+              <div className="px-3 py-1 rounded bg-white/10 text-[10px] font-bold text-slate-300">
                 Incorrect: -0.25
               </div>
             </div>
