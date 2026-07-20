@@ -50,10 +50,10 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
           <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
             Interactive Simulator
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Experience the CLAT Mock Portal
           </h2>
-          <p className="text-slate-400 text-sm font-light">
+          <p className="text-slate-335 text-sm font-light">
             Test your legal reasoning live. Attempt this actual CLAT-level sample passage below.
           </p>
         </div>
@@ -70,10 +70,10 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="px-3 py-1 rounded bg-white/5 text-[10px] font-bold text-slate-400">
+              <div className="px-3 py-1 rounded bg-white/5 text-[10px] font-bold text-slate-335">
                 Correct: +1.00
               </div>
-              <div className="px-3 py-1 rounded bg-white/5 text-[10px] font-bold text-slate-400">
+              <div className="px-3 py-1 rounded bg-white/5 text-[10px] font-bold text-slate-335">
                 Incorrect: -0.25
               </div>
             </div>
@@ -85,11 +85,11 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
               <div className={`p-6 sm:p-8 space-y-4 overflow-y-auto transition-all duration-300 ${
                 passageExpanded ? "max-h-none lg:max-h-[380px]" : "max-h-[160px] lg:max-h-[380px]"
               }`}>
-                <h3 className="text-xs font-bold uppercase text-slate-400 flex items-center gap-1.5">
+                <h3 className="text-xs font-bold uppercase text-slate-335 flex items-center gap-1.5">
                   <HelpCircle className="w-4 h-4 text-brand-gold-500" />
                   Read the Passage
                 </h3>
-                <p className="text-slate-350 text-sm leading-relaxed font-light">
+                <p className="text-slate-250 text-sm leading-relaxed font-light">
                   {questionData.passage}
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                 <span className="px-2 py-0.5 rounded bg-brand-blue-500/10 border border-brand-blue-500/20 text-brand-blue-500 text-[10px] font-bold uppercase tracking-wider font-mono">
                   Question 1
                 </span>
-                <h4 className="text-white text-sm font-bold leading-normal">
+                <h4 className="text-slate-150 text-sm font-bold leading-normal">
                   {questionData.question}
                 </h4>
               </div>
@@ -126,16 +126,16 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                   const isSelected = selectedOption === opt.id;
                   const isCorrect = opt.id === questionData.correctAnswer;
                   
-                  let optionClass = "border-white/5 bg-white/5 text-slate-300 hover:bg-white/10 hover:border-white/15";
+                  let optionClass = "border-white/5 bg-white/5 text-slate-250 hover:bg-white/10 hover:border-white/15";
                   if (isSelected && !submitted) {
-                    optionClass = "border-brand-blue-500/50 bg-brand-blue-500/5 text-white shadow-lg shadow-brand-blue-500/5";
+                    optionClass = "border-brand-blue-500/50 bg-brand-blue-500/5 text-slate-150 shadow-lg shadow-brand-blue-500/5";
                   } else if (submitted) {
                     if (isCorrect) {
-                      optionClass = "border-emerald-500/40 bg-emerald-500/5 text-emerald-400";
+                      optionClass = "border-emerald-500/40 bg-emerald-500/5 text-emerald-600 dark:text-emerald-400";
                     } else if (isSelected) {
-                      optionClass = "border-rose-500/40 bg-rose-500/5 text-rose-450";
+                      optionClass = "border-rose-500/40 bg-rose-500/5 text-rose-600 dark:text-rose-450";
                     } else {
-                      optionClass = "border-white/5 bg-white/5 text-slate-500 opacity-60";
+                      optionClass = "border-white/5 bg-white/5 text-slate-350 opacity-60";
                     }
                   }
 
@@ -153,7 +153,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                           ? "bg-emerald-500 border-emerald-500 text-brand-navy-950"
                           : submitted && isSelected
                           ? "bg-rose-500 border-rose-500 text-white"
-                          : "border-white/10 bg-brand-navy-950 text-slate-400"
+                          : "border-white/10 bg-brand-navy-950 text-slate-335"
                       }`}>
                         {opt.id}
                       </span>
@@ -185,8 +185,8 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                       {/* Explanation box */}
                       <div className={`p-4 rounded-xl text-xs leading-relaxed border ${
                         selectedOption === questionData.correctAnswer
-                          ? "bg-emerald-500/5 border-emerald-500/25 text-slate-350"
-                          : "bg-rose-500/5 border-rose-500/20 text-slate-350"
+                          ? "bg-emerald-500/5 border-emerald-500/25 text-slate-250"
+                          : "bg-rose-500/5 border-rose-500/20 text-slate-250"
                       }`}>
                         <div className="flex items-center gap-2 mb-2 font-bold">
                           {selectedOption === questionData.correctAnswer ? (
@@ -208,7 +208,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                       <div className="flex flex-col sm:flex-row gap-3">
                         <button
                           onClick={handleReset}
-                          className="w-full sm:w-1/3 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-slate-300 hover:text-white transition-all text-xs font-bold"
+                          className="w-full sm:w-1/3 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-slate-250 hover:text-slate-150 transition-all text-xs font-bold"
                         >
                           Retry Question
                         </button>

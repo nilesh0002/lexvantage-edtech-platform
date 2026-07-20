@@ -68,10 +68,10 @@ export default function CurrentAffairsPreview() {
             <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
               Daily Digest
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 tracking-tight">
               Constitutional & Legal Bulletins
             </h2>
-            <p className="text-slate-400 text-sm font-light leading-relaxed">
+            <p className="text-slate-335 text-sm font-light leading-relaxed">
               We track national judicial verdicts, bill amendments, and global treaty negotiations, translating them into high-yield summaries for your GK preparation.
             </p>
           </div>
@@ -94,14 +94,14 @@ export default function CurrentAffairsPreview() {
                   <span className="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-brand-purple-500/10 text-brand-purple-400 border border-brand-purple-500/20 uppercase tracking-wider">
                     {article.category}
                   </span>
-                  <span className="text-[10px] text-slate-500 font-medium font-mono">{article.date}</span>
+                  <span className="text-[10px] text-slate-350 font-medium font-mono">{article.date}</span>
                 </div>
 
-                <h3 className="text-white font-bold text-sm sm:text-base leading-snug group-hover:text-brand-purple-500 transition-colors">
+                <h3 className="text-slate-150 font-bold text-sm sm:text-base leading-snug group-hover:text-brand-purple-500 transition-colors">
                   {article.title}
                 </h3>
 
-                <p className="text-slate-400 text-xs font-light leading-relaxed line-clamp-3">
+                <p className="text-slate-335 text-xs font-light leading-relaxed line-clamp-3">
                   {article.summary}
                 </p>
               </div>
@@ -109,12 +109,12 @@ export default function CurrentAffairsPreview() {
               <div className="pt-6 mt-4 border-t border-white/5 flex items-center justify-between">
                 <button
                   onClick={() => setActiveSummary(article)}
-                  className="text-xs font-bold text-brand-blue-500 hover:text-white flex items-center gap-1 transition-colors"
+                  className="text-xs font-bold text-brand-blue-500 hover:text-slate-150 flex items-center gap-1 transition-colors"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-brand-gold-500 fill-brand-gold-500/10" />
                   AI Legal Summarizer
                 </button>
-                <ChevronRight className="w-4 h-4 text-slate-500 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-slate-350 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           ))}
@@ -155,17 +155,17 @@ export default function CurrentAffairsPreview() {
                     <BrainCircuit className="w-4.5 h-4.5 text-brand-purple-500" />
                   </div>
                   <div>
-                    <span className="text-[9px] uppercase font-extrabold tracking-widest text-slate-500 block leading-none">
+                    <span className="text-[9px] uppercase font-extrabold tracking-widest text-slate-350 block leading-none">
                       Vantage AI
                     </span>
-                    <h3 className="text-white font-bold text-xs">High-Yield Concept Digest</h3>
+                    <h3 className="text-slate-150 font-bold text-xs">High-Yield Concept Digest</h3>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="space-y-1">
                     <span className="text-[10px] uppercase font-bold text-brand-purple-400 font-mono">Article Title</span>
-                    <h4 className="text-white font-serif font-bold text-base leading-tight">
+                    <h4 className="text-slate-150 font-serif font-bold text-base leading-tight">
                       {activeSummary.title}
                     </h4>
                   </div>
@@ -176,7 +176,7 @@ export default function CurrentAffairsPreview() {
                     </span>
                     <ul className="space-y-2">
                       {activeSummary.bullets.map((bullet, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-slate-300 leading-relaxed font-light">
+                        <li key={i} className="flex items-start gap-2 text-xs text-slate-250 leading-relaxed font-light">
                           <span className="w-1.5 h-1.5 rounded-full bg-brand-blue-500 mt-2 flex-shrink-0" />
                           <span>{bullet}</span>
                         </li>
@@ -185,12 +185,12 @@ export default function CurrentAffairsPreview() {
                   </div>
 
                   <div className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between">
-                    <p className="text-[10px] text-slate-550 max-w-[320px] leading-snug">
+                    <p className="text-[10px] text-slate-350 max-w-[320px] leading-snug">
                       Subscribe to the Law Desk Briefing in the footer to get these summaries delivered to your inbox every morning.
                     </p>
                     <button
                       onClick={() => setActiveSummary(null)}
-                      className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 text-xs font-bold transition-all"
+                      className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-150 hover:bg-white/10 text-xs font-bold transition-all"
                     >
                       Understood
                     </button>

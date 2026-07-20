@@ -94,7 +94,7 @@ export default function WhyChooseUs() {
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Why Future Lawyers Choose Shreya's Law Desk
           </h2>
-          <p className="text-slate-405 text-base font-light">
+          <p className="text-slate-250 text-base font-light">
             We guide you through your law entrance exams, and support you all the way through your 5 years in law school with premium course articles, study guides, and legal notes.
           </p>
         </div>
@@ -125,13 +125,13 @@ export default function WhyChooseUs() {
                   <h3 className="text-lg font-bold text-slate-150 group-hover:text-brand-blue-500 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-405 text-sm leading-relaxed font-light">
+                  <p className="text-slate-250 text-sm leading-relaxed font-light">
                     {feature.description}
                   </p>
                 </div>
 
                 <div className="pt-6 mt-4 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-400 group-hover:text-brand-gold-500 transition-colors flex items-center gap-1.5">
+                  <span className="text-xs font-bold text-slate-335 group-hover:text-brand-gold-500 transition-colors flex items-center gap-1.5">
                     Learn more <Zap className="w-3 h-3 text-brand-gold-500 transition-transform group-hover:scale-110" />
                   </span>
                 </div>

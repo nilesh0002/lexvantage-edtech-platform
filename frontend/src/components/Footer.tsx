@@ -135,7 +135,6 @@ export default function Footer() {
               <li><Link href="/current-affairs" className="hover:text-white transition-colors">Daily Current Affairs</Link></li>
               <li><Link href="/free-notes" className="hover:text-white transition-colors">LL.B Semester Notes</Link></li>
               <li><Link href="/mock-tests" className="hover:text-white transition-colors">Free Mock Tests</Link></li>
-              <li><Link href="/scholarships" className="hover:text-white transition-colors">Scholarship Test</Link></li>
             </ul>
           </div>
 

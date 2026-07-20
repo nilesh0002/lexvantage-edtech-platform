@@ -72,7 +72,7 @@ export default function Faculty() {
                     <img
                       src={member.avatar}
                       alt={member.name}
-                      className="w-4/5 h-4/5 object-contain"
+                      className="w-full h-full object-cover"
                     />
                     {/* Overlay specialty badge */}
                     <div className="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-brand-navy-900 border border-white/10 flex items-center justify-center shadow-lg">

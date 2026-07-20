@@ -99,10 +99,10 @@ export default function Faq() {
           <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
             Got Questions?
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Frequently Asked Queries
           </h2>
-          <p className="text-slate-400 text-sm font-light">
+          <p className="text-slate-335 text-sm font-light">
             Everything you need to know about the admission process, course delivery, and student support.
           </p>
         </div>
@@ -119,7 +119,7 @@ export default function Faq() {
                 {/* Accordion Toggle handle */}
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left text-white hover:bg-white/5 transition-colors focus:outline-none"
+                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left text-slate-150 hover:bg-white/5 transition-colors focus:outline-none"
                 >
                   <div className="flex items-center gap-3">
                     <HelpCircle className="w-5 h-5 text-brand-blue-500 flex-shrink-0" />
@@ -128,8 +128,8 @@ export default function Faq() {
                     </span>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-white" : ""
+                    className={`w-5 h-5 text-slate-350 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-slate-150" : ""
                     }`}
                   />
                 </button>
@@ -143,7 +143,7 @@ export default function Faq() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 pt-2 text-slate-400 text-sm leading-relaxed border-t border-white/5 font-light">
+                      <div className="px-6 pb-6 pt-2 text-slate-335 text-sm leading-relaxed border-t border-white/5 font-light">
                         {item.answer}
                       </div>
                     </motion.div>

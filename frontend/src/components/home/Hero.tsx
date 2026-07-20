@@ -51,10 +51,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           animate="visible"
           className="space-y-6 flex flex-col items-center justify-center"
         >
-          {/* Pill Badge */}
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-navy-900 border border-white/5 text-brand-gold-500 text-xs font-bold uppercase tracking-wider">
-            <span>National Law University Preparation</span>
-          </motion.div>
+
 
           {/* Main Headline */}
           <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-slate-150 leading-[1.15] max-w-2xl">
