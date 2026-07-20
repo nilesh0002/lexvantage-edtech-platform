@@ -144,7 +144,7 @@ export default function Navbar({
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute left-0 mt-1 w-56 rounded-xl glass-panel p-2 shadow-2xl border border-white/10"
+                      className="absolute left-0 mt-1 w-56 rounded-xl bg-brand-navy-950 p-2 shadow-2xl border border-slate-150/10"
                     >
                       {resourceLinks.map((item) => {
                         const Icon = item.icon;
