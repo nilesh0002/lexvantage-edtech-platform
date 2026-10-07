@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Heart, Sparkles, Trophy, Calendar, CheckCircle2, ChevronRight, Filter } from "lucide-react";
 import CheckoutModal from "../CheckoutModal";
-import { Course } from "@/data/courses"; // keep types but not hardcoded data
+import { Course, coursesData as defaultCoursesData } from "@/data/courses";
 
 interface CoursesProps {
   wishlist: string[];
@@ -30,16 +30,16 @@ export default function Courses({
         const text = await res.text();
         try {
           const data = JSON.parse(text);
-          if (res.ok) {
+          if (res.ok && Array.isArray(data) && data.length > 0) {
             setCoursesData(data);
           } else {
-            console.error("API Error:", data.error);
+            setCoursesData(defaultCoursesData);
           }
-        } catch (e) {
-          console.error("API returned non-JSON response (likely an error page or Prisma is not initialized). Please run `npx prisma generate` and `npx prisma db push`. Response snippet:", text.slice(0, 100));
+        } catch {
+          setCoursesData(defaultCoursesData);
         }
-      } catch (error) {
-        console.error("Failed to fetch courses:", error);
+      } catch {
+        setCoursesData(defaultCoursesData);
       } finally {
         setLoading(false);
       }
@@ -127,9 +127,29 @@ export default function Courses({
         {/* Courses Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           {loading ? (
-            <div className="col-span-full py-16 text-center">
-              <p className="text-muted-foreground animate-pulse text-sm">Fetching latest courses from database...</p>
-            </div>
+            <>
+              {[1, 2].map((i) => (
+                <div key={i} className="rounded-2xl glass-panel p-6 sm:p-8 animate-pulse space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-6 w-24 bg-muted rounded-full" />
+                    <div className="h-4 w-32 bg-muted/60 rounded" />
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-6 w-3/4 bg-muted rounded" />
+                    <div className="h-4 w-1/3 bg-muted/60 rounded" />
+                  </div>
+                  <div className="space-y-3 pt-4 border-t border-border">
+                    <div className="h-4 w-full bg-muted/40 rounded" />
+                    <div className="h-4 w-5/6 bg-muted/40 rounded" />
+                    <div className="h-4 w-4/6 bg-muted/40 rounded" />
+                  </div>
+                  <div className="pt-4 border-t border-border flex gap-3">
+                    <div className="h-12 flex-1 bg-muted rounded-lg" />
+                    <div className="h-12 w-12 bg-muted rounded-lg" />
+                  </div>
+                </div>
+              ))}
+            </>
           ) : (
             <>
               <AnimatePresence mode="popLayout">

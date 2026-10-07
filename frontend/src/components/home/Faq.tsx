@@ -15,7 +15,7 @@ const faqData: FaqItem[] = [
     answer: (
       <div className="space-y-4">
         <div>
-          <p className="font-semibold text-slate-150 mb-2">Our courses are designed for:</p>
+          <p className="font-semibold text-foreground mb-2">Our courses are designed for:</p>
           <ul className="list-disc list-inside space-y-1 text-muted-foreground pl-1">
             <li>LL.B. students (All Years/Semesters)</li>
             <li>CLAT UG & CLAT PG Aspirants</li>
@@ -27,7 +27,7 @@ const faqData: FaqItem[] = [
           </ul>
         </div>
         <div>
-          <p className="font-semibold text-slate-150 mb-2">We provide comprehensive coverage of major law subjects, including:</p>
+          <p className="font-semibold text-foreground mb-2">We provide comprehensive coverage of major law subjects, including:</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-muted-foreground pl-1">
             <span>• Constitutional Law</span>
             <span>• Contract Law</span>
@@ -96,7 +96,7 @@ export default function Faq() {
           <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
             Got Questions?
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
             Frequently Asked Queries
           </h2>
           <p className="text-muted-foreground text-sm font-light">
@@ -116,17 +116,17 @@ export default function Faq() {
                 {/* Accordion Toggle handle */}
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left text-slate-150 hover:bg-muted/50 transition-colors focus:outline-none"
+                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left text-foreground hover:bg-muted/50 transition-colors focus:outline-none cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-brand-blue-500 flex-shrink-0" />
+                    <HelpCircle className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="font-bold text-sm sm:text-base leading-tight">
                       {item.question}
                     </span>
                   </div>
                   <ChevronDown
                     className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-slate-150" : ""
+                      isOpen ? "rotate-180 text-primary" : ""
                     }`}
                   />
                 </button>

@@ -50,7 +50,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Interactive Simulator
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
             Experience the CLAT Mock Portal
           </h2>
           <p className="text-muted-foreground text-sm font-light">
@@ -70,10 +70,10 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="px-3 py-1 rounded bg-muted text-[10px] font-bold text-slate-300">
+              <div className="px-3 py-1 rounded bg-muted text-[10px] font-bold text-foreground/80 border border-border">
                 Correct: +1.00
               </div>
-              <div className="px-3 py-1 rounded bg-muted text-[10px] font-bold text-slate-300">
+              <div className="px-3 py-1 rounded bg-muted text-[10px] font-bold text-foreground/80 border border-border">
                 Incorrect: -0.25
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
               }`}>
                 <button
                   onClick={() => setPassageExpanded(!passageExpanded)}
-                  className="pointer-events-auto px-4 py-1.5 rounded-full bg-background text-slate-300 hover:text-foreground border border-border hover:border-border text-[10px] font-bold shadow-lg flex items-center gap-1 transition-all"
+                  className="pointer-events-auto px-4 py-1.5 rounded-full bg-background text-foreground hover:text-primary border border-border text-[10px] font-bold shadow-lg flex items-center gap-1 transition-all"
                 >
                   {passageExpanded ? "Collapse Passage" : "Show Full Passage"}
                 </button>
@@ -115,7 +115,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                 <span className="px-2 py-0.5 rounded bg-brand-blue-500/10 border border-brand-blue-500/20 text-brand-blue-500 text-[10px] font-bold uppercase tracking-wider font-mono">
                   Question 1
                 </span>
-                <h4 className="text-slate-150 text-sm font-bold leading-normal">
+                <h4 className="text-foreground text-sm font-bold leading-normal">
                   {questionData.question}
                 </h4>
               </div>
@@ -128,7 +128,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                   
                   let optionClass = "border-border bg-muted/50 text-muted-foreground hover:bg-muted hover:border-border";
                   if (isSelected && !submitted) {
-                    optionClass = "border-brand-blue-500/50 bg-brand-blue-500/5 text-slate-150 shadow-lg shadow-brand-blue-500/5";
+                    optionClass = "border-primary bg-primary/10 text-foreground shadow-sm";
                   } else if (submitted) {
                     if (isCorrect) {
                       optionClass = "border-emerald-500/40 bg-emerald-500/5 text-emerald-600 dark:text-emerald-400";
@@ -208,7 +208,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                       <div className="flex flex-col sm:flex-row gap-3">
                         <button
                           onClick={handleReset}
-                          className="w-full sm:w-1/3 py-3 rounded-xl bg-muted/50 border border-border hover:bg-muted text-muted-foreground hover:text-slate-150 transition-all text-xs font-bold"
+                          className="w-full sm:w-1/3 py-3 rounded-xl bg-muted/50 border border-border hover:bg-muted text-foreground transition-all text-xs font-bold"
                         >
                           Retry Question
                         </button>

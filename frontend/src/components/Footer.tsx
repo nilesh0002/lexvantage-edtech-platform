@@ -119,7 +119,7 @@ export default function Footer() {
 
           {/* Links Column 1: Courses */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Target Programs</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-foreground">Target Programs</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               <li><Link href="/courses" className="hover:text-foreground transition-colors">CLAT & AILET Prep</Link></li>
               <li><Link href="/courses" className="hover:text-foreground transition-colors">SLAT & MH CET Law</Link></li>
@@ -129,7 +129,7 @@ export default function Footer() {
 
           {/* Links Column 2: Resources */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Free Resources</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-foreground">Free Resources</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               <li><Link href="/free-notes" className="hover:text-foreground transition-colors">Free Notes</Link></li>
             </ul>
@@ -137,7 +137,7 @@ export default function Footer() {
 
           {/* Links Column 3: Contact & Info */}
           <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-4 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Contact Info</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-foreground">Contact Info</h4>
             <ul className="space-y-3.5 text-sm text-muted-foreground">
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-blue-500 flex-shrink-0" />
@@ -171,10 +171,10 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground">
-            <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
-            <a href="#" className="hover:text-slate-300 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-slate-300 transition-colors">Refund Policy</a>
-            <a href="#" className="hover:text-slate-300 transition-colors">Sitemap</a>
+            <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-foreground transition-colors">Refund Policy</a>
+            <a href="#" className="hover:text-foreground transition-colors">Sitemap</a>
           </div>
         </div>
       </div>

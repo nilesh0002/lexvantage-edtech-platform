@@ -115,7 +115,7 @@ export default function CheckoutModal({
                   <p className="text-primary font-bold mb-4 flex items-center gap-1.5 text-sm">
                     <Sparkles className="w-4 h-4" /> Request for {course.name}
                   </p>
-                  <p className="text-slate-405 text-sm max-w-sm">
+                  <p className="text-muted-foreground text-sm max-w-sm">
                     Thank you! Your enrollment request has been registered. Shreya Nadar will contact you directly to confirm your schedule and batch details.
                   </p>
                 </motion.div>
@@ -143,11 +143,11 @@ export default function CheckoutModal({
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Selected Course Summary */}
               <div className="p-4 rounded-xl bg-muted/50 border border-border">
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-primary text-primary-foreground/10 text-primary border border-brand-gold-500/20 uppercase">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-primary/10 text-primary border border-brand-gold-500/20 uppercase">
                   {course.exam}
                 </span>
                 <h4 className="text-foreground font-bold mt-1.5">{course.name}</h4>
-                <p className="text-slate-405 text-xs mt-0.5">{course.duration}</p>
+                <p className="text-muted-foreground text-xs mt-0.5">{course.duration}</p>
               </div>
 
               {/* Student Information Fields */}
@@ -166,7 +166,7 @@ export default function CheckoutModal({
                       value={studentName}
                       onChange={(e) => setStudentName(e.target.value)}
                       placeholder="Enter student name..."
-                      className="w-full px-4 py-2.5 rounded-xl bg-muted/50 border border-border text-foreground text-sm focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-slate-600"
+                      className="w-full px-4 py-2.5 rounded-xl bg-muted/50 border border-border text-foreground text-sm focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-muted-foreground/60"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -179,7 +179,7 @@ export default function CheckoutModal({
                       value={parentMobile}
                       onChange={(e) => setParentMobile(e.target.value)}
                       placeholder="e.g. +91 9876543210"
-                      className="w-full px-4 py-2.5 rounded-xl bg-muted/50 border border-border text-foreground text-sm focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-slate-600"
+                      className="w-full px-4 py-2.5 rounded-xl bg-muted/50 border border-border text-foreground text-sm focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-muted-foreground/60"
                     />
                   </div>
                 </div>
@@ -193,7 +193,7 @@ export default function CheckoutModal({
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="Enter city..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-muted/50 border border-border text-foreground text-sm focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-slate-600"
+                    className="w-full px-4 py-2.5 rounded-xl bg-muted/50 border border-border text-foreground text-sm focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-muted-foreground/60"
                   />
                 </div>
               </div>

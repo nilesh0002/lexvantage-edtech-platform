@@ -37,7 +37,7 @@ export default function Results() {
             <Trophy className="w-4 h-4 text-primary fill-brand-gold-500/10 animate-bounce" />
             Hall of Fame 2025
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
             Transforming Aspirants Into NLU Scholars
           </h2>
           <p className="text-muted-foreground text-sm font-light">
@@ -80,7 +80,7 @@ export default function Results() {
 
               {/* Student details */}
               <div className="space-y-1">
-                <h3 className="text-slate-150 font-extrabold text-base leading-none group-hover:text-primary transition-colors">
+                <h3 className="text-foreground font-extrabold text-base leading-none group-hover:text-primary transition-colors">
                   {ranker.name}
                 </h3>
                 <div className="flex items-center gap-1.5 text-muted-foreground text-xs font-medium">
@@ -103,7 +103,7 @@ export default function Results() {
         {/* Statistical highlights */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 sm:p-12 rounded-2xl glass-panel border border-border backdrop-blur-md text-center">
           <div className="space-y-1.5">
-            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-slate-150">420+</div>
+            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-foreground">420+</div>
             <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">NLU Selections (Total)</div>
           </div>
           <div className="space-y-1.5 border-l border-border">
@@ -111,7 +111,7 @@ export default function Results() {
             <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Top 100 Ranks share</div>
           </div>
           <div className="space-y-1.5 border-l border-border">
-            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-slate-150">98.4%</div>
+            <div className="text-3xl sm:text-4xl font-serif font-extrabold text-foreground">98.4%</div>
             <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Student Mock Completion</div>
           </div>
           <div className="space-y-1.5 border-l border-border">

@@ -33,7 +33,7 @@ export default function Faculty() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary">
               Master Mentor
             </span>
-            <h2 className="text-3xl sm:text-4xl font-sans font-black text-slate-150 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-sans font-black text-foreground tracking-tight">
               Learn Directly From the Founder
             </h2>
             <p className="text-muted-foreground text-sm font-light leading-relaxed">
@@ -43,7 +43,7 @@ export default function Faculty() {
 
           <a
             href="#courses"
-            className="flex items-center gap-1.5 px-5 py-3 rounded-lg border border-slate-150/20 bg-slate-150/5 hover:bg-slate-150/10 text-slate-150 font-bold text-xs transition-all self-start md:self-auto cursor-pointer"
+            className="flex items-center gap-1.5 px-5 py-3 rounded-lg border border-border bg-card/80 hover:bg-muted text-foreground font-bold text-xs transition-all self-start md:self-auto cursor-pointer shadow-sm"
           >
             Schedule Free Demo Class
             <ArrowUpRight className="w-4 h-4 text-primary" />
@@ -84,7 +84,7 @@ export default function Faculty() {
                 {/* Info */}
                 <div className="space-y-4 flex-1">
                   <div className="space-y-1 text-center md:text-left">
-                    <h3 className="text-slate-150 font-black text-xl leading-tight">
+                    <h3 className="text-foreground font-black text-xl leading-tight">
                       {member.name}
                     </h3>
                     <p className="text-primary text-xs font-bold font-mono">

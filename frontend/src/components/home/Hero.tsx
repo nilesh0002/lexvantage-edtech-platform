@@ -54,7 +54,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
 
 
           {/* Main Headline */}
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-slate-150 leading-[1.15] max-w-2xl">
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-foreground leading-[1.15] max-w-2xl">
             Personalized CLAT & <br />
             <span className="text-primary">
               Law Entrance Prep
@@ -85,7 +85,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
                   if (target) target.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-slate-150 border border-slate-150/20 bg-slate-150/5 hover:bg-slate-150/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-foreground border border-border bg-card/80 hover:bg-muted transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm"
             >
               Explore Courses
             </button>
@@ -97,9 +97,9 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
               <div className="text-xs sm:text-sm font-semibold flex flex-wrap items-center justify-center gap-2 text-muted-foreground">
                 <Trophy className="w-4 h-4 text-primary inline-block mr-1" />
                 <span>Small Batch Focus</span>
-                <span className="text-slate-600">•</span>
+                <span className="text-muted-foreground/40">•</span>
                 <span>Coaching by Shreya Nadar</span>
-                <span className="text-slate-600">•</span>
+                <span className="text-muted-foreground/40">•</span>
                 <span>Dedicated 1-on-1 Doubt Clearing</span>
               </div>
             </div>

@@ -68,7 +68,7 @@ export default function CurrentAffairsPreview() {
             <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
               Daily Digest
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground tracking-tight">
               Constitutional & Legal Bulletins
             </h2>
             <p className="text-muted-foreground text-sm font-light leading-relaxed">
@@ -97,7 +97,7 @@ export default function CurrentAffairsPreview() {
                   <span className="text-[10px] text-muted-foreground font-medium font-mono">{article.date}</span>
                 </div>
 
-                <h3 className="text-slate-150 font-bold text-sm sm:text-base leading-snug group-hover:text-brand-purple-500 transition-colors">
+                <h3 className="text-foreground font-bold text-sm sm:text-base leading-snug group-hover:text-primary transition-colors">
                   {article.title}
                 </h3>
 
@@ -109,7 +109,7 @@ export default function CurrentAffairsPreview() {
               <div className="pt-6 mt-4 border-t border-border flex items-center justify-between">
                 <button
                   onClick={() => setActiveSummary(article)}
-                  className="text-xs font-bold text-brand-blue-500 hover:text-slate-150 flex items-center gap-1 transition-colors"
+                  className="text-xs font-bold text-primary hover:text-foreground flex items-center gap-1 transition-colors cursor-pointer"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-primary fill-brand-gold-500/10" />
                   AI Legal Summarizer
@@ -158,14 +158,14 @@ export default function CurrentAffairsPreview() {
                     <span className="text-[9px] uppercase font-extrabold tracking-widest text-muted-foreground block leading-none">
                       Vantage AI
                     </span>
-                    <h3 className="text-slate-150 font-bold text-xs">High-Yield Concept Digest</h3>
+                    <h3 className="text-foreground font-bold text-xs">High-Yield Concept Digest</h3>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="space-y-1">
-                    <span className="text-[10px] uppercase font-bold text-brand-purple-400 font-mono">Article Title</span>
-                    <h4 className="text-slate-150 font-serif font-bold text-base leading-tight">
+                    <span className="text-[10px] uppercase font-bold text-primary font-mono">Article Title</span>
+                    <h4 className="text-foreground font-serif font-bold text-base leading-tight">
                       {activeSummary.title}
                     </h4>
                   </div>
@@ -190,7 +190,7 @@ export default function CurrentAffairsPreview() {
                     </p>
                     <button
                       onClick={() => setActiveSummary(null)}
-                      className="px-4 py-2 rounded-xl bg-muted/50 border border-border text-slate-150 hover:bg-muted text-xs font-bold transition-all"
+                      className="px-4 py-2 rounded-xl bg-muted/60 border border-border text-foreground hover:bg-muted text-xs font-bold transition-all cursor-pointer"
                     >
                       Understood
                     </button>

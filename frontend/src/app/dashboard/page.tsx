@@ -496,8 +496,8 @@ export default function StudentDashboard() {
 
                     {!mockScoreCard?.completed ? (
                       <div className="h-[220px] flex flex-col items-center justify-center text-center text-muted-foreground font-sans text-xs space-y-2 border border-dashed border-border rounded-xl">
-                        <FileText className="w-8 h-8 text-slate-650" />
-                        <p className="font-bold text-muted-foreground">Subject Diagnostics Pending</p>
+                        <FileText className="w-8 h-8 text-muted-foreground/40" />
+                        <p className="font-bold text-foreground">Subject Diagnostics Pending</p>
                         <p className="max-w-xs font-light text-muted-foreground">
                           Complete your first CLAT/AILET simulation mock test in the portal to analyze your concept-level strengths.
                         </p>
@@ -606,7 +606,7 @@ export default function StudentDashboard() {
                         <span className="text-[10px] uppercase font-bold text-muted-foreground block">Admissibility Ratios</span>
                         {predictions.map((p) => (
                           <div key={p.name} className="flex justify-between items-center text-xs">
-                            <span className="text-slate-300">{p.name}</span>
+                            <span className="text-foreground">{p.name}</span>
                             <span className={`font-bold font-mono ${
                               p.chance.includes("95") || p.chance.includes("80")
                                 ? "text-emerald-450"
@@ -707,7 +707,7 @@ export default function StudentDashboard() {
                   ) : (
                     <button
                       onClick={() => setActiveTab("mock")}
-                      className="px-5 py-3 rounded-xl bg-muted/50 border border-border hover:bg-muted text-slate-300 hover:text-foreground font-bold text-xs flex items-center gap-1.5 transition-all"
+                      className="px-5 py-3 rounded-xl bg-muted/50 border border-border hover:bg-muted text-foreground font-bold text-xs flex items-center gap-1.5 transition-all"
                     >
                       <AlertCircle className="w-4.5 h-4.5 text-muted-foreground" />
                       Locked: Complete 1 Mock Test
@@ -784,7 +784,7 @@ export default function StudentDashboard() {
                       {/* Passage */}
                       <div className="p-5 rounded-2xl glass-panel border border-border space-y-3 bg-muted/60 max-h-[300px] overflow-y-auto">
                         <span className="text-[9px] uppercase font-bold text-muted-foreground block">Passage Directive</span>
-                        <p className="text-slate-300 text-sm leading-relaxed font-light">
+                        <p className="text-foreground text-sm leading-relaxed font-light">
                           {mockQuestions[activeQuestionIdx].passage}
                         </p>
                       </div>
@@ -805,8 +805,8 @@ export default function StudentDashboard() {
                                 onClick={() => handleOptionSelect(mockQuestions[activeQuestionIdx].id, opt.id)}
                                 className={`w-full text-left p-4 rounded-lg border text-xs leading-relaxed transition-all flex items-start gap-3 cursor-pointer min-h-[48px] ${
                                   isSelected
-                                    ? "bg-primary text-primary-foreground/5 border-brand-gold-500 text-foreground font-bold"
-                                    : "bg-muted/50 border-border text-slate-355 hover:bg-muted hover:border-border"
+                                    ? "bg-primary text-primary-foreground border-brand-gold-500 font-bold"
+                                    : "bg-muted/50 border-border text-foreground hover:bg-muted hover:border-border"
                                 }`}
                               >
                                 <span className={`w-5 h-5 rounded-lg border text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5 ${
@@ -839,7 +839,7 @@ export default function StudentDashboard() {
                             <button
                               disabled={activeQuestionIdx === 0}
                               onClick={() => setActiveQuestionIdx((prev) => prev - 1)}
-                              className="flex-grow sm:flex-grow-0 min-h-[44px] px-4 py-2 rounded-lg text-xs font-semibold bg-muted/50 border border-border hover:bg-muted text-slate-300 disabled:opacity-30 disabled:pointer-events-none transition-all cursor-pointer"
+                              className="flex-grow sm:flex-grow-0 min-h-[44px] px-4 py-2 rounded-lg text-xs font-semibold bg-muted/50 border border-border hover:bg-muted text-foreground disabled:opacity-30 disabled:pointer-events-none transition-all cursor-pointer"
                             >
                               Prev
                             </button>
@@ -1024,8 +1024,8 @@ export default function StudentDashboard() {
                     >
                       <div className={`max-w-[75%] p-3.5 rounded-2xl text-xs leading-relaxed ${
                         m.sender === "user"
-                          ? "bg-gradient-to-r from-blue-600 to-purple-600 text-foreground shadow-md rounded-tr-none"
-                          : "bg-muted/50 border border-border text-slate-200 rounded-tl-none"
+                          ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md rounded-tr-none"
+                          : "bg-muted/50 border border-border text-foreground rounded-tl-none"
                       }`}>
                         {m.text}
                       </div>
@@ -1068,7 +1068,7 @@ export default function StudentDashboard() {
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
                     placeholder="Ask a legal reasoning concept, case laws, or strategy question..."
-                    className="flex-1 px-4 py-3 rounded-xl bg-muted/50 border border-border text-foreground text-xs focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-slate-650"
+                    className="flex-1 px-4 py-3 rounded-xl bg-muted/50 border border-border text-foreground text-xs focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-muted-foreground/60"
                   />
                   <button
                     type="submit"
@@ -1146,9 +1146,9 @@ export default function StudentDashboard() {
                           if (isSelected && !quizFeedback) {
                             btnClass = "border-brand-gold-500 bg-primary text-primary-foreground/5 text-foreground font-bold";
                           } else if (quizFeedback) {
-                            if (isCorrect) btnClass = "border-emerald-500/40 bg-emerald-500/10 text-emerald-400";
-                            else if (isSelected) btnClass = "border-rose-500/40 bg-rose-500/10 text-rose-450";
-                            else btnClass = "border-border bg-muted/50 text-slate-650 opacity-50";
+                            if (isCorrect) btnClass = "border-emerald-500/40 bg-emerald-500/10 text-emerald-500 dark:text-emerald-400";
+                            else if (isSelected) btnClass = "border-rose-500/40 bg-rose-500/10 text-rose-500 dark:text-rose-450";
+                            else btnClass = "border-border bg-muted/50 text-muted-foreground opacity-50";
                           }
 
                           return (
@@ -1245,7 +1245,7 @@ export default function StudentDashboard() {
                 <h3 className="text-2xl md:text-4xl font-extrabold text-foreground tracking-wide border-b border-brand-gold-500/20 pb-2 max-w-md mx-auto print:text-black print:border-black">
                   {userName}
                 </h3>
-                <p className="text-xs md:text-sm text-slate-300 leading-relaxed font-light">
+                <p className="text-xs md:text-sm text-foreground leading-relaxed font-light">
                   for demonstrating outstanding cognitive competence and analytical rigor, achieving an elite score of{" "}
                   <span className="text-primary font-bold font-mono">{mockScoreCard?.score.toFixed(2)}</span> Marks
                   in the <span className="font-sans font-bold text-foreground print:text-black">Shreya's Law Desk National Mock Diagnostic Simulation (CLAT Format)</span>.
@@ -1258,7 +1258,7 @@ export default function StudentDashboard() {
                   <div className="h-8 font-serif italic text-sm text-primary flex items-end justify-center">
                     Shreya Nadar
                   </div>
-                  <div className="h-px bg-slate-700/40 w-full print:bg-black" />
+                  <div className="h-px bg-border w-full print:bg-black" />
                   <span className="text-[10px] text-muted-foreground block uppercase tracking-wider font-bold">Founder & Lead Law Mentor</span>
                 </div>
               </div>
@@ -1267,14 +1267,14 @@ export default function StudentDashboard() {
               <div className="flex justify-center gap-4 pt-4 print:hidden">
                 <button
                   onClick={() => window.print()}
-                  className="px-6 py-2.5 rounded-xl bg-primary text-primary-foreground hover:bg-brand-gold-400  font-bold text-xs flex items-center gap-1.5 transition-all shadow-lg shadow-brand-gold-500/20"
+                  className="px-6 py-2.5 rounded-xl bg-primary text-primary-foreground hover:bg-brand-gold-400 font-bold text-xs flex items-center gap-1.5 transition-all shadow-lg shadow-brand-gold-500/20"
                 >
                   <Download className="w-4 h-4" />
                   Print / Save PDF
                 </button>
                 <button
                   onClick={() => setIsCertificateOpen(false)}
-                  className="px-6 py-2.5 rounded-xl bg-muted/50 border border-border hover:bg-muted text-slate-300 hover:text-foreground font-bold text-xs transition-all"
+                  className="px-6 py-2.5 rounded-xl bg-muted/50 border border-border hover:bg-muted text-foreground font-bold text-xs transition-all"
                 >
                   Dismiss
                 </button>
@@ -1358,7 +1358,7 @@ export default function StudentDashboard() {
                     {liveChats.map((chat, idx) => (
                       <div key={idx} className="space-y-0.5">
                         <span className="text-primary/80 font-bold block">{chat.name}</span>
-                        <p className="text-slate-300 font-light">{chat.msg}</p>
+                        <p className="text-foreground font-light">{chat.msg}</p>
                       </div>
                     ))}
                   </div>

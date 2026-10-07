@@ -109,7 +109,7 @@ export default function Navbar({
                     key={link.name}
                     href={link.href}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors relative ${
-                      isActive ? "text-primary font-bold" : "text-muted-foreground hover:text-slate-150"
+                      isActive ? "text-primary font-bold" : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
                     {link.name}
@@ -129,8 +129,8 @@ export default function Navbar({
                 onMouseEnter={() => setDropdownOpen("resources")}
                 onMouseLeave={() => setDropdownOpen(null)}
               >
-                <button className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-slate-150 transition-colors">
-                  Resources <ChevronDown className="w-4 h-4" />
+                <button className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                  Resources <ChevronDown className="w-4 h-4 opacity-70" />
                 </button>
 
                 <AnimatePresence>
@@ -140,7 +140,7 @@ export default function Navbar({
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute left-0 mt-1 w-56 rounded-xl bg-background p-2 shadow-2xl border border-slate-150/10"
+                      className="absolute left-0 mt-1 w-56 rounded-xl bg-card p-2 shadow-2xl border border-border"
                     >
                       {resourceLinks.map((item) => {
                         const Icon = item.icon;
@@ -149,13 +149,13 @@ export default function Navbar({
                           <Link
                             key={item.name}
                             href={item.href}
-                            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all ${
+                            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                               isSubActive
                                 ? "bg-muted text-primary font-bold"
-                                : "text-muted-foreground hover:text-slate-150 hover:bg-muted/50"
+                                : "text-muted-foreground hover:text-foreground hover:bg-muted"
                             }`}
                           >
-                            <Icon className="w-4 h-4 text-brand-blue-500" />
+                            <Icon className="w-4 h-4 text-primary" />
                             {item.name}
                           </Link>
                         );
@@ -212,7 +212,7 @@ export default function Navbar({
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => onOpenAuth("login")}
-                    className="px-4 py-2.5 rounded-lg text-sm font-semibold text-muted-foreground hover:text-slate-150 transition-colors cursor-pointer"
+                    className="px-4 py-2.5 rounded-lg text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                   >
                     Sign In
                   </button>
@@ -239,11 +239,11 @@ export default function Navbar({
 
               <button
                 onClick={onOpenWishlist}
-                className="relative p-2 rounded-xl text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors"
+                className="relative p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
               >
                 <Heart className="w-5 h-5" />
                 {wishlistCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-brand-pink-500 text-foreground text-[9px] font-bold flex items-center justify-center">
+                  <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-primary text-primary-foreground text-[9px] font-bold flex items-center justify-center">
                     {wishlistCount}
                   </span>
                 )}
@@ -251,7 +251,7 @@ export default function Navbar({
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-xl text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors"
+                className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -288,7 +288,7 @@ export default function Navbar({
                 </span>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 rounded-xl text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors cursor-pointer"
+                  className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -301,7 +301,7 @@ export default function Navbar({
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors min-h-[48px] flex items-center"
+                    className="block px-4 py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-foreground hover:bg-muted transition-colors min-h-[48px] flex items-center"
                   >
                     {link.name}
                   </Link>
@@ -318,7 +318,7 @@ export default function Navbar({
                         key={item.name}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors min-h-[48px]"
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-foreground hover:bg-muted transition-colors min-h-[48px]"
                       >
                         <Icon className="w-5 h-5 text-primary" />
                         {item.name}
@@ -357,7 +357,7 @@ export default function Navbar({
                         onOpenAuth("login");
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors min-h-[48px] cursor-pointer"
+                      className="w-full py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-foreground hover:bg-muted transition-colors min-h-[48px] cursor-pointer"
                     >
                       Sign In
                     </button>

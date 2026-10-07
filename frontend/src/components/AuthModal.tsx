@@ -182,7 +182,7 @@ export default function AuthModal({
               )}
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-355 flex items-center gap-1.5">
+                <label className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                   <Mail className="w-3.5 h-3.5 text-brand-blue-500" /> Email Address
                 </label>
                 <input
@@ -196,7 +196,7 @@ export default function AuthModal({
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-360 flex items-center gap-1.5">
+                <label className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                   <Lock className="w-3.5 h-3.5 text-brand-blue-500" /> Password
                 </label>
                 <input
@@ -211,7 +211,7 @@ export default function AuthModal({
 
               {activeTab === "signup" && (
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-360 flex items-center gap-1.5">
+                  <label className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                     <GraduationCap className="w-3.5 h-3.5 text-brand-blue-500" /> Target Exam
                   </label>
                   <select

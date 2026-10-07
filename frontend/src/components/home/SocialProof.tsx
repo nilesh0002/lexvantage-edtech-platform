@@ -176,7 +176,7 @@ export default function SocialProof() {
                     ))}
                   </div>
 
-                  <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-light font-serif italic text-center md:text-left">
+                  <p className="text-foreground text-base sm:text-lg leading-relaxed font-normal font-serif italic text-center md:text-left">
                     "{activeTestimonial.quote}"
                   </p>
 

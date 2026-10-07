@@ -48,7 +48,7 @@ export default function FreeNotes() {
             <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
               Study Material
             </span>
-            <h1 className="text-4xl font-serif font-bold text-slate-150">
+            <h1 className="text-4xl font-serif font-bold text-foreground">
               Unlock Elite Legal Resources
             </h1>
             <p className="text-muted-foreground text-sm font-light">
@@ -76,7 +76,7 @@ export default function FreeNotes() {
                       <span className="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-muted/50 text-muted-foreground border border-border uppercase">
                         {note.category}
                       </span>
-                      <h3 className="text-slate-150 font-bold text-sm leading-tight pt-1">
+                      <h3 className="text-foreground font-bold text-sm leading-tight pt-1">
                         {note.title}
                       </h3>
                       <p className="text-muted-foreground text-[10px]">
@@ -91,7 +91,7 @@ export default function FreeNotes() {
                     className={`p-3 rounded-xl border flex items-center justify-center transition-all shrink-0 ${
                       isDownloaded
                         ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400"
-                        : "bg-muted/50 border-border text-muted-foreground hover:bg-muted hover:text-slate-150"
+                        : "bg-muted/50 border-border text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer"
                     }`}
                   >
                     {isDownloading ? (

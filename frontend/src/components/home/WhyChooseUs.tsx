@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Engineered for Success
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
             Why Future Lawyers Choose Shreya's Law Desk
           </h2>
           <p className="text-muted-foreground text-base font-light">
@@ -117,12 +117,12 @@ export default function WhyChooseUs() {
               >
                 <div className="space-y-4">
                   {/* Icon Wrapper */}
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center border bg-slate-150/5 dark:bg-muted/50 border-slate-150/10 dark:border-border group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center border bg-muted/70 border-border group-hover:scale-110 transition-transform duration-300">
                     <Icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
 
                   {/* Text */}
-                  <h3 className="text-lg font-bold text-slate-150 group-hover:text-brand-blue-500 transition-colors">
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed font-light">
