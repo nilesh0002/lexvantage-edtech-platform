@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Heart, Sparkles, Trophy, Calendar, CheckCircle2, ChevronRight, Filter } from "lucide-react";
 import CheckoutModal from "../CheckoutModal";
-import { Course, coursesData } from "@/data/courses";
+import { Course } from "@/data/courses"; // keep types but not hardcoded data
 
 interface CoursesProps {
   wishlist: string[];
@@ -17,9 +17,35 @@ export default function Courses({
   onToggleWishlist,
   onEnroll,
 }: CoursesProps) {
+  const [coursesData, setCoursesData] = useState<Course[]>([]);
+  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("ALL");
   const [checkoutCourse, setCheckoutCourse] = useState<Course | null>(null);
+
+  useEffect(() => {
+    async function fetchCourses() {
+      try {
+        const res = await fetch("/api/courses");
+        const text = await res.text();
+        try {
+          const data = JSON.parse(text);
+          if (res.ok) {
+            setCoursesData(data);
+          } else {
+            console.error("API Error:", data.error);
+          }
+        } catch (e) {
+          console.error("API returned non-JSON response (likely an error page or Prisma is not initialized). Please run `npx prisma generate` and `npx prisma db push`. Response snippet:", text.slice(0, 100));
+        }
+      } catch (error) {
+        console.error("Failed to fetch courses:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchCourses();
+  }, []);
 
   const filters = [
     { id: "ALL", label: "All Programs" },
@@ -51,7 +77,7 @@ export default function Courses({
             <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
               Elite Curriculums
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground tracking-tight">
               Invest in Your NLU Future
             </h2>
             <p className="text-muted-foreground text-sm font-light leading-relaxed">
@@ -77,7 +103,7 @@ export default function Courses({
                 className={`min-h-[44px] px-4 py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer border shrink-0 snap-start ${
                   selectedFilter === f.id
                     ? "bg-primary text-primary-foreground  border-brand-gold-500"
-                    : "text-slate-355 hover:text-foreground hover:bg-muted/50 border-border"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50 border-border"
                 }`}
               >
                 {f.label}
@@ -93,86 +119,94 @@ export default function Courses({
               placeholder="Search syllabus or course name..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-background border border-border text-foreground text-xs focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-slate-650"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-background border border-border text-foreground text-xs focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-muted-foreground"
             />
           </div>
         </div>
 
         {/* Courses Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
-          <AnimatePresence mode="popLayout">
-            {filteredCourses.map((course) => {
-              const isWishlisted = wishlist.includes(course.id);
-              return (
-                <motion.div
-                  key={course.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.25 }}
-                  className="rounded-2xl glass-panel p-6 sm:p-8 flex flex-col gap-6 justify-between relative group hover:border-border transition-all shadow-xl h-full"
-                >
-                  {/* Card Main Info */}
-                  <div className="flex-grow flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-brand-blue-500/10 text-brand-blue-500 border border-brand-blue-500/20 uppercase tracking-wide">
-                          {course.exam}
-                        </span>
-                        <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">
-                          By Shreya Nadar
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-lg font-bold text-slate-150 group-hover:text-primary transition-colors leading-tight mb-1">
-                        {course.name}
-                      </h3>
-                      <p className="text-xs text-muted-foreground font-medium mb-4">{course.duration}</p>
-                    </div>
-
-                    <ul className="space-y-2.5 border-t border-border pt-4 my-4 flex-grow">
-                      {course.syllabus.map((syl, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
-                          <span>{syl}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Card Bottom CTA Actions */}
-                  <div className="border-t border-border pt-5 flex items-center gap-3 w-full">
-                    <button
-                      onClick={() => setCheckoutCourse(course)}
-                      className="min-h-[48px] flex-1 px-5 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90  font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer"
-                    >
-                      Enroll Now
-                      <ChevronRight className="w-4 h-4 animate-pulse" />
-                    </button>
-
-                    <button
-                      onClick={() => onToggleWishlist(course)}
-                      className={`p-3 rounded-lg border transition-all cursor-pointer min-h-[48px] flex items-center justify-center ${
-                        isWishlisted
-                          ? "bg-rose-500/10 border-rose-500/20 text-rose-500"
-                          : "bg-slate-150/5 border-slate-150/10 dark:bg-muted/50 dark:border-border text-muted-foreground hover:text-rose-500 hover:bg-muted"
-                      }`}
-                      title="Add to Wishlist"
-                    >
-                      <Heart className={`w-5 h-5 ${isWishlisted ? "fill-current" : ""}`} />
-                    </button>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </AnimatePresence>
-
-          {/* Empty State */}
-          {filteredCourses.length === 0 && (
+          {loading ? (
             <div className="col-span-full py-16 text-center">
-              <p className="text-muted-foreground text-sm">No courses matching your search query. Please try another keyword.</p>
+              <p className="text-muted-foreground animate-pulse text-sm">Fetching latest courses from database...</p>
             </div>
+          ) : (
+            <>
+              <AnimatePresence mode="popLayout">
+                {filteredCourses.map((course) => {
+                  const isWishlisted = wishlist.includes(course.id);
+                  return (
+                    <motion.div
+                      key={course.id}
+                      layout
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.25 }}
+                      className="rounded-2xl glass-panel p-6 sm:p-8 flex flex-col gap-6 justify-between relative group hover:border-border transition-all shadow-xl h-full"
+                    >
+                      {/* Card Main Info */}
+                      <div className="flex-grow flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-brand-blue-500/10 text-brand-blue-500 border border-brand-blue-500/20 uppercase tracking-wide">
+                              {course.exam}
+                            </span>
+                            <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">
+                              By Shreya Nadar
+                            </span>
+                          </div>
+                          
+                          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-tight mb-1">
+                            {course.name}
+                          </h3>
+                          <p className="text-xs text-muted-foreground font-medium mb-4">{course.duration}</p>
+                        </div>
+
+                        <ul className="space-y-2.5 border-t border-border pt-4 my-4 flex-grow">
+                          {course.syllabus.map((syl, i) => (
+                            <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
+                              <span>{syl}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Card Bottom CTA Actions */}
+                      <div className="border-t border-border pt-5 flex items-center gap-3 w-full">
+                        <button
+                          onClick={() => setCheckoutCourse(course)}
+                          className="min-h-[48px] flex-1 px-5 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90  font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer"
+                        >
+                          Enroll Now
+                          <ChevronRight className="w-4 h-4 animate-pulse" />
+                        </button>
+
+                        <button
+                          onClick={() => onToggleWishlist(course)}
+                          className={`p-3 rounded-lg border transition-all cursor-pointer min-h-[48px] flex items-center justify-center ${
+                            isWishlisted
+                              ? "bg-rose-500/10 border-rose-500/20 text-rose-500"
+                              : "bg-muted/50 border-border text-muted-foreground hover:text-rose-500 hover:bg-muted"
+                          }`}
+                          title="Add to Wishlist"
+                        >
+                          <Heart className={`w-5 h-5 ${isWishlisted ? "fill-current" : ""}`} />
+                        </button>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+
+              {/* Empty State */}
+              {filteredCourses.length === 0 && !loading && (
+                <div className="col-span-full py-16 text-center border border-dashed border-border rounded-2xl">
+                  <p className="text-muted-foreground text-sm">No courses matching your search query. Please try another keyword or ask the admin to add courses.</p>
+                </div>
+              )}
+            </>
           )}
         </div>
 

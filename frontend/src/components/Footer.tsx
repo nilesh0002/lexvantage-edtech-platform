@@ -124,7 +124,6 @@ export default function Footer() {
               <li><Link href="/courses" className="hover:text-foreground transition-colors">CLAT & AILET Prep</Link></li>
               <li><Link href="/courses" className="hover:text-foreground transition-colors">SLAT & MH CET Law</Link></li>
               <li><Link href="/courses" className="hover:text-foreground transition-colors">5-Year LL.B Companion</Link></li>
-              <li><Link href="/courses" className="hover:text-foreground transition-colors">Shreya's Law Desk Mock Series</Link></li>
             </ul>
           </div>
 
@@ -132,9 +131,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1 lg:col-span-2 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Free Resources</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              <li><Link href="/current-affairs" className="hover:text-foreground transition-colors">Daily Current Affairs</Link></li>
-              <li><Link href="/free-notes" className="hover:text-foreground transition-colors">LL.B Semester Notes</Link></li>
-              <li><Link href="/mock-tests" className="hover:text-foreground transition-colors">Free Mock Tests</Link></li>
+              <li><Link href="/free-notes" className="hover:text-foreground transition-colors">Free Notes</Link></li>
             </ul>
           </div>
 

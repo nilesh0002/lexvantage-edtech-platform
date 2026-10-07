@@ -7,7 +7,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/home/Hero";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Courses from "@/components/home/Courses";
-import Faculty from "@/components/home/Faculty";
 import MockTestPreview from "@/components/home/MockTestPreview";
 import CurrentAffairsPreview from "@/components/home/CurrentAffairsPreview";
 import Faq from "@/components/home/Faq";
@@ -156,7 +155,6 @@ export default function Home() {
             onEnroll={(c) => handleEnrollSuccess(c.id)}
           />
           <MockTestPreview onStartFullMock={() => handleOpenAuth("signup")} />
-          <Faculty />
           <CurrentAffairsPreview />
           <Faq />
           <Footer />
@@ -195,13 +193,6 @@ export default function Home() {
               <Footer />
             </div>
           )}
-
-          {activeMobileTab === "mentor" && (
-            <div className="pt-2">
-              <Faculty />
-              <Footer />
-            </div>
-          )}
         </div>
       </main>
 
@@ -211,7 +202,6 @@ export default function Home() {
           { id: "home", label: "Home", icon: HomeIcon },
           { id: "courses", label: "Courses", icon: GraduationCap },
           { id: "prep", label: "Free Prep", icon: Play },
-          { id: "mentor", label: "Mentor", icon: User },
         ].map((tab) => {
           const Icon = tab.icon;
           const isActive = activeMobileTab === tab.id;

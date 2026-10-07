@@ -73,14 +73,10 @@ export default function Navbar({
     { name: "Courses", href: "/courses" },
     { name: "Mock Tests", href: "/mock-tests" },
     { name: "Current Affairs", href: "/current-affairs" },
-    { name: "Scholarships", href: "/scholarships" },
   ];
 
   const resourceLinks = [
     { name: "Free Notes", href: "/free-notes", icon: FileText },
-    { name: "Faculty", href: "/faculty", icon: GraduationCap },
-    { name: "Results", href: "/results", icon: Trophy },
-    { name: "About Us", href: "/about", icon: BookOpen },
   ];
 
   return (
