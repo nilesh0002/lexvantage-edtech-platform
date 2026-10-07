@@ -44,7 +44,7 @@ export default function Contact() {
               Get in Touch with Admissions
             </h1>
             <p className="text-muted-foreground text-sm font-light">
-              Have questions regarding course schedules, fee installments, or scholarships? Our team is available 24/7.
+              Have questions regarding course schedules or fee installments? Our team is available 24/7.
             </p>
           </div>
 

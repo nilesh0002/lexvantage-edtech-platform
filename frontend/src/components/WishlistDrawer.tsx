@@ -130,7 +130,7 @@ export default function WishlistDrawer({
                     <span className="text-foreground font-bold">{items.length}</span>
                   </div>
                   <div className="text-xs text-muted-foreground leading-normal">
-                    *Taxes and mock portal fee will be computed during checkout. Dynamic scholarships can be applied in the student dashboard.
+                    *Taxes and mock portal fee will be computed during checkout.
                   </div>
                 </div>
               )}

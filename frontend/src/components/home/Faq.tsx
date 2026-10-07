@@ -73,10 +73,7 @@ const faqData: FaqItem[] = [
     question: "Can I adjust my batch timings to avoid conflicts with school board exams?",
     answer: "Absolutely. We offer flexible schedules including Early Morning, Late Evening, and Weekend-only cohorts. Additionally, every live lecture is recorded in high-definition and uploaded to your dashboard alongside key transcripts and slides.",
   },
-  {
-    question: "Do you offer scholarship incentives for merit-based admissions?",
-    answer: "Yes, our Vantage Scholarship Program offers up to 100% tuition waivers. Scholarships are calculated dynamically in the student dashboard based on your Class 10/12 board exam percentages, or your performance on our simulated scholarship tests.",
-  },
+
   {
     question: "What is your doubt-resolution system's turnaround time?",
     answer: "Shreya's Law Desk provides dedicated doubt resolution directly by Shreya Nadar. Students can upload screenshots or type text queries directly inside the dashboard. Over 92% of doubts receive comprehensive step-by-step video explanations within 15 minutes.",

@@ -24,12 +24,12 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-lg font-serif font-bold text-slate-150 pt-4">1. Information We Collect</h2>
             <p>
-              We collect information that you identify or provide directly to us when creating a Student Account, registering for Mock Tests, completing Scholarship Claim forms, or subscribing to our email newsletters. This information may include:
+              We collect information that you identify or provide directly to us when creating a Student Account, registering for Mock Tests, or subscribing to our email newsletters. This information may include:
             </p>
             <ul className="list-disc pl-5 space-y-2">
               <li>Student and parent names, email addresses, and telephone numbers.</li>
               <li>Target entrance examinations (CLAT, AILET, MHCET, etc.).</li>
-              <li>Academic percentages or mock scoring history used in scholarship calculations.</li>
+
               <li>Simulated transaction metrics necessary for processing admissions.</li>
             </ul>
 

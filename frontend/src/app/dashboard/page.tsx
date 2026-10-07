@@ -15,7 +15,7 @@ import { Question, mockQuestions } from "@/data/mockQuestions";
 
 export default function StudentDashboard() {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState<"overview" | "mock" | "chatbot" | "quiz" | "scholarship">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "mock" | "chatbot" | "quiz">("overview");
   
   // Theme state
   const [theme, setTheme] = useState<"dark" | "light">("light");
@@ -130,10 +130,6 @@ export default function StudentDashboard() {
     }
   ];
 
-  // Scholarship calculator states
-  const [boardMarks, setBoardMarks] = useState(85);
-  const [targetPercentile, setTargetPercentile] = useState(80);
-  const [scholarshipResult, setScholarshipResult] = useState<any | null>(null);
 
   // Timer logic for Mock Portal
   useEffect(() => {
@@ -310,28 +306,6 @@ export default function StudentDashboard() {
     }
   };
 
-  // Scholarship
-  const handleCalculateScholarship = () => {
-    let waiver = 0;
-    if (boardMarks >= 95) waiver += 40;
-    else if (boardMarks >= 90) waiver += 25;
-    else if (boardMarks >= 80) waiver += 10;
-
-    if (targetPercentile >= 98) waiver += 50;
-    else if (targetPercentile >= 95) waiver += 35;
-    else if (targetPercentile >= 90) waiver += 20;
-
-    // Cap waiver at 100%
-    const finalWaiver = Math.min(waiver, 100);
-    const regularCost = 64999;
-    const finalCost = regularCost - (regularCost * finalWaiver) / 100;
-
-    setScholarshipResult({
-      waiver: finalWaiver,
-      discount: regularCost - finalCost,
-      finalCost,
-    });
-  };
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -374,7 +348,7 @@ export default function StudentDashboard() {
               { id: "mock", label: "Mock Test Portal", icon: Play },
               { id: "chatbot", label: "AI Law Tutor", icon: BrainCircuit },
               { id: "quiz", label: "Daily Quiz Arena", icon: HelpCircle },
-              { id: "scholarship", label: "Scholarship Hub", icon: Award },
+
             ].map((link) => {
               const Icon = link.icon;
               return (
@@ -716,7 +690,7 @@ export default function StudentDashboard() {
                     <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-primary text-primary-foreground/10 text-primary border border-brand-gold-500/20 uppercase tracking-wide">
                       Achievement unlocked
                     </span>
-                    <h3 className="text-foreground font-serif font-bold text-base">Generate Scholarship & Mock Certificate</h3>
+                    <h3 className="text-foreground font-serif font-bold text-base">Generate Mock Certificate</h3>
                     <p className="text-muted-foreground text-xs font-light max-w-xl">
                       Complete at least one full Mock Test simulation to generate your official Shreya's Law Desk Scholar merit credential.
                     </p>
@@ -1218,117 +1192,7 @@ export default function StudentDashboard() {
               </motion.div>
             )}
 
-            {/* SCHOLARSHIP HUB */}
-            {activeTab === "scholarship" && (
-              <motion.div
-                key="scholarship"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.2 }}
-                className="space-y-6"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                  
-                  {/* Inputs Left */}
-                  <div className="lg:col-span-6 p-6 rounded-2xl glass-panel border border-border space-y-6">
-                    <div>
-                      <h3 className="text-foreground font-serif font-bold text-sm">Vantage Merit Calculator</h3>
-                      <p className="text-muted-foreground text-xs font-light">Determine your dynamic tuition fee waivers based on academic scores.</p>
-                    </div>
 
-                    <div className="space-y-5">
-                      {/* Board Marks Slider */}
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-xs">
-                          <span className="text-slate-300 font-semibold">12th Board Score</span>
-                          <span className="text-foreground font-bold">{boardMarks}%</span>
-                        </div>
-                        <input
-                          type="range"
-                          min="60"
-                          max="100"
-                          value={boardMarks}
-                          onChange={(e) => setBoardMarks(parseInt(e.target.value))}
-                          className="w-full accent-white bg-muted rounded-lg appearance-none h-1.5"
-                        />
-                      </div>
-
-                      {/* Mock Percentile Slider */}
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-xs">
-                          <span className="text-muted-foreground font-semibold">Mock Entrance Percentile</span>
-                          <span className="text-foreground font-bold">{targetPercentile}th Percentile</span>
-                        </div>
-                        <input
-                          type="range"
-                          min="50"
-                          max="100"
-                          value={targetPercentile}
-                          onChange={(e) => setTargetPercentile(parseInt(e.target.value))}
-                          className="w-full accent-white bg-muted rounded-lg appearance-none h-1.5"
-                        />
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={handleCalculateScholarship}
-                      className="min-h-[48px] w-full py-3 rounded-lg bg-white text-black font-bold text-xs tracking-wider transition-all cursor-pointer hover:bg-slate-200"
-                    >
-                      Compute Fee Waiver
-                    </button>
-                  </div>
-
-                  {/* Prediction Output Right */}
-                  <div className="lg:col-span-6 p-6 rounded-2xl glass-panel border border-border space-y-6 flex flex-col justify-between min-h-[300px]">
-                    {scholarshipResult ? (
-                      <div className="space-y-6">
-                        <div className="text-center space-y-1.5">
-                          <Award className="w-10 h-10 text-foreground mx-auto fill-white/10 animate-pulse" />
-                          <h4 className="text-2xl font-serif font-extrabold text-foreground">
-                            {scholarshipResult.waiver}% Scholarship
-                          </h4>
-                          <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider block">Awarded and Approved</span>
-                        </div>
-
-                        <div className="space-y-2 border-t border-b border-border py-4 text-xs">
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Regular Tuition:</span>
-                            <span className="text-foreground font-bold">₹64,999</span>
-                          </div>
-                          <div className="flex justify-between text-emerald-400">
-                            <span>Scholarship Waiver:</span>
-                            <span>- ₹{scholarshipResult.discount.toLocaleString()}</span>
-                          </div>
-                          <div className="flex justify-between text-sm border-t border-border pt-2 font-bold">
-                            <span className="text-slate-300">Net Admission Cost:</span>
-                            <span className="text-foreground">₹{scholarshipResult.finalCost.toLocaleString()}</span>
-                          </div>
-                        </div>
-
-                        <button
-                          onClick={() => alert("Scholarship claimed! We have reserved your seats for the next 48 hours.")}
-                          className="min-h-[48px] w-full py-3 rounded-lg bg-white text-black font-bold text-xs tracking-wider transition-all cursor-pointer hover:bg-slate-200"
-                        >
-                          Lock Net Scholarship Cost
-                        </button>
-                      </div>
-                    ) : (
-                      <div className="h-full flex flex-col items-center justify-center text-center">
-                        <div className="w-12 h-12 rounded-full bg-muted/50 flex items-center justify-center border border-border mb-4">
-                          <Sparkles className="w-6 h-6 text-muted-foreground" />
-                        </div>
-                        <h4 className="text-foreground font-bold mb-1">Scholarship calculations pending</h4>
-                        <p className="text-muted-foreground text-xs max-w-xs font-light">
-                          Select your scores in the left panel and click compute to see your discount criteria.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-
-                </div>
-              </motion.div>
-            )}
 
           </AnimatePresence>
         </div>
