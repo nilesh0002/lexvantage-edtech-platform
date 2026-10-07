@@ -206,7 +206,7 @@ export default function Home() {
       </main>
 
       {/* Sticky Bottom Navigation Bar for Mobile (PW-style App Navigation) */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-brand-navy-950/95 border-t border-white/10 backdrop-blur-md py-2 px-6 flex justify-between items-center shadow-lg">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/95 border-t border-border backdrop-blur-md py-2 px-6 flex justify-between items-center shadow-lg">
         {[
           { id: "home", label: "Home", icon: HomeIcon },
           { id: "courses", label: "Courses", icon: GraduationCap },
@@ -221,8 +221,8 @@ export default function Home() {
               onClick={() => handleMobileTabChange(tab.id as any)}
               className="flex flex-col items-center justify-center gap-1 cursor-pointer py-1 text-center"
             >
-              <Icon className={`w-5 h-5 transition-colors ${isActive ? "text-brand-gold-500" : "text-slate-400 dark:text-slate-350"}`} />
-              <span className={`text-[10px] font-bold tracking-wider ${isActive ? "text-brand-gold-500" : "text-slate-400 dark:text-slate-350"}`}>
+              <Icon className={`w-5 h-5 transition-colors ${isActive ? "text-primary" : "text-muted-foreground dark:text-muted-foreground"}`} />
+              <span className={`text-[10px] font-bold tracking-wider ${isActive ? "text-primary" : "text-muted-foreground dark:text-muted-foreground"}`}>
                 {tab.label}
               </span>
             </button>
@@ -239,8 +239,8 @@ export default function Home() {
           }}
           className="flex flex-col items-center justify-center gap-1 cursor-pointer py-1 text-center"
         >
-          <LayoutDashboard className="w-5 h-5 text-slate-400 dark:text-slate-350" />
-          <span className="text-[10px] font-bold tracking-wider text-slate-400 dark:text-slate-350">Portal</span>
+          <LayoutDashboard className="w-5 h-5 text-muted-foreground dark:text-muted-foreground" />
+          <span className="text-[10px] font-bold tracking-wider text-muted-foreground dark:text-muted-foreground">Portal</span>
         </button>
       </div>
 

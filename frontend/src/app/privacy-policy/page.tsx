@@ -9,13 +9,13 @@ export default function PrivacyPolicy() {
     <>
       <Navbar />
 
-      <main className="flex-grow pt-28 bg-brand-navy-955">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8 text-slate-350">
+      <main className="flex-grow pt-28 bg-card">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8 text-muted-foreground">
           
           <h1 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 mb-6">
             Privacy Policy
           </h1>
-          <p className="text-xs text-slate-500 font-mono">Last Updated: July 11, 2026</p>
+          <p className="text-xs text-muted-foreground font-mono">Last Updated: July 11, 2026</p>
 
           <div className="space-y-6 text-sm leading-relaxed font-light">
             <p>

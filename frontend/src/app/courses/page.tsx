@@ -19,7 +19,7 @@ export default function CoursesPage() {
   return (
     <>
       <Navbar onOpenAuth={() => setIsAuthOpen(true)} wishlistCount={wishlist.length} />
-      <main className="flex-grow pt-20 bg-brand-navy-950">
+      <main className="flex-grow pt-20 bg-background">
         <Courses
           wishlist={wishlist}
           onToggleWishlist={handleToggleWishlist}

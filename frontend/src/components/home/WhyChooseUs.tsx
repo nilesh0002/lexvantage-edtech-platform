@@ -10,57 +10,57 @@ export default function WhyChooseUs() {
       icon: Scale,
       title: "Concept-Based Learning",
       description: "Understand the law instead of memorizing it.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
     {
       icon: BookOpen,
       title: "Complete Syllabus Coverage",
       description: "Covers major Acts and subjects for law exams.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
     {
       icon: ClipboardList,
       title: "Regular Mock Tests & Practice MCQs",
       description: "Build exam confidence with consistent practice.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
     {
       icon: PenTool,
       title: "Handwritten & Easy-to-Understand Notes",
       description: "Concise notes designed for quick revision.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
     {
       icon: Target,
       title: "Exam-Oriented Preparation",
       description: "Focused strategies for LL.B., CLAT, LL.M., AIBE, Judiciary, and other law entrance exams.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
     {
       icon: MessageSquare,
       title: "Dedicated Doubt Support",
       description: "Get your questions answered with timely guidance.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
     {
       icon: Smartphone,
       title: "Learn Anytime, Anywhere",
       description: "Access recorded lectures and study materials at your convenience.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
     {
       icon: Sparkles,
       title: "Affordable & Student-Focused",
       description: "Quality legal education at reasonable fees.",
-      color: "text-brand-gold-500",
-      bg: "bg-white/5 border-white/10",
+      color: "text-primary",
+      bg: "bg-muted/50 border-border",
     },
   ];
 
@@ -83,18 +83,18 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section className="py-24 bg-brand-navy-955 relative z-10">
+    <section className="py-24 bg-card relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Engineered for Success
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Why Future Lawyers Choose Shreya's Law Desk
           </h2>
-          <p className="text-slate-250 text-base font-light">
+          <p className="text-muted-foreground text-base font-light">
             We guide you through your law entrance exams, and support you all the way through your 5 years in law school with premium course articles, study guides, and legal notes.
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function WhyChooseUs() {
               >
                 <div className="space-y-4">
                   {/* Icon Wrapper */}
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center border bg-slate-150/5 dark:bg-white/5 border-slate-150/10 dark:border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center border bg-slate-150/5 dark:bg-muted/50 border-slate-150/10 dark:border-border group-hover:scale-110 transition-transform duration-300">
                     <Icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
 
@@ -125,14 +125,14 @@ export default function WhyChooseUs() {
                   <h3 className="text-lg font-bold text-slate-150 group-hover:text-brand-blue-500 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-250 text-sm leading-relaxed font-light">
+                  <p className="text-muted-foreground text-sm leading-relaxed font-light">
                     {feature.description}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-4 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-335 group-hover:text-brand-gold-500 transition-colors flex items-center gap-1.5">
-                    Learn more <Zap className="w-3 h-3 text-brand-gold-500 transition-transform group-hover:scale-110" />
+                <div className="pt-6 mt-4 border-t border-border flex items-center justify-between">
+                  <span className="text-xs font-bold text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                    Learn more <Zap className="w-3 h-3 text-primary transition-transform group-hover:scale-110" />
                   </span>
                 </div>
               </motion.div>

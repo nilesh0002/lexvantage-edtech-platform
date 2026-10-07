@@ -88,7 +88,7 @@ export default function Navbar({
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-brand-navy-950/70 backdrop-blur-md border-b border-white/5 py-3 shadow-lg shadow-brand-navy-950/20"
+            ? "bg-background/70 backdrop-blur-md border-b border-border py-3 shadow-lg shadow-black/10"
             : "bg-transparent py-5 border-b border-transparent"
         }`}
       >
@@ -96,11 +96,11 @@ export default function Navbar({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-lg border border-brand-gold-500/30 bg-brand-navy-900 flex items-center justify-center transition-transform group-hover:scale-105">
-                <Scale className="w-4.5 h-4.5 text-brand-gold-500" />
+              <div className="w-9 h-9 rounded-lg border border-brand-gold-500/30 bg-muted flex items-center justify-center transition-transform group-hover:scale-105">
+                <Scale className="w-4.5 h-4.5 text-primary" />
               </div>
               <span className="font-sans font-black text-base sm:text-xl tracking-tight text-foreground">
-                Shreya's <span className="text-brand-gold-500">Law Desk</span>
+                Shreya's <span className="text-primary">Law Desk</span>
               </span>
             </Link>
 
@@ -113,14 +113,14 @@ export default function Navbar({
                     key={link.name}
                     href={link.href}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors relative ${
-                      isActive ? "text-brand-gold-500 font-bold" : "text-slate-250 hover:text-slate-150"
+                      isActive ? "text-primary font-bold" : "text-muted-foreground hover:text-slate-150"
                     }`}
                   >
                     {link.name}
                     {isActive && (
                       <motion.span
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-4 right-4 h-0.5 bg-brand-gold-500 rounded-full"
+                        className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary text-primary-foreground rounded-full"
                       />
                     )}
                   </Link>
@@ -133,7 +133,7 @@ export default function Navbar({
                 onMouseEnter={() => setDropdownOpen("resources")}
                 onMouseLeave={() => setDropdownOpen(null)}
               >
-                <button className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium text-slate-250 hover:text-slate-150 transition-colors">
+                <button className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-slate-150 transition-colors">
                   Resources <ChevronDown className="w-4 h-4" />
                 </button>
 
@@ -144,7 +144,7 @@ export default function Navbar({
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute left-0 mt-1 w-56 rounded-xl bg-brand-navy-950 p-2 shadow-2xl border border-slate-150/10"
+                      className="absolute left-0 mt-1 w-56 rounded-xl bg-background p-2 shadow-2xl border border-slate-150/10"
                     >
                       {resourceLinks.map((item) => {
                         const Icon = item.icon;
@@ -155,8 +155,8 @@ export default function Navbar({
                             href={item.href}
                             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all ${
                               isSubActive
-                                ? "bg-white/10 text-brand-gold-500 font-bold"
-                                : "text-slate-250 hover:text-slate-150 hover:bg-white/5"
+                                ? "bg-muted text-primary font-bold"
+                                : "text-muted-foreground hover:text-slate-150 hover:bg-muted/50"
                             }`}
                           >
                             <Icon className="w-4 h-4 text-brand-blue-500" />
@@ -175,20 +175,20 @@ export default function Navbar({
               {/* Theme Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-xl text-slate-350 hover:text-white hover:bg-white/5 transition-colors border border-white/10 cursor-pointer"
+                className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors border border-border cursor-pointer"
                 title="Toggle Theme"
               >
-                {theme === "dark" ? <Sun className="w-5 h-5 text-brand-gold-500" /> : <Moon className="w-5 h-5 text-brand-gold-500" />}
+                {theme === "dark" ? <Sun className="w-5 h-5 text-primary" /> : <Moon className="w-5 h-5 text-primary" />}
               </button>
 
               {/* Wishlist Button */}
               <button
                 onClick={onOpenWishlist}
-                className="relative p-2 rounded-xl text-slate-350 hover:text-white hover:bg-white/5 transition-colors border border-white/10"
+                className="relative p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors border border-border"
               >
                 <Heart className="w-5 h-5" />
                 {wishlistCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brand-pink-500 text-white text-[10px] font-bold flex items-center justify-center border border-brand-navy-950">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brand-pink-500 text-foreground text-[10px] font-bold flex items-center justify-center border border-brand-navy-950">
                     {wishlistCount}
                   </span>
                 )}
@@ -199,14 +199,14 @@ export default function Navbar({
                 <div className="flex items-center gap-3">
                   <Link
                     href="/dashboard"
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold bg-brand-gold-500 text-brand-navy-950 hover:bg-brand-gold-600 transition-all cursor-pointer"
+                    className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold bg-primary text-primary-foreground  hover:bg-primary/90 transition-all cursor-pointer"
                   >
                     <LayoutDashboard className="w-4 h-4" />
                     Dashboard
                   </Link>
                   <button
                     onClick={onLogout}
-                    className="p-2.5 rounded-lg text-slate-450 hover:text-rose-500 hover:bg-rose-500/5 transition-colors border border-white/10 cursor-pointer"
+                    className="p-2.5 rounded-lg text-muted-foreground hover:text-rose-500 hover:bg-rose-500/5 transition-colors border border-border cursor-pointer"
                     title="Logout"
                   >
                     <LogOut className="w-5 h-5" />
@@ -216,13 +216,13 @@ export default function Navbar({
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => onOpenAuth("login")}
-                    className="px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-250 hover:text-slate-150 transition-colors cursor-pointer"
+                    className="px-4 py-2.5 rounded-lg text-sm font-semibold text-muted-foreground hover:text-slate-150 transition-colors cursor-pointer"
                   >
                     Sign In
                   </button>
                   <button
                     onClick={() => onOpenAuth("signup")}
-                    className="px-5 py-2.5 rounded-lg text-sm font-bold text-brand-navy-950 bg-brand-gold-500 hover:bg-brand-gold-600 transition-all flex items-center gap-1.5 cursor-pointer"
+                    className="px-5 py-2.5 rounded-lg text-sm font-bold  bg-primary text-primary-foreground hover:bg-primary/90 transition-all flex items-center gap-1.5 cursor-pointer"
                   >
                     Start Free
                   </button>
@@ -235,19 +235,19 @@ export default function Navbar({
               {/* Mobile Theme Toggle */}
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-xl text-slate-350 hover:text-white hover:bg-white/5 transition-colors border border-white/10"
+                className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors border border-border"
                 title="Toggle Theme"
               >
-                {theme === "dark" ? <Sun className="w-5 h-5 text-brand-gold-500" /> : <Moon className="w-5 h-5 text-brand-gold-500" />}
+                {theme === "dark" ? <Sun className="w-5 h-5 text-primary" /> : <Moon className="w-5 h-5 text-primary" />}
               </button>
 
               <button
                 onClick={onOpenWishlist}
-                className="relative p-2 rounded-xl text-slate-250 hover:text-slate-150 hover:bg-white/5 transition-colors"
+                className="relative p-2 rounded-xl text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors"
               >
                 <Heart className="w-5 h-5" />
                 {wishlistCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-brand-pink-500 text-white text-[9px] font-bold flex items-center justify-center">
+                  <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-brand-pink-500 text-foreground text-[9px] font-bold flex items-center justify-center">
                     {wishlistCount}
                   </span>
                 )}
@@ -255,7 +255,7 @@ export default function Navbar({
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-xl text-slate-250 hover:text-slate-150 hover:bg-white/5 transition-colors"
+                className="p-2 rounded-xl text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -283,16 +283,16 @@ export default function Navbar({
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", bounce: 0, duration: 0.3 }}
-              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] z-50 bg-brand-navy-955 border-l border-white/10 shadow-2xl p-6 flex flex-col md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] z-50 bg-card border-l border-border shadow-2xl p-6 flex flex-col md:hidden overflow-y-auto"
             >
               {/* Drawer Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-white/5 mb-6">
+              <div className="flex items-center justify-between pb-4 border-b border-border mb-6">
                 <span className="font-sans font-black text-lg tracking-tight text-foreground">
-                  Shreya's <span className="text-brand-gold-500">Law Desk</span>
+                  Shreya's <span className="text-primary">Law Desk</span>
                 </span>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 rounded-xl text-slate-250 hover:text-slate-150 hover:bg-white/5 transition-colors cursor-pointer"
+                  className="p-2 rounded-xl text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -305,14 +305,14 @@ export default function Navbar({
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-base font-semibold text-slate-250 hover:text-slate-150 hover:bg-white/5 transition-colors min-h-[48px] flex items-center"
+                    className="block px-4 py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors min-h-[48px] flex items-center"
                   >
                     {link.name}
                   </Link>
                 ))}
 
-                <div className="border-t border-white/5 my-4 pt-4">
-                  <span className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">
+                <div className="border-t border-border my-4 pt-4">
+                  <span className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-2">
                     Resources
                   </span>
                   {resourceLinks.map((item) => {
@@ -322,9 +322,9 @@ export default function Navbar({
                         key={item.name}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-semibold text-slate-250 hover:text-slate-150 hover:bg-white/5 transition-colors min-h-[48px]"
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors min-h-[48px]"
                       >
-                        <Icon className="w-5 h-5 text-brand-gold-500" />
+                        <Icon className="w-5 h-5 text-primary" />
                         {item.name}
                       </Link>
                     );
@@ -333,15 +333,15 @@ export default function Navbar({
               </div>
 
               {/* Login / Actions on mobile */}
-              <div className="border-t border-white/5 pt-6 mt-auto flex flex-col gap-3">
+              <div className="border-t border-border pt-6 mt-auto flex flex-col gap-3">
                 {isLoggedIn ? (
                   <>
                     <Link
                       href="/dashboard"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-base font-bold bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-colors min-h-[48px]"
+                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-base font-bold bg-muted/50 hover:bg-muted border border-border text-foreground transition-colors min-h-[48px]"
                     >
-                      <LayoutDashboard className="w-5 h-5 text-brand-gold-500" />
+                      <LayoutDashboard className="w-5 h-5 text-primary" />
                       Dashboard Portal
                     </Link>
                     <button
@@ -361,7 +361,7 @@ export default function Navbar({
                         onOpenAuth("login");
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full py-3 rounded-xl text-base font-semibold text-slate-250 hover:text-slate-150 hover:bg-white/5 transition-colors min-h-[48px] cursor-pointer"
+                      className="w-full py-3 rounded-xl text-base font-semibold text-muted-foreground hover:text-slate-150 hover:bg-muted/50 transition-colors min-h-[48px] cursor-pointer"
                     >
                       Sign In
                     </button>
@@ -370,7 +370,7 @@ export default function Navbar({
                         onOpenAuth("signup");
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full min-h-[48px] py-3 rounded-xl text-base font-bold text-brand-navy-955 bg-brand-gold-500 hover:bg-brand-gold-600 text-center flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full min-h-[48px] py-3 rounded-xl text-base font-bold  bg-primary text-primary-foreground hover:bg-primary/90 text-center flex items-center justify-center gap-2 cursor-pointer"
                     >
                       Start Free Trial
                     </button>

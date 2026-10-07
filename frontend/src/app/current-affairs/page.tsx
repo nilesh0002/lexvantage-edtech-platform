@@ -12,7 +12,7 @@ export default function CurrentAffairsPage() {
   return (
     <>
       <Navbar onOpenAuth={() => setIsAuthOpen(true)} />
-      <main className="flex-grow pt-20 bg-brand-navy-950">
+      <main className="flex-grow pt-20 bg-background">
         <CurrentAffairsPreview />
       </main>
       <Footer />

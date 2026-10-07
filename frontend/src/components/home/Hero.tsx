@@ -40,7 +40,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
   };
 
   return (
-    <section className="relative min-h-[75vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-brand-navy-950">
+    <section className="relative min-h-[75vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-background">
       {/* Grid Pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -56,13 +56,13 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           {/* Main Headline */}
           <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black tracking-tight text-slate-150 leading-[1.15] max-w-2xl">
             Personalized CLAT & <br />
-            <span className="text-brand-gold-500">
+            <span className="text-primary">
               Law Entrance Prep
             </span>
           </motion.h1>
 
           {/* Tagline */}
-          <motion.p variants={itemVariants} className="text-slate-350 text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
+          <motion.p variants={itemVariants} className="text-muted-foreground text-sm sm:text-base lg:text-lg max-w-xl leading-relaxed font-light">
             Direct, focused guidance and structured mocks from Shreya Nadar. We keep our batches small to focus entirely on your individual success.
           </motion.p>
 
@@ -70,7 +70,7 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full sm:w-auto">
             <button
               onClick={onStartFree}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold text-brand-navy-950 bg-brand-gold-500 hover:bg-brand-gold-450 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-bold  bg-primary text-primary-foreground hover:bg-brand-gold-450 transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
               Start Free Trial
               <ChevronRight className="w-4 h-4" />
@@ -92,10 +92,10 @@ export default function Hero({ onStartFree, onBookDemo, onExploreCourses }: Hero
           </motion.div>
 
           {/* Startup Focus Detail */}
-          <motion.div variants={itemVariants} className="pt-8 border-t border-white/5 w-full flex justify-center">
+          <motion.div variants={itemVariants} className="pt-8 border-t border-border w-full flex justify-center">
             <div className="text-center">
-              <div className="text-xs sm:text-sm font-semibold flex flex-wrap items-center justify-center gap-2 text-slate-350">
-                <Trophy className="w-4 h-4 text-brand-gold-500 inline-block mr-1" />
+              <div className="text-xs sm:text-sm font-semibold flex flex-wrap items-center justify-center gap-2 text-muted-foreground">
+                <Trophy className="w-4 h-4 text-primary inline-block mr-1" />
                 <span>Small Batch Focus</span>
                 <span className="text-slate-600">•</span>
                 <span>Coaching by Shreya Nadar</span>

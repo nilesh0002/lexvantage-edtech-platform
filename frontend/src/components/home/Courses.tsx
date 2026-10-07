@@ -42,7 +42,7 @@ export default function Courses({
   });
 
   return (
-    <section className="py-24 bg-brand-navy-950 relative z-10" id="courses">
+    <section className="py-24 bg-background relative z-10" id="courses">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -54,7 +54,7 @@ export default function Courses({
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 tracking-tight">
               Invest in Your NLU Future
             </h2>
-            <p className="text-slate-350 text-sm font-light leading-relaxed">
+            <p className="text-muted-foreground text-sm font-light leading-relaxed">
               Explore our range of comprehensive classes and test series meticulously architected to help you conquer law school entrance examinations.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Courses({
         </div>
 
         {/* Search and Filters Panel */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8 p-4 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-md">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8 p-4 rounded-2xl bg-muted/50 border border-border backdrop-blur-md">
           {/* Filters List */}
           <div className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-2 w-full pb-2 lg:pb-0 lg:flex-wrap">
             {filters.map((f) => (
@@ -76,8 +76,8 @@ export default function Courses({
                 onClick={() => setSelectedFilter(f.id)}
                 className={`min-h-[44px] px-4 py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer border shrink-0 snap-start ${
                   selectedFilter === f.id
-                    ? "bg-brand-gold-500 text-brand-navy-950 border-brand-gold-500"
-                    : "text-slate-355 hover:text-white hover:bg-white/5 border-white/5"
+                    ? "bg-primary text-primary-foreground  border-brand-gold-500"
+                    : "text-slate-355 hover:text-foreground hover:bg-muted/50 border-border"
                 }`}
               >
                 {f.label}
@@ -87,13 +87,13 @@ export default function Courses({
 
           {/* Search Box */}
           <div className="relative w-full lg:max-w-xs">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
               placeholder="Search syllabus or course name..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-brand-navy-950 border border-white/10 text-white text-xs focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-slate-650"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-background border border-border text-foreground text-xs focus:outline-none focus:border-brand-blue-500/50 transition-all placeholder:text-slate-650"
             />
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function Courses({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.25 }}
-                  className="rounded-2xl glass-panel p-6 sm:p-8 flex flex-col gap-6 justify-between relative group hover:border-white/15 transition-all shadow-xl h-full"
+                  className="rounded-2xl glass-panel p-6 sm:p-8 flex flex-col gap-6 justify-between relative group hover:border-border transition-all shadow-xl h-full"
                 >
                   {/* Card Main Info */}
                   <div className="flex-grow flex flex-col justify-between">
@@ -120,21 +120,21 @@ export default function Courses({
                         <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-brand-blue-500/10 text-brand-blue-500 border border-brand-blue-500/20 uppercase tracking-wide">
                           {course.exam}
                         </span>
-                        <span className="text-[10px] text-slate-450 font-bold uppercase tracking-wider">
+                        <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider">
                           By Shreya Nadar
                         </span>
                       </div>
                       
-                      <h3 className="text-lg font-bold text-slate-150 group-hover:text-brand-gold-500 transition-colors leading-tight mb-1">
+                      <h3 className="text-lg font-bold text-slate-150 group-hover:text-primary transition-colors leading-tight mb-1">
                         {course.name}
                       </h3>
-                      <p className="text-xs text-slate-350 font-medium mb-4">{course.duration}</p>
+                      <p className="text-xs text-muted-foreground font-medium mb-4">{course.duration}</p>
                     </div>
 
-                    <ul className="space-y-2.5 border-t border-white/5 pt-4 my-4 flex-grow">
+                    <ul className="space-y-2.5 border-t border-border pt-4 my-4 flex-grow">
                       {course.syllabus.map((syl, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-slate-350">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-brand-gold-500 flex-shrink-0 mt-0.5" />
+                        <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
                           <span>{syl}</span>
                         </li>
                       ))}
@@ -142,10 +142,10 @@ export default function Courses({
                   </div>
 
                   {/* Card Bottom CTA Actions */}
-                  <div className="border-t border-white/5 pt-5 flex items-center gap-3 w-full">
+                  <div className="border-t border-border pt-5 flex items-center gap-3 w-full">
                     <button
                       onClick={() => setCheckoutCourse(course)}
-                      className="min-h-[48px] flex-1 px-5 py-3 rounded-lg bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-955 font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer"
+                      className="min-h-[48px] flex-1 px-5 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90  font-bold text-xs tracking-wide transition-all flex items-center justify-center gap-1 cursor-pointer"
                     >
                       Enroll Now
                       <ChevronRight className="w-4 h-4 animate-pulse" />
@@ -156,7 +156,7 @@ export default function Courses({
                       className={`p-3 rounded-lg border transition-all cursor-pointer min-h-[48px] flex items-center justify-center ${
                         isWishlisted
                           ? "bg-rose-500/10 border-rose-500/20 text-rose-500"
-                          : "bg-slate-150/5 border-slate-150/10 dark:bg-white/5 dark:border-white/10 text-slate-400 hover:text-rose-500 hover:bg-white/10"
+                          : "bg-slate-150/5 border-slate-150/10 dark:bg-muted/50 dark:border-border text-muted-foreground hover:text-rose-500 hover:bg-muted"
                       }`}
                       title="Add to Wishlist"
                     >
@@ -171,7 +171,7 @@ export default function Courses({
           {/* Empty State */}
           {filteredCourses.length === 0 && (
             <div className="col-span-full py-16 text-center">
-              <p className="text-slate-500 text-sm">No courses matching your search query. Please try another keyword.</p>
+              <p className="text-muted-foreground text-sm">No courses matching your search query. Please try another keyword.</p>
             </div>
           )}
         </div>

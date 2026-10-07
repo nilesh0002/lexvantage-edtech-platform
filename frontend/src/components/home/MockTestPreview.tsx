@@ -42,54 +42,54 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
   };
 
   return (
-    <section className="py-24 bg-brand-navy-950 relative z-10">
+    <section className="py-24 bg-background relative z-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Interactive Simulator
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Experience the CLAT Mock Portal
           </h2>
-          <p className="text-slate-335 text-sm font-light">
+          <p className="text-muted-foreground text-sm font-light">
             Test your legal reasoning live. Attempt this actual CLAT-level sample passage below.
           </p>
         </div>
 
         {/* Interactive Mockup Widget */}
-        <div className="rounded-2xl border border-white/10 bg-brand-navy-950 shadow-2xl overflow-hidden backdrop-blur-md">
+        <div className="rounded-2xl border border-border bg-background shadow-2xl overflow-hidden backdrop-blur-md">
           {/* Mock Top bar */}
-          <div className="px-6 py-4 bg-brand-navy-900 border-b border-white/5 flex items-center justify-between flex-wrap gap-4">
+          <div className="px-6 py-4 bg-muted border-b border-border flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <Scale className="w-5 h-5 text-brand-gold-500" />
-              <span className="text-xs font-bold text-white font-serif uppercase tracking-wider">
+              <Scale className="w-5 h-5 text-primary" />
+              <span className="text-xs font-bold text-foreground font-serif uppercase tracking-wider">
                 Legal Reasoning • Section A
               </span>
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="px-3 py-1 rounded bg-white/10 text-[10px] font-bold text-slate-300">
+              <div className="px-3 py-1 rounded bg-muted text-[10px] font-bold text-slate-300">
                 Correct: +1.00
               </div>
-              <div className="px-3 py-1 rounded bg-white/10 text-[10px] font-bold text-slate-300">
+              <div className="px-3 py-1 rounded bg-muted text-[10px] font-bold text-slate-300">
                 Incorrect: -0.25
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-border">
             {/* Left Side: Passage (Collapsible on Mobile) */}
-            <div className="relative border-b lg:border-b-0 lg:border-r border-white/5">
+            <div className="relative border-b lg:border-b-0 lg:border-r border-border">
               <div className={`p-6 sm:p-8 space-y-4 overflow-y-auto transition-all duration-300 ${
                 passageExpanded ? "max-h-none lg:max-h-[380px]" : "max-h-[160px] lg:max-h-[380px]"
               }`}>
-                <h3 className="text-xs font-bold uppercase text-slate-335 flex items-center gap-1.5">
-                  <HelpCircle className="w-4 h-4 text-brand-gold-500" />
+                <h3 className="text-xs font-bold uppercase text-muted-foreground flex items-center gap-1.5">
+                  <HelpCircle className="w-4 h-4 text-primary" />
                   Read the Passage
                 </h3>
-                <p className="text-slate-250 text-sm leading-relaxed font-light">
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">
                   {questionData.passage}
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
               }`}>
                 <button
                   onClick={() => setPassageExpanded(!passageExpanded)}
-                  className="pointer-events-auto px-4 py-1.5 rounded-full bg-brand-navy-950 text-slate-300 hover:text-white border border-white/10 hover:border-white/20 text-[10px] font-bold shadow-lg flex items-center gap-1 transition-all"
+                  className="pointer-events-auto px-4 py-1.5 rounded-full bg-background text-slate-300 hover:text-foreground border border-border hover:border-border text-[10px] font-bold shadow-lg flex items-center gap-1 transition-all"
                 >
                   {passageExpanded ? "Collapse Passage" : "Show Full Passage"}
                 </button>
@@ -126,7 +126,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                   const isSelected = selectedOption === opt.id;
                   const isCorrect = opt.id === questionData.correctAnswer;
                   
-                  let optionClass = "border-white/5 bg-white/5 text-slate-250 hover:bg-white/10 hover:border-white/15";
+                  let optionClass = "border-border bg-muted/50 text-muted-foreground hover:bg-muted hover:border-border";
                   if (isSelected && !submitted) {
                     optionClass = "border-brand-blue-500/50 bg-brand-blue-500/5 text-slate-150 shadow-lg shadow-brand-blue-500/5";
                   } else if (submitted) {
@@ -135,7 +135,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                     } else if (isSelected) {
                       optionClass = "border-rose-500/40 bg-rose-500/5 text-rose-600 dark:text-rose-450";
                     } else {
-                      optionClass = "border-white/5 bg-white/5 text-slate-350 opacity-60";
+                      optionClass = "border-border bg-muted/50 text-muted-foreground opacity-60";
                     }
                   }
 
@@ -148,12 +148,12 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                     >
                       <span className={`w-5 h-5 rounded-lg border flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5 ${
                         isSelected && !submitted
-                          ? "bg-brand-blue-500 border-brand-blue-500 text-white"
+                          ? "bg-brand-blue-500 border-brand-blue-500 text-foreground"
                           : submitted && isCorrect
-                          ? "bg-emerald-500 border-emerald-500 text-brand-navy-950"
+                          ? "bg-emerald-500 border-emerald-500 "
                           : submitted && isSelected
-                          ? "bg-rose-500 border-rose-500 text-white"
-                          : "border-white/10 bg-brand-navy-950 text-slate-335"
+                          ? "bg-rose-500 border-rose-500 text-foreground"
+                          : "border-border bg-background text-muted-foreground"
                       }`}>
                         {opt.id}
                       </span>
@@ -170,7 +170,7 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                     <button
                       onClick={handleSubmit}
                       disabled={!selectedOption}
-                      className="w-full py-3.5 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1.5 disabled:opacity-50 cursor-pointer"
+                      className="w-full py-3.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90  font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1.5 disabled:opacity-50 cursor-pointer"
                     >
                       Submit Response
                       <ArrowRight className="w-4 h-4" />
@@ -185,8 +185,8 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                       {/* Explanation box */}
                       <div className={`p-4 rounded-xl text-xs leading-relaxed border ${
                         selectedOption === questionData.correctAnswer
-                          ? "bg-emerald-500/5 border-emerald-500/25 text-slate-250"
-                          : "bg-rose-500/5 border-rose-500/20 text-slate-250"
+                          ? "bg-emerald-500/5 border-emerald-500/25 text-muted-foreground"
+                          : "bg-rose-500/5 border-rose-500/20 text-muted-foreground"
                       }`}>
                         <div className="flex items-center gap-2 mb-2 font-bold">
                           {selectedOption === questionData.correctAnswer ? (
@@ -208,13 +208,13 @@ export default function MockTestPreview({ onStartFullMock }: MockTestPreviewProp
                       <div className="flex flex-col sm:flex-row gap-3">
                         <button
                           onClick={handleReset}
-                          className="w-full sm:w-1/3 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-slate-250 hover:text-slate-150 transition-all text-xs font-bold"
+                          className="w-full sm:w-1/3 py-3 rounded-xl bg-muted/50 border border-border hover:bg-muted text-muted-foreground hover:text-slate-150 transition-all text-xs font-bold"
                         >
                           Retry Question
                         </button>
                         <button
                           onClick={onStartFullMock}
-                          className="w-full sm:w-2/3 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-xs font-bold transition-all shadow-md shadow-blue-500/25 flex items-center justify-center gap-1.5"
+                          className="w-full sm:w-2/3 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-foreground text-xs font-bold transition-all shadow-md shadow-blue-500/25 flex items-center justify-center gap-1.5"
                         >
                           <Play className="w-4 h-4 fill-white" />
                           Take Full 120-Q Mock Test

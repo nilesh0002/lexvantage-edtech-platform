@@ -25,18 +25,18 @@ export default function Faculty() {
   };
 
   return (
-    <section className="py-24 bg-brand-navy-950 relative z-10" id="faculty">
+    <section className="py-24 bg-background relative z-10" id="faculty">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">
               Master Mentor
             </span>
             <h2 className="text-3xl sm:text-4xl font-sans font-black text-slate-150 tracking-tight">
               Learn Directly From the Founder
             </h2>
-            <p className="text-slate-350 text-sm font-light leading-relaxed">
+            <p className="text-muted-foreground text-sm font-light leading-relaxed">
               No generic tutors. Get direct, unmediated guidance from Shreya Nadar, who personally teaches and anchors all core subject streams.
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function Faculty() {
             className="flex items-center gap-1.5 px-5 py-3 rounded-lg border border-slate-150/20 bg-slate-150/5 hover:bg-slate-150/10 text-slate-150 font-bold text-xs transition-all self-start md:self-auto cursor-pointer"
           >
             Schedule Free Demo Class
-            <ArrowUpRight className="w-4 h-4 text-brand-gold-500" />
+            <ArrowUpRight className="w-4 h-4 text-primary" />
           </a>
         </div>
 
@@ -68,15 +68,15 @@ export default function Faculty() {
               >
                 {/* Avatar wrapper */}
                 <div className="w-44 h-44 rounded-xl p-0.5 bg-gradient-to-tr from-purple-600 via-blue-500 to-amber-500 overflow-hidden shrink-0 relative shadow-lg shadow-brand-blue-500/10">
-                  <div className="w-full h-full rounded-[10px] bg-brand-navy-950 overflow-hidden relative flex items-center justify-center">
+                  <div className="w-full h-full rounded-[10px] bg-background overflow-hidden relative flex items-center justify-center">
                     <img
                       src={member.avatar}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
                     {/* Overlay specialty badge */}
-                    <div className="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-brand-navy-900 border border-white/10 flex items-center justify-center shadow-lg">
-                      <Icon className="w-4 h-4 text-brand-gold-500" />
+                    <div className="absolute bottom-2 right-2 w-7 h-7 rounded-lg bg-muted border border-border flex items-center justify-center shadow-lg">
+                      <Icon className="w-4 h-4 text-primary" />
                     </div>
                   </div>
                 </div>
@@ -87,14 +87,14 @@ export default function Faculty() {
                     <h3 className="text-slate-150 font-black text-xl leading-tight">
                       {member.name}
                     </h3>
-                    <p className="text-brand-gold-500 text-xs font-bold font-mono">
+                    <p className="text-primary text-xs font-bold font-mono">
                       {member.role}
                     </p>
-                    <p className="text-slate-350 text-xs font-medium leading-relaxed">
+                    <p className="text-muted-foreground text-xs font-medium leading-relaxed">
                       {member.credentials}
                     </p>
                   </div>
-                  <p className="text-slate-350 text-sm font-light leading-relaxed border-t border-white/5 pt-4 whitespace-pre-line">
+                  <p className="text-muted-foreground text-sm font-light leading-relaxed border-t border-border pt-4 whitespace-pre-line">
                     {member.bio}
                   </p>
                 </div>

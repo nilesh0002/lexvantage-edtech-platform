@@ -85,7 +85,7 @@ export default function SocialProof() {
   const activeTestimonial = filteredList[activeIndex] || filteredList[0];
 
   return (
-    <section className="py-24 bg-brand-navy-950 relative z-10 overflow-hidden">
+    <section className="py-24 bg-background relative z-10 overflow-hidden">
       {/* Glows */}
       <div className="absolute right-0 top-1/4 w-[400px] h-[400px] bg-brand-purple-600/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute left-0 bottom-1/4 w-[400px] h-[400px] bg-brand-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
@@ -96,15 +96,15 @@ export default function SocialProof() {
           <span className="text-xs font-bold uppercase tracking-widest text-brand-blue-500">
             Validated by Results
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
             What Our Students & Parents Say
           </h2>
-          <p className="text-slate-400 text-sm font-light">
+          <p className="text-muted-foreground text-sm font-light">
             Read direct feedback from India's elite law aspirants and parents who partnered with us.
           </p>
 
           {/* Testimonial Category Switches */}
-          <div className="inline-flex rounded-xl bg-white/5 p-1 border border-white/5 mt-4">
+          <div className="inline-flex rounded-xl bg-muted/50 p-1 border border-border mt-4">
             {[
               { id: "all", label: "Show All" },
               { id: "student", label: "Students" },
@@ -118,8 +118,8 @@ export default function SocialProof() {
                 }}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
                   filterType === tab.id
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
-                    : "text-slate-400 hover:text-white"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-foreground shadow-md"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {tab.label}
@@ -141,12 +141,12 @@ export default function SocialProof() {
                 className="rounded-2xl glass-panel p-8 sm:p-12 relative flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12"
               >
                 {/* Quote decoration */}
-                <Quote className="absolute right-6 bottom-6 w-20 h-20 text-white/5 pointer-events-none" />
+                <Quote className="absolute right-6 bottom-6 w-20 h-20 text-foreground/5 pointer-events-none" />
 
                 {/* Left Side: Avatar and stats */}
                 <div className="flex flex-col items-center text-center md:text-left md:items-start flex-shrink-0">
                   <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-0.5 bg-gradient-to-tr from-brand-blue-500 via-brand-purple-600 to-brand-gold-500 mb-4 shadow-lg shadow-brand-blue-500/10">
-                    <div className="w-full h-full rounded-[14px] bg-brand-navy-950 overflow-hidden">
+                    <div className="w-full h-full rounded-[14px] bg-background overflow-hidden">
                       <img
                         src={activeTestimonial.avatar}
                         alt={activeTestimonial.name}
@@ -156,13 +156,13 @@ export default function SocialProof() {
                   </div>
 
                   {activeTestimonial.rank && (
-                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold-500/10 border border-brand-gold-500/20 text-brand-gold-500 text-[10px] font-bold uppercase tracking-wider mb-2">
+                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-primary-foreground/10 border border-brand-gold-500/20 text-primary text-[10px] font-bold uppercase tracking-wider mb-2">
                       <GraduationCap className="w-3.5 h-3.5" />
                       {activeTestimonial.rank}
                     </div>
                   )}
 
-                  <span className="text-slate-400 font-serif font-extrabold text-sm tracking-wide">
+                  <span className="text-muted-foreground font-serif font-extrabold text-sm tracking-wide">
                     {activeTestimonial.nlu}
                   </span>
                 </div>
@@ -170,7 +170,7 @@ export default function SocialProof() {
                 {/* Right Side: Quote Text */}
                 <div className="flex-1 space-y-4">
                   {/* Star rating */}
-                  <div className="flex items-center text-brand-gold-500 justify-center md:justify-start">
+                  <div className="flex items-center text-primary justify-center md:justify-start">
                     {[1, 2, 3, 4, 5].map((s) => (
                       <Star key={s} className="w-4 h-4 fill-current" />
                     ))}
@@ -181,10 +181,10 @@ export default function SocialProof() {
                   </p>
 
                   <div className="text-center md:text-left pt-2">
-                    <h4 className="text-white font-extrabold text-base leading-none">
+                    <h4 className="text-foreground font-extrabold text-base leading-none">
                       {activeTestimonial.name}
                     </h4>
-                    <p className="text-slate-500 text-xs mt-1.5">
+                    <p className="text-muted-foreground text-xs mt-1.5">
                       {activeTestimonial.role}
                     </p>
                   </div>
@@ -198,16 +198,16 @@ export default function SocialProof() {
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={handlePrev}
-                className="p-3 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition-colors shadow-lg"
+                className="p-3 rounded-xl bg-muted/50 border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors shadow-lg"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <span className="text-xs text-slate-500 font-semibold font-mono">
+              <span className="text-xs text-muted-foreground font-semibold font-mono">
                 {activeIndex + 1} / {filteredList.length}
               </span>
               <button
                 onClick={handleNext}
-                className="p-3 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition-colors shadow-lg"
+                className="p-3 rounded-xl bg-muted/50 border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors shadow-lg"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>

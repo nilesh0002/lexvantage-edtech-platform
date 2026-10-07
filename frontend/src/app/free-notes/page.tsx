@@ -40,7 +40,7 @@ export default function FreeNotes() {
     <>
       <Navbar onOpenAuth={() => setIsAuthOpen(true)} />
 
-      <main className="flex-grow pt-28 bg-brand-navy-950">
+      <main className="flex-grow pt-28 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
           
           {/* Header */}
@@ -51,7 +51,7 @@ export default function FreeNotes() {
             <h1 className="text-4xl font-serif font-bold text-slate-150">
               Unlock Elite Legal Resources
             </h1>
-            <p className="text-slate-335 text-sm font-light">
+            <p className="text-muted-foreground text-sm font-light">
               Get immediate access to our high-yield static GK briefs and law exam cheatsheets compiled by NLU graduates.
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function FreeNotes() {
               return (
                 <div
                   key={note.id}
-                  className="p-6 rounded-2xl glass-panel border border-white/5 flex items-start gap-4 hover:border-white/10 transition-colors justify-between"
+                  className="p-6 rounded-2xl glass-panel border border-border flex items-start gap-4 hover:border-border transition-colors justify-between"
                 >
                   <div className="flex items-start gap-3.5">
                     <div className="w-10 h-10 rounded-xl bg-brand-blue-500/10 border border-brand-blue-500/20 flex items-center justify-center text-brand-blue-500 shrink-0">
@@ -73,13 +73,13 @@ export default function FreeNotes() {
                     </div>
 
                     <div className="space-y-1">
-                      <span className="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-white/5 text-slate-335 border border-white/5 uppercase">
+                      <span className="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-muted/50 text-muted-foreground border border-border uppercase">
                         {note.category}
                       </span>
                       <h3 className="text-slate-150 font-bold text-sm leading-tight pt-1">
                         {note.title}
                       </h3>
-                      <p className="text-slate-350 text-[10px]">
+                      <p className="text-muted-foreground text-[10px]">
                         Size: {note.size} • {note.downloads} downloads
                       </p>
                     </div>
@@ -91,7 +91,7 @@ export default function FreeNotes() {
                     className={`p-3 rounded-xl border flex items-center justify-center transition-all shrink-0 ${
                       isDownloaded
                         ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400"
-                        : "bg-white/5 border-white/10 text-slate-250 hover:bg-white/10 hover:text-slate-150"
+                        : "bg-muted/50 border-border text-muted-foreground hover:bg-muted hover:text-slate-150"
                     }`}
                   >
                     {isDownloading ? (

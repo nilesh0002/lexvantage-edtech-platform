@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="en"
       className={`${openSans.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-brand-navy-950 text-slate-100 selection:bg-brand-blue-500 selection:text-white">
+      <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-brand-blue-500 selection:text-foreground">
         {children}
       </body>
     </html>

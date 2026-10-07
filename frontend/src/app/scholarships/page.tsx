@@ -13,18 +13,18 @@ export default function Scholarships() {
     <>
       <Navbar onOpenAuth={() => setIsAuthOpen(true)} />
 
-      <main className="flex-grow pt-28 bg-brand-navy-950">
+      <main className="flex-grow pt-28 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
           
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold-500">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">
               Vantage Scholarship Test
             </span>
-            <h1 className="text-4xl font-serif font-bold text-white">
+            <h1 className="text-4xl font-serif font-bold text-foreground">
               Shreya's Law Desk Merit Scholars Program
             </h1>
-            <p className="text-slate-400 text-sm font-light">
+            <p className="text-muted-foreground text-sm font-light">
               We reward academic excellence. Earn up to 100% tuition waivers for our premium CLAT, AILET, and NLU preparation courses.
             </p>
           </div>
@@ -32,10 +32,10 @@ export default function Scholarships() {
           {/* Info cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
-              <h3 className="text-2xl font-serif font-bold text-white leading-tight">
+              <h3 className="text-2xl font-serif font-bold text-foreground leading-tight">
                 Empowering deserving jurists regardless of finances.
               </h3>
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed font-light">
                 Our dynamic scholarship program evaluates both board exam credentials and standard logical reasoning aptitude. Awards range from 10% to complete 100% course sponsorships.
               </p>
               
@@ -46,7 +46,7 @@ export default function Scholarships() {
                   "State quota reservation categories (SC/ST/OBC support)",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-brand-gold-500 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -54,17 +54,17 @@ export default function Scholarships() {
             </div>
 
             <div className="p-8 rounded-2xl glass-panel border border-brand-gold-500/20 bg-gradient-to-tr from-brand-navy-900 via-brand-navy-900 to-brand-purple-950/20 space-y-6 text-center">
-              <Award className="w-12 h-12 text-brand-gold-500 mx-auto fill-brand-gold-500/5 animate-pulse" />
+              <Award className="w-12 h-12 text-primary mx-auto fill-brand-gold-500/5 animate-pulse" />
               <div className="space-y-2">
-                <h4 className="text-white font-bold text-base">Calculate Your Fee Waiver</h4>
-                <p className="text-slate-400 text-xs font-light max-w-xs mx-auto">
+                <h4 className="text-foreground font-bold text-base">Calculate Your Fee Waiver</h4>
+                <p className="text-muted-foreground text-xs font-light max-w-xs mx-auto">
                   Access our scholarship calculator tool in the student dashboard to calculate details instantly.
                 </p>
               </div>
 
               <button
                 onClick={() => setIsAuthOpen(true)}
-                className="w-full py-3.5 rounded-xl bg-brand-gold-500 hover:bg-brand-gold-600 text-brand-navy-950 font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1 cursor-pointer"
+                className="w-full py-3.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90  font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-1 cursor-pointer"
               >
                 Start Scholarship Evaluation
                 <ChevronRight className="w-4 h-4" />

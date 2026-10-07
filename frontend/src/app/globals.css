@@ -4,31 +4,39 @@
   --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-serif), Georgia, serif;
   
-  --color-brand-navy-955: var(--bg-navy-955);
-  --color-brand-navy-950: var(--bg-navy-950);
-  --color-brand-navy-900: var(--bg-navy-900);
-  --color-brand-navy-800: var(--bg-navy-800);
-  --color-brand-navy-700: var(--bg-navy-700);
-  --color-brand-blue-600: var(--accent-white-black);
-  --color-brand-blue-500: var(--primary-accent);
-  --color-brand-purple-600: var(--accent-white-black);
-  --color-brand-purple-500: var(--primary-accent-subtle);
-  --color-brand-pink-500: var(--accent-gray);
-  --color-brand-gold-500: var(--primary-accent);
-  --color-brand-gold-600: var(--primary-accent-hover);
-  --color-brand-gold-400: var(--primary-accent-subtle);
+  /* Semantic Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-  /* Mappings for non-standard slate colors used in components */
-  --color-slate-150: var(--slate-150);
-  --color-slate-250: var(--slate-250);
-  --color-slate-335: var(--slate-335);
-  --color-slate-350: var(--slate-350);
-  --color-slate-355: var(--slate-355);
-  --color-slate-405: var(--slate-405);
-  --color-slate-450: var(--slate-450);
-  --color-slate-455: var(--slate-455);
-  --color-slate-550: var(--slate-550);
-  --color-slate-555: var(--slate-555);
+  /* Retain some brand specific for special use cases */
+  --color-brand-blue-500: #C99A2E; /* Originally primary accent */
+  --color-brand-purple-500: #DDB34E;
+  --color-brand-pink-500: #7C7565;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -52,70 +60,68 @@
 }
 
 :root {
-  --background: #FAF7EF;
+  /* Light Mode */
+  --background: #F8F9FA;
   --foreground: #0A1F44;
   
-  --bg-navy-955: #FAF7EF;
-  --bg-navy-950: #FFFFFF;
-  --bg-navy-900: #0F2D52;
-  --bg-navy-800: #EAE4D7;
-  --bg-navy-700: #DDD5C5;
+  --card: #FFFFFF;
+  --card-foreground: #0A1F44;
   
-  --accent-gray: #7C7565;
-  --accent-gray-dark: #4F4A3E;
-  --accent-gray-light: #CBBFAD;
-  --accent-white-black: #0A1F44;
+  --popover: #FFFFFF;
+  --popover-foreground: #0A1F44;
   
-  --primary-accent: #C99A2E;
-  --primary-accent-hover: #B28827;
-  --primary-accent-subtle: #DDB34E;
-
-  /* Custom slate definitions for Light Mode */
-  --slate-150: #0A1F44;
-  --slate-250: #1A3B6B;
-  --slate-335: #2B548F;
-  --slate-350: #3D68A8;
-  --slate-355: #4E7BC2;
-  --slate-405: #5F8EDE;
-  --slate-450: #7DA4EB;
-  --slate-455: #91B3ED;
-  --slate-550: #A6C2EE;
-  --slate-555: #BCD2EF;
+  --primary: #C99A2E;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #E2E8F0;
+  --secondary-foreground: #0F172A;
+  
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  
+  --accent: #F1F5F9;
+  --accent-foreground: #0F172A;
+  
+  --destructive: #EF4444;
+  --destructive-foreground: #F8FAFC;
+  
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #C99A2E;
 }
 
 html.dark {
-  --background: #0A1F44;
-  --foreground: #FAF7EF;
+  /* Dark Mode */
+  --background: #0A1321;
+  --foreground: #F8FAFC;
   
-  --bg-navy-955: #0A1F44;
-  --bg-navy-950: #0F2754;
-  --bg-navy-900: #081A3C;
-  --bg-navy-800: #14326A;
-  --bg-navy-700: #1D4386;
+  --card: #111C30;
+  --card-foreground: #F8FAFC;
   
-  --accent-gray: #D2C8B5;
-  --accent-gray-dark: #A59B88;
-  --accent-gray-light: #FAF5EB;
-  --accent-white-black: #FAF7EF;
+  --popover: #111C30;
+  --popover-foreground: #F8FAFC;
   
-  --primary-accent: #C99A2E;
-  --primary-accent-hover: #B28827;
-  --primary-accent-subtle: #DDB34E;
-
-  /* Custom slate definitions for Dark Mode (bright slate shades for readable text) */
-  --slate-150: #FAF7EF;
-  --slate-250: #EAE4D7;
-  --slate-335: #D2C8B5;
-  --slate-350: #C3B6A0;
-  --slate-355: #B5A891;
-  --slate-405: #978B78;
-  --slate-450: #C3B6A0;
-  --slate-455: #C3B6A0;
-  --slate-550: #7C7565;
-  --slate-555: #7C7565;
+  --primary: #DDB34E;
+  --primary-foreground: #0A1321;
+  
+  --secondary: #1E293B;
+  --secondary-foreground: #F8FAFC;
+  
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  
+  --accent: #1E293B;
+  --accent-foreground: #F8FAFC;
+  
+  --destructive: #7F1D1D;
+  --destructive-foreground: #FEF2F2;
+  
+  --border: #1E293B;
+  --input: #1E293B;
+  --ring: #DDB34E;
 }
 
-/* Custom Scrollbar for premium dark mode */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -126,12 +132,12 @@ html.dark {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-gray);
+  background: var(--muted-foreground);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-gray-light);
+  background: var(--primary);
 }
 
 body {
@@ -139,14 +145,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Glassmorphism utility classes */
 .glass-panel {
-  background: rgba(30, 41, 59, 0.45);
+  background: rgba(var(--card), 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
 }
 
 .glass-panel-hover {
@@ -154,9 +161,9 @@ body {
 }
 
 .glass-panel-hover:hover {
-  background: rgba(30, 41, 59, 0.65);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+  background: var(--card);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
@@ -170,11 +177,11 @@ body {
 }
 
 .glow-gold {
-  box-shadow: 0 0 40px -5px rgba(245, 158, 11, 0.15);
+  box-shadow: 0 0 40px -5px rgba(201, 154, 46, 0.3);
 }
 
 .text-gradient-purple-blue {
-  background: linear-gradient(135deg, #fbbf24 0%, #d4af37 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -187,50 +194,6 @@ body {
 
 .bg-gradient-radial {
   background: radial-gradient(circle at center, var(--tw-gradient-stops));
-}
-
-/* Light Mode Global Layout Overrides (when html does not have the .dark class) */
-html:not(.dark) {
-  /* Make global backgrounds pure white / light gray */
-  --background: #FAF7EF;
-  --foreground: #0A1F44;
-}
-
-
-/* Semi-transparent backgrounds dynamic shift */
-html:not(.dark) .bg-white\/5 {
-  background-color: rgba(10, 31, 68, 0.04) !important;
-}
-
-html:not(.dark) .bg-white\/10 {
-  background-color: rgba(10, 31, 68, 0.07) !important;
-}
-
-/* Semi-transparent borders dynamic shift */
-html:not(.dark) .border-white\/5,
-html:not(.dark) .border-white\/10,
-html:not(.dark) .border-white\/15,
-html:not(.dark) .border-white\/20 {
-  border-color: rgba(10, 31, 68, 0.08) !important;
-}
-
-/* Dividers dynamic shift */
-html:not(.dark) .divide-white\/5,
-html:not(.dark) .divide-white\/10 {
-  border-color: rgba(10, 31, 68, 0.08) !important;
-}
-
-/* Glassmorphism panel transformation */
-html:not(.dark) .glass-panel {
-  background: rgba(255, 255, 255, 0.7) !important;
-  border-color: rgba(10, 31, 68, 0.08) !important;
-  box-shadow: 0 4px 20px -2px rgba(10, 31, 68, 0.05) !important;
-}
-
-html:not(.dark) .glass-panel-hover:hover {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border-color: rgba(10, 31, 68, 0.12) !important;
-  box-shadow: 0 10px 30px -10px rgba(10, 31, 68, 0.1) !important;
 }
 
 /* Responsive Root Font Scaling for Native-App Feel on Mobile Phones */
@@ -256,4 +219,3 @@ html:not(.dark) .glass-panel-hover:hover {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-

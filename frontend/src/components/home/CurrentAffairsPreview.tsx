@@ -59,7 +59,7 @@ export default function CurrentAffairsPreview() {
   const [activeSummary, setActiveSummary] = useState<Article | null>(null);
 
   return (
-    <section className="py-24 bg-brand-navy-950 relative z-10" id="current-affairs">
+    <section className="py-24 bg-background relative z-10" id="current-affairs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -71,7 +71,7 @@ export default function CurrentAffairsPreview() {
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150 tracking-tight">
               Constitutional & Legal Bulletins
             </h2>
-            <p className="text-slate-335 text-sm font-light leading-relaxed">
+            <p className="text-muted-foreground text-sm font-light leading-relaxed">
               We track national judicial verdicts, bill amendments, and global treaty negotiations, translating them into high-yield summaries for your GK preparation.
             </p>
           </div>
@@ -87,34 +87,34 @@ export default function CurrentAffairsPreview() {
           {articlesData.map((article) => (
             <div
               key={article.id}
-              className="rounded-2xl glass-panel p-6 flex flex-col justify-between relative group hover:border-white/15 transition-all shadow-xl"
+              className="rounded-2xl glass-panel p-6 flex flex-col justify-between relative group hover:border-border transition-all shadow-xl"
             >
               <div className="space-y-4">
                 <div className="flex justify-between items-center gap-2">
                   <span className="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-brand-purple-500/10 text-brand-purple-400 border border-brand-purple-500/20 uppercase tracking-wider">
                     {article.category}
                   </span>
-                  <span className="text-[10px] text-slate-350 font-medium font-mono">{article.date}</span>
+                  <span className="text-[10px] text-muted-foreground font-medium font-mono">{article.date}</span>
                 </div>
 
                 <h3 className="text-slate-150 font-bold text-sm sm:text-base leading-snug group-hover:text-brand-purple-500 transition-colors">
                   {article.title}
                 </h3>
 
-                <p className="text-slate-335 text-xs font-light leading-relaxed line-clamp-3">
+                <p className="text-muted-foreground text-xs font-light leading-relaxed line-clamp-3">
                   {article.summary}
                 </p>
               </div>
 
-              <div className="pt-6 mt-4 border-t border-white/5 flex items-center justify-between">
+              <div className="pt-6 mt-4 border-t border-border flex items-center justify-between">
                 <button
                   onClick={() => setActiveSummary(article)}
                   className="text-xs font-bold text-brand-blue-500 hover:text-slate-150 flex items-center gap-1 transition-colors"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-brand-gold-500 fill-brand-gold-500/10" />
+                  <Sparkles className="w-3.5 h-3.5 text-primary fill-brand-gold-500/10" />
                   AI Legal Summarizer
                 </button>
-                <ChevronRight className="w-4 h-4 text-slate-350 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           ))}
@@ -130,7 +130,7 @@ export default function CurrentAffairsPreview() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setActiveSummary(null)}
-                className="fixed inset-0 bg-brand-navy-950/80 backdrop-blur-md"
+                className="fixed inset-0 bg-background/80 backdrop-blur-md"
               />
 
               {/* Box */}
@@ -139,12 +139,12 @@ export default function CurrentAffairsPreview() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ type: "spring", duration: 0.4 }}
-                className="relative w-full max-w-xl overflow-hidden rounded-2xl glass-panel border border-white/10 shadow-2xl p-6 sm:p-8 z-10 bg-brand-navy-900/95"
+                className="relative w-full max-w-xl overflow-hidden rounded-2xl glass-panel border border-border shadow-2xl p-6 sm:p-8 z-10 bg-muted/95"
               >
                 {/* Close Button */}
                 <button
                   onClick={() => setActiveSummary(null)}
-                  className="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                  className="absolute top-4 right-4 p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -155,7 +155,7 @@ export default function CurrentAffairsPreview() {
                     <BrainCircuit className="w-4.5 h-4.5 text-brand-purple-500" />
                   </div>
                   <div>
-                    <span className="text-[9px] uppercase font-extrabold tracking-widest text-slate-350 block leading-none">
+                    <span className="text-[9px] uppercase font-extrabold tracking-widest text-muted-foreground block leading-none">
                       Vantage AI
                     </span>
                     <h3 className="text-slate-150 font-bold text-xs">High-Yield Concept Digest</h3>
@@ -170,13 +170,13 @@ export default function CurrentAffairsPreview() {
                     </h4>
                   </div>
 
-                  <div className="space-y-2 pt-2 border-t border-white/5">
-                    <span className="text-[10px] uppercase font-bold text-brand-gold-500 font-mono flex items-center gap-1">
+                  <div className="space-y-2 pt-2 border-t border-border">
+                    <span className="text-[10px] uppercase font-bold text-primary font-mono flex items-center gap-1">
                       <BookMarked className="w-3.5 h-3.5" /> High-Yield Bullet points for CLAT
                     </span>
                     <ul className="space-y-2">
                       {activeSummary.bullets.map((bullet, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-slate-250 leading-relaxed font-light">
+                        <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed font-light">
                           <span className="w-1.5 h-1.5 rounded-full bg-brand-blue-500 mt-2 flex-shrink-0" />
                           <span>{bullet}</span>
                         </li>
@@ -184,13 +184,13 @@ export default function CurrentAffairsPreview() {
                     </ul>
                   </div>
 
-                  <div className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between">
-                    <p className="text-[10px] text-slate-350 max-w-[320px] leading-snug">
+                  <div className="pt-4 mt-6 border-t border-border flex items-center justify-between">
+                    <p className="text-[10px] text-muted-foreground max-w-[320px] leading-snug">
                       Subscribe to the Law Desk Briefing in the footer to get these summaries delivered to your inbox every morning.
                     </p>
                     <button
                       onClick={() => setActiveSummary(null)}
-                      className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-150 hover:bg-white/10 text-xs font-bold transition-all"
+                      className="px-4 py-2 rounded-xl bg-muted/50 border border-border text-slate-150 hover:bg-muted text-xs font-bold transition-all"
                     >
                       Understood
                     </button>

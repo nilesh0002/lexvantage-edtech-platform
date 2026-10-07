@@ -16,7 +16,7 @@ const faqData: FaqItem[] = [
       <div className="space-y-4">
         <div>
           <p className="font-semibold text-slate-150 mb-2">Our courses are designed for:</p>
-          <ul className="list-disc list-inside space-y-1 text-slate-250 pl-1">
+          <ul className="list-disc list-inside space-y-1 text-muted-foreground pl-1">
             <li>LL.B. students (All Years/Semesters)</li>
             <li>CLAT UG & CLAT PG Aspirants</li>
             <li>MH CET Law Aspirants (3-Year & 5-Year)</li>
@@ -28,7 +28,7 @@ const faqData: FaqItem[] = [
         </div>
         <div>
           <p className="font-semibold text-slate-150 mb-2">We provide comprehensive coverage of major law subjects, including:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-slate-250 pl-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs text-muted-foreground pl-1">
             <span>• Constitutional Law</span>
             <span>• Contract Law</span>
             <span>• Law of Torts</span>
@@ -59,7 +59,7 @@ const faqData: FaqItem[] = [
             <span>• Sale of Goods Act</span>
             <span>• Competition Law</span>
             <span>• Insolvency & Bankruptcy Law</span>
-            <span className="sm:col-span-2 italic font-medium mt-1 text-slate-250">And other university-prescribed subjects.</span>
+            <span className="sm:col-span-2 italic font-medium mt-1 text-muted-foreground">And other university-prescribed subjects.</span>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ export default function Faq() {
   };
 
   return (
-    <section className="py-24 bg-brand-navy-950 relative z-10" id="faq">
+    <section className="py-24 bg-background relative z-10" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -102,7 +102,7 @@ export default function Faq() {
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-150">
             Frequently Asked Queries
           </h2>
-          <p className="text-slate-335 text-sm font-light">
+          <p className="text-muted-foreground text-sm font-light">
             Everything you need to know about the admission process, course delivery, and student support.
           </p>
         </div>
@@ -114,12 +114,12 @@ export default function Faq() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl glass-panel overflow-hidden transition-colors border border-white/5"
+                className="rounded-2xl glass-panel overflow-hidden transition-colors border border-border"
               >
                 {/* Accordion Toggle handle */}
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left text-slate-150 hover:bg-white/5 transition-colors focus:outline-none"
+                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left text-slate-150 hover:bg-muted/50 transition-colors focus:outline-none"
                 >
                   <div className="flex items-center gap-3">
                     <HelpCircle className="w-5 h-5 text-brand-blue-500 flex-shrink-0" />
@@ -128,7 +128,7 @@ export default function Faq() {
                     </span>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-350 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${
                       isOpen ? "rotate-180 text-slate-150" : ""
                     }`}
                   />
@@ -143,7 +143,7 @@ export default function Faq() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 pt-2 text-slate-335 text-sm leading-relaxed border-t border-white/5 font-light">
+                      <div className="px-6 pb-6 pt-2 text-muted-foreground text-sm leading-relaxed border-t border-border font-light">
                         {item.answer}
                       </div>
                     </motion.div>
