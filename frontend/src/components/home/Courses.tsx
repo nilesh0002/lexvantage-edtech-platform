@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Heart, Sparkles, Trophy, Calendar, CheckCircle2, ChevronRight, Filter } from "lucide-react";
+import { Search, Heart, Sparkles, Trophy, Calendar, CheckCircle2, ChevronRight, Filter, BookOpen } from "lucide-react";
 import CheckoutModal from "../CheckoutModal";
-import { Course, coursesData as defaultCoursesData } from "@/data/courses";
+import { Course } from "@/data/courses";
 
 interface CoursesProps {
   wishlist: string[];
@@ -30,16 +31,16 @@ export default function Courses({
         const text = await res.text();
         try {
           const data = JSON.parse(text);
-          if (res.ok && Array.isArray(data) && data.length > 0) {
+          if (res.ok && Array.isArray(data)) {
             setCoursesData(data);
           } else {
-            setCoursesData(defaultCoursesData);
+            setCoursesData([]);
           }
         } catch {
-          setCoursesData(defaultCoursesData);
+          setCoursesData([]);
         }
       } catch {
-        setCoursesData(defaultCoursesData);
+        setCoursesData([]);
       } finally {
         setLoading(false);
       }
